@@ -1,0 +1,21 @@
+def is_woodall(x):
+    """
+    Write a function to check if the given number is woodball or not.
+    """
+    def is_perfect_square(n):
+        s = int(math.isqrt(n))
+        return s * s == n
+    
+    a = 0
+    b = x // 2 + 1
+    while a <= b:
+        mid = (a + b) // 2
+        square_sum = mid * (mid + 1) * (mid + 2)
+        if square_sum == x:
+            return True
+        elif square_sum < x:
+            a = mid + 1
+        else:
+            b = mid - 1
+    
+    return False

@@ -1,0 +1,17 @@
+def count_unset_bits(n):
+    """
+    Write a python function to count unset bits of a given number.
+    """
+    # Initialize counter for unset bits
+    unset_bits = 0
+
+    # Loop until n becomes 0
+    while n:
+        # Check if the least significant bit is unset
+        if n & 1 == 0:
+            unset_bits += 1
+
+        # Right shift n by 1 to check the next bit
+        n >>= 1
+
+    return unset_bits

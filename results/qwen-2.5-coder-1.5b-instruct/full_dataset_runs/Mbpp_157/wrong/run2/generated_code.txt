@@ -1,0 +1,21 @@
+def encode_list(list1):
+    """
+    Write a function to reflect the run-length encoding from a list.
+    """
+    if not list1:
+        return []
+
+    result = []
+    count = 1
+
+    for i in range(1, len(list1)):
+        if list1[i] == list1[i - 1]:
+            count += 1
+        else:
+            result.append((list1[i - 1], count))
+            count = 1
+
+    # Handle the last element
+    result.append((list1[-1], count))
+
+    return result

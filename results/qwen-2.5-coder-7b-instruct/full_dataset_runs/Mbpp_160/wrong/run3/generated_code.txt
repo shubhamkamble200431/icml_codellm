@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a function to find x and y that satisfies ax + by = n.
+    """
+    if len(args) != 3:
+        raise ValueError("Function requires exactly three arguments: a, b, n")
+    
+    a, b, n = args
+    
+    for x in range(n // a + 1):
+        if (n - a * x) % b == 0:
+            return x, (n - a * x) // b
+    
+    return None

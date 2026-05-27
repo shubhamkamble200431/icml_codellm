@@ -1,0 +1,5 @@
+def count_X(tup, x):
+    """
+    Write a python function to count the occcurences of an element in a tuple.
+    """
+return tup.count(x)

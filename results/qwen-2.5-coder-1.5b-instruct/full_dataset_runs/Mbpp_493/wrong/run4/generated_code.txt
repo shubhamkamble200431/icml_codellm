@@ -1,0 +1,45 @@
+def calculate_polygons(startx, starty, endx, endy, radius):
+    """
+    Write a function to calculate a grid of hexagon coordinates where function returns a list of lists containing 6 tuples of x, y point coordinates.
+    """
+    # Calculate the center of the bounding box
+    centerx = (startx + endx) / 2
+    centery = (starty + endy) / 2
+    
+    # Calculate the side length of the hexagon
+    hex_side = radius * math.sqrt(3)
+    
+    # Calculate the number of columns and rows in the grid
+    num_cols = int((endx - startx) / hex_side) + 1
+    num_rows = int((endy - starty) / hex_side) + 1
+    
+    # Initialize the list to store the coordinates of the hexagons
+    polygons = []
+    
+    # Iterate over each row
+    for row in range(num_rows):
+        row_points = []
+        
+        # Iterate over each column
+        for col in range(num_cols):
+            # Calculate the center of the current hexagon
+            hx = centerx + col * hex_side
+            hy = centery + row * hex_side
+        
+            # Calculate the coordinates of the vertices of the hexagon
+            points = [
+                (hx + hex_side / 2, hy),
+                (hx - hex_side / 2, hy),
+                (hx + hex_side / 4, hy + hex_side * math.sqrt(3) / 2),
+                (hx + hex_side / 4, hy - hex_side * math.sqrt(3) / 2),
+                (hx - hex_side / 4, hy + hex_side * math.sqrt(3) / 2),
+                (hx - hex_side / 4, hy - hex_side * math.sqrt(3) / 2)
+            ]
+            
+            # Add the coordinates of the hexagon to the list of points
+            row_points.append(points)
+        
+        # Append the list of points representing the hexagon to the main list
+        polygons.append(row_points)
+    
+    return polygons

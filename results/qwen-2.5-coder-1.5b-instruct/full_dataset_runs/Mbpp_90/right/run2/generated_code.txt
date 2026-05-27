@@ -1,0 +1,8 @@
+def len_log(list1):
+    """
+    Write a python function to find the length of the longest word.
+    """
+    if list1:
+        return max(len(word) for word in list1)
+    else:
+        return 0

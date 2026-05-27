@@ -1,0 +1,5 @@
+def is_decimal(num):
+    """
+    Write a function to check the given decimal with a precision of 2 by using regex.
+    """
+    return bool(re.fullmatch(r'\d+(\.\d{1,2})?', num))

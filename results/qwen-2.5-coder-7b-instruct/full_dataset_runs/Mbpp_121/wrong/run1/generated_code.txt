@@ -1,0 +1,10 @@
+def check_triplet(A, n, sum, count):
+    """
+    Write a function to find the triplet with sum of the given array
+    """
+for i in range(n - 2):
+    for j in range(i + 1, n - 1):
+        for k in range(j + 1, n):
+            if A[i] + A[j] + A[k] == sum:
+                count += 1
+    return count

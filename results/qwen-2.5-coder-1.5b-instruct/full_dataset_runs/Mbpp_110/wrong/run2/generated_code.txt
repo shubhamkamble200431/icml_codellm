@@ -1,0 +1,15 @@
+def extract_missing(test_list, strt_val, stop_val):
+    """
+    Write a function to extract the ranges that are missing from the given list with the given start range and end range values.
+    """
+    missing_ranges = []
+
+    # Convert test_list into set to allow O(1) lookups
+    test_set = set(test_list)
+
+    # Iterate through possible range values starting from strt_val
+    for val in range(strt_val, stop_val + 1):
+        if val not in test_set:
+            missing_ranges.append(val)
+
+    return missing_ranges

@@ -1,0 +1,12 @@
+def re_order(A):
+    """
+    Write a function to move all zeroes to the end of the given array.
+    """
+    # Separate non-zero elements and zero elements
+    non_zero_elements = [x for x in A if x != 0]
+    zero_elements = [x for x in A if x == 0]
+
+    # Concatenate non-zero elements with zero elements
+    A = non_zero_elements + zero_elements
+
+    return A

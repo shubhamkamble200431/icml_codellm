@@ -1,0 +1,18 @@
+def find_length(string, n):
+    """
+    Write a function to find the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string.
+    """
+    max_diff = 0
+    current_diff = 0
+    for char in string:
+        if char == '0':
+            current_diff += 1
+        else:
+            current_diff -= 1
+
+        if current_diff < 0:
+            current_diff = 0
+
+        max_diff = max(max_diff, current_diff)
+
+    return max_diff

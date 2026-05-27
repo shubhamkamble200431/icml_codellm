@@ -1,0 +1,5 @@
+def common_element(list1, list2):
+    """
+    Write a function that takes two lists and returns true if they have at least one common element.
+    """
+    return any(item in list2 for item in list1)

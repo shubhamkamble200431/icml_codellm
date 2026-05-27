@@ -1,0 +1,6 @@
+def find_Average_Of_Cube(n):
+    """
+    Write a python function to find the average of cubes of first n natural numbers.
+    """
+    total_sum = sum(x**3 for x in range(1, n+1))
+    return total_sum / n

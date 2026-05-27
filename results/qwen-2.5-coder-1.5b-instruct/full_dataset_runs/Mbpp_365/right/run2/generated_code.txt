@@ -1,0 +1,8 @@
+def count_Digit(n):
+    """
+    Write a python function to count the number of digits of a given number.
+    """
+    if n == 0:
+        return 1
+    else:
+        return int(len(str(abs(n))))

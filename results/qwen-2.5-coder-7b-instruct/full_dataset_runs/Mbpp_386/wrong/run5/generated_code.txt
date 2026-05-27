@@ -1,0 +1,21 @@
+def swap_count(s):
+    """
+    Write a function to find out the minimum no of swaps required for bracket balancing in the given string.
+    """
+    stack = []
+    swap = 0
+    imbalance = 0
+
+    for char in s:
+        if char == '(':
+            if imbalance > 0:
+                swap += imbalance
+                imbalance -= 1
+            stack.append(char)
+        elif char == ')':
+            if stack and stack[-1] == '(':
+                stack.pop()
+            else:
+                imbalance += 1
+
+    return swap

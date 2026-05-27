@@ -1,0 +1,7 @@
+def dig_let(s):
+    """
+    Write a function to calculate the number of digits and letters in a string.
+    """
+    digits = len(re.findall(r'\d', s))
+    letters = len(re.findall(r'[a-zA-Z]', s))
+    return digits, letters

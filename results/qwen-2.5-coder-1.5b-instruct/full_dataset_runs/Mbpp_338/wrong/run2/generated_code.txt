@@ -1,0 +1,13 @@
+def check_Equality(s):
+    """
+    Write a python function to count the number of substrings with same first and last characters.
+    """
+    n = len(s)
+    count = 0
+
+    for i in range(n):
+        # Check for repeating character at the end of current substring
+        if s[i] == s[-1]:
+            count += 1
+
+    return count

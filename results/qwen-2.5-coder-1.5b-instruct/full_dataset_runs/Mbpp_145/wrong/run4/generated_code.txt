@@ -1,0 +1,5 @@
+def max_Abs_Diff(arr,n):
+    """
+    Write a python function to find the maximum difference between any two elements in a given array.
+    """
+    return max(abs(a) for a in arr)

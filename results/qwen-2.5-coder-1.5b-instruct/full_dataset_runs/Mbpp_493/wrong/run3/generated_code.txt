@@ -1,0 +1,40 @@
+def calculate_polygons(startx, starty, endx, endy, radius):
+    """
+    Write a function to calculate a grid of hexagon coordinates where function returns a list of lists containing 6 tuples of x, y point coordinates.
+    """
+    import math
+
+    def hexagon_vertices(x, y, radius):
+        angle = math.radians(30)
+        vertices = [
+            (x + math.cos(angle) * radius, y - math.sin(angle) * radius),
+            (x + math.cos(angle + 2 * angle) * radius, y - math.sin(angle + 2 * angle) * radius),
+            (x + math.cos(angle + 4 * angle) * radius, y - math.sin(angle + 4 * angle) * radius),
+            (x + math.cos(angle + 6 * angle) * radius, y - math.sin(angle + 6 * angle) * radius),
+            (x + math.cos(angle + 8 * angle) * radius, y - math.sin(angle + 8 * angle) * radius),
+            (x + math.cos(angle + 10 * angle) * radius, y - math.sin(angle + 10 * angle) * radius),
+        ]
+        return vertices
+
+    # Calculate the number of rows and columns based on the start and end points and the radius
+    num_rows = int(abs((endy - starty) / radius)) + 1
+    num_cols = int(abs((endx - startx) / radius)) + 1
+
+    # Calculate the step size in both directions
+    dx = abs(endx - startx) / num_cols
+    dy = abs(endy - starty) / num_rows
+
+    # Initialize an empty list to store the polygons
+    polygons = []
+
+    # Loop through each row and column to calculate the polygon vertices
+    for i in range(num_rows):
+        row = []
+        for j in range(num_cols):
+            x = startx + j * dx
+            y = starty + i * dy
+            polygon = hexagon_vertices(x, y, radius)
+            row.append(polygon)
+        polygons.append(row)
+
+    return polygons

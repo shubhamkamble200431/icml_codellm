@@ -1,0 +1,11 @@
+def recursive_list_sum(data_list):
+    """
+    Write a function of recursion list sum.
+    """
+    # Base case: if data_list is empty, return 0
+    if not data_list:
+        return 0
+
+    # Recursive case: return the first element plus the sum of the rest of the list
+    else:
+        return data_list[0] + recursive_list_sum(data_list[1:])

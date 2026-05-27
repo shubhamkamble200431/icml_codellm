@@ -1,0 +1,23 @@
+def min_Ops(arr,n,k):
+    """
+    Write a python function to find k number of operations required to make all elements equal.
+    """
+    count = 0
+    max_value = arr[0]
+    min_value = arr[0]
+
+    # Find the maximum and minimum values in the array
+    for i in range(1, n):
+        if arr[i] > max_value:
+            max_value = arr[i]
+        elif arr[i] < min_value:
+            min_value = arr[i]
+
+    # Calculate the difference between max and min values
+    diff = max_value - min_value
+
+    # Calculate the total number of operations required to make all elements equal
+    for i in range(n):
+        count += (max_value - arr[i])
+
+    return count // k

@@ -1,0 +1,5 @@
+def concatenate_elements(test_tup):
+    """
+    Write a function to perform the adjacent element concatenation in the given tuples.
+    """
+return ''.join(str(element) for element in test_tup)

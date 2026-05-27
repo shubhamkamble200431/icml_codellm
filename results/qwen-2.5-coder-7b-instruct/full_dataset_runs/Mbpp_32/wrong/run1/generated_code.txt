@@ -1,0 +1,9 @@
+def solution(*args):
+    """
+    Write a python function to find the largest prime factor of a given number.
+    """
+    numbers = list(args)
+    result = []
+    for num in numbers:
+        result.append(largest_prime_factor(num))
+    return result

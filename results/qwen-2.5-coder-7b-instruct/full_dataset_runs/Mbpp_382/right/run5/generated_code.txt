@@ -1,0 +1,18 @@
+def find_rotation_count(A):
+    """
+    Write a function to find the number of rotations in a circularly sorted array.
+    """
+    def binary_search(low, high):
+        if low > high:
+            return 0
+        mid = (low + high) // 2
+        next_index = (mid + 1) % len(A)
+        prev_index = (mid - 1 + len(A)) % len(A)
+        if A[mid] <= A[next_index] and A[mid] <= A[prev_index]:
+            return mid
+        elif A[mid] <= A[high]:
+            return binary_search(low, mid - 1)
+        else:
+            return binary_search(mid + 1, high)
+
+    return binary_search(0, len(A) - 1)

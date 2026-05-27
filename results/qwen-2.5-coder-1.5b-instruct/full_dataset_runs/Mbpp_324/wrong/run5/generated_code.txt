@@ -1,0 +1,5 @@
+def sum_of_alternates(test_tuple):
+    """
+    Write a function to extract the sum of alternate chains of tuples.
+    """
+    return sum(item[0] for item in test_tuple if item)

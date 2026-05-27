@@ -1,0 +1,6 @@
+def inversion_elements(test_tup):
+    """
+    Write a function to find the inversions of tuple elements in the given tuple list.
+    """
+    res = [len(sub) - sum(1 for x, y in zip(sub, sub[1:]) if x < y) for sub in test_tup]
+    return res

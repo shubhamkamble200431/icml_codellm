@@ -1,0 +1,19 @@
+def swap_count(s):
+    """
+    Write a function to find out the minimum no of swaps required for bracket balancing in the given string.
+    """
+    stack = []
+    count = 0
+    open_brackets = '('
+
+    for char in s:
+        if char == open_brackets:
+            stack.append(char)
+        else:  # Assuming closing brackets are ')'
+            if not stack or stack[-1] != open_brackets:
+                count += 1
+                stack.append(open_brackets)  # Adding opening bracket to balance
+            else:
+                stack.pop()  # Removing the matching opening bracket
+
+    return count

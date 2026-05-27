@@ -1,0 +1,8 @@
+def dict_depth(d):
+    """
+    Write a function to find the depth of a dictionary.
+    """
+    if not isinstance(d, dict):
+        return 0
+    else:
+        return 1 + max(dict_depth(v) for v in d.values())

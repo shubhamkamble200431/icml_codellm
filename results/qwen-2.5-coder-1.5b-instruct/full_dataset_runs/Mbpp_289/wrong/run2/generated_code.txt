@@ -1,0 +1,21 @@
+def odd_Days(N):
+    """
+    Write a python function to calculate the number of odd days in a given year.
+    """
+    # Calculate the remainder when N is divided by 400
+    century = N // 400
+
+    # Calculate the remainder when N is divided by 100
+    decade = N // 100
+
+    # Calculate the remainder when N is divided by 4
+    year = N % 4
+
+    # Calculate the number of leap years in the last 3 centuries
+    leap_years = 5 * century + decade - (century >> 2)
+
+    # Calculate the total number of days in the year
+    total_days = 365 * (N - leap_years) + (year == 1 and century % 4 != 0) + (year == 0 and century % 100 != 0)
+
+    # Return the number of odd days in the year
+    return total_days % 7

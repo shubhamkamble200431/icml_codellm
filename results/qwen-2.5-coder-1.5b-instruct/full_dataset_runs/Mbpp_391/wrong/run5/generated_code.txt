@@ -1,0 +1,5 @@
+def convert_list_dictionary(l1, l2, l3):
+    """
+    Write a function to convert more than one list to nested dictionary.
+    """
+from typing import List

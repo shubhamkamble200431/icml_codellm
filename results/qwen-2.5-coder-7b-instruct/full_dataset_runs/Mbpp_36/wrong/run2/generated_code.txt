@@ -1,0 +1,16 @@
+def solution(*args):
+    """
+    Write a python function to find the nth digit in the proper fraction of two given numbers.
+    """
+    num = args[0] // args[1]
+    rem = args[0] % args[1]
+    n = args[2]
+    
+    for _ in range(n - 1):
+        if rem == 0:
+            return -1
+        rem *= 10
+        num = rem // args[1]
+        rem %= args[1]
+        
+    return num

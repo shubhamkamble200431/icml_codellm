@@ -1,0 +1,7 @@
+def get_maxgold(gold, m, n):
+    """
+    Write a function to solve gold mine problem.
+    """
+from functools import lru_cache
+
+@lru_cache(None)

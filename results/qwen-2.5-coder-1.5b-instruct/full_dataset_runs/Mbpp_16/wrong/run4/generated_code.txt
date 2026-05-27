@@ -1,0 +1,5 @@
+def text_lowercase_underscore(text):
+    """
+    Write a function to find sequences of lowercase letters joined with an underscore.
+    """
+    return re.sub(r'\b([a-z]+)\b', r'_\1', text)

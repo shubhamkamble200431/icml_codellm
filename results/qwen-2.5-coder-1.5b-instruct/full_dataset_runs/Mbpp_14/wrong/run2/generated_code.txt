@@ -1,0 +1,11 @@
+def solution(*args):
+    """
+    Write a python function to find the volume of a triangular prism.
+    """
+    # Define the base area and height of the triangular prism
+    base_area = 0.5 * args[0] * args[1]
+    
+    # Calculate the volume using the formula: V = Base Area × Height
+    volume = base_area * args[2]
+    
+    return volume

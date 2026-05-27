@@ -1,0 +1,5 @@
+def sum_Of_Series(n):
+    """
+    Write a python function to find the cube sum of first n natural numbers.
+    """
+    return (n * (n + 1) * (2*n + 1)) // 6

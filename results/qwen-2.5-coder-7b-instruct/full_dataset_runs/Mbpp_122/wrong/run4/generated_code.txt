@@ -1,0 +1,26 @@
+def smartNumber(n):
+    """
+    Write a function to find n’th smart number.
+    """
+    if n == 1:
+        return 1
+
+    heap = [6]
+    seen = {6}
+
+    def generate_next():
+        while True:
+            x = heapq.heappop(heap)
+            yield x
+            yield x + 3
+            yield x * 2 + 1
+
+    gen = generate_next()
+    next(gen)  # Skip the first value which is already in the heap
+
+    for _ in range(1, n):
+        next_value = next(gen)
+        heapq.heappush(heap, next_value)
+        seen.add(next_value)
+
+    return next_value

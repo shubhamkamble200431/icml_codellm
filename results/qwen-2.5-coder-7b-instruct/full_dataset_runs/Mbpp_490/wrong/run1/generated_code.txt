@@ -1,0 +1,6 @@
+def extract_symmetric(test_list):
+    """
+    Write a function to extract all the pairs which are symmetric in the given tuple list.
+    """
+    result = [pair for pair in test_list if pair == pair[::-1]]
+    return result

@@ -1,0 +1,15 @@
+def zigzag(n, k):
+    """
+    Write a function to find entringer number e(n, k).
+    """
+    e_n_k = []
+    current_num = n
+    while len(e_n_k) < n:
+        if current_num % 2 == 0:
+            # Even case: append the next odd number
+            e_n_k.append(current_num + 1)
+        else:
+            # Odd case: append the previous even number
+            e_n_k.append(current_num - 1)
+        current_num += k
+    return e_n_k

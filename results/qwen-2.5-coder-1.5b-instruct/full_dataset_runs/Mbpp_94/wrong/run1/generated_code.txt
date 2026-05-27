@@ -1,0 +1,18 @@
+def index_minimum(test_list):
+    """
+    Write a function to extract the index minimum value record from the given tuples.
+    """
+    # Initialize variables to store the minimum value and its index
+    min_value = float('inf')
+    index_of_min = -1
+
+    # Iterate through each tuple in the list
+    for idx, (value, _) in enumerate(test_list):
+        # Check if the current value is less than the current minimum value
+        if value < min_value:
+            # Update the minimum value and its index
+            min_value = value
+            index_of_min = idx
+
+    # Return the index of the minimum value
+    return index_of_min

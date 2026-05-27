@@ -1,0 +1,5 @@
+def count_bidirectional(test_list):
+    """
+    Write a function to count bidirectional tuple pairs.
+    """
+    return sum(1 for pair in test_list if pair[0] > pair[1])

@@ -1,0 +1,9 @@
+def solution(*args):
+    """
+    Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.
+    """
+    grid = [list(map(int, row.split())) for row in args]
+    if len(grid) != 2:
+        raise ValueError("Grid must have exactly 2 rows")
+
+    return max(max_non_adjacent_sum(row) for row in grid)

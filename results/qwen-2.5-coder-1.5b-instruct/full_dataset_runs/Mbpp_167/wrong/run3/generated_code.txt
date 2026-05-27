@@ -1,0 +1,5 @@
+def next_Power_Of_2(n):
+    """
+    Write a python function to find smallest power of 2 greater than or equal to n.
+    """
+    return 1 << (n - 1).bit_length()

@@ -1,0 +1,6 @@
+def check_monthnum(monthname1):
+    """
+    Write a function to check whether the given month name contains 28 days or not.
+    """
+    months_with_28_days = ["February"]
+    return monthname1 in months_with_28_days

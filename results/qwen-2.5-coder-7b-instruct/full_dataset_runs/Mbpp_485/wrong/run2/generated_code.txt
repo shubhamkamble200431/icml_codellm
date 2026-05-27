@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a function to find the largest palindromic number in the given array.
+    """
+    return max([num for num in args if str(num) == str(num)[::-1]], default=None)

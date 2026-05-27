@@ -1,0 +1,5 @@
+def get_carol(n):
+    """
+    Write a function to find the n’th carol number.
+    """
+    return (1 << n) * (n + 3)

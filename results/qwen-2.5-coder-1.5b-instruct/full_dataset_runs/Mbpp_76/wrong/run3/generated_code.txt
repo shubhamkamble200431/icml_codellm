@@ -1,0 +1,5 @@
+def count_Squares(m,n):
+    """
+    Write a python function to count the number of squares in a rectangle.
+    """
+    return m * n - (m - 1) * (n - 1)

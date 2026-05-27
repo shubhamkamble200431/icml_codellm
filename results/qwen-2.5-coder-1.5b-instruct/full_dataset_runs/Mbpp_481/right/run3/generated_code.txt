@@ -1,0 +1,19 @@
+def is_subset_sum(set, n, sum):
+    """
+    Write a function to determine if there is a subset of the given set with sum equal to the given sum.
+    """
+    # Base case: If the sum is zero, then there is a subset with sum 0
+    if sum == 0:
+        return True
+
+    # Base case: If there are no elements left and the sum is not zero, then there is no subset with that sum
+    elif n == 0:
+        return False
+
+    # If the last element of the set is greater than the sum, exclude it and check the rest of the set
+    elif set[n - 1] > sum:
+        return is_subset_sum(set, n - 1, sum)
+
+    # Check two cases: either include the last element in the subset or exclude it
+    else:
+        return is_subset_sum(set, n - 1, sum) or is_subset_sum(set, n - 1, sum - set[n - 1])

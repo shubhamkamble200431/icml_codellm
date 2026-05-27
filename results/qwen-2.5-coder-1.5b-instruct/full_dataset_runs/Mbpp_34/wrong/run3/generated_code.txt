@@ -1,0 +1,5 @@
+def find_missing(ar,N):
+    """
+    Write a python function to find the missing number in a sorted array.
+    """
+    return (N*(N+1))//2 - sum(ar)

@@ -1,0 +1,5 @@
+def sum_series(n):
+    """
+    Write a function to calculate the sum of the positive integers of n+(n-2)+(n-4)... (until n-x =< 0).
+    """
+    return sum(range(n, 0, -2))

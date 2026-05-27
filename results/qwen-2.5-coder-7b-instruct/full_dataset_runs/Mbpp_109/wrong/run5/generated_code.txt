@@ -1,0 +1,5 @@
+def odd_Equivalent(s,n):
+    """
+    Write a python function to find the count of rotations of a binary string with odd value.
+    """
+from collections import deque

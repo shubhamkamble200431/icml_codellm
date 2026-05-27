@@ -1,0 +1,6 @@
+def rev(num):
+    """
+    Write a python function to check if a given number is one less than twice its reverse.
+    """
+    rev_num = int(str(num)[::-1])
+    return num == 2 * rev_num - 1

@@ -1,0 +1,5 @@
+def text_match_wordz(text):
+    """
+    Write a function that matches a word containing 'z'.
+    """
+    return bool(re.search(r'\b\w*z\b', text))

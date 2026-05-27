@@ -1,0 +1,4 @@
+def cal_electbill(units):
+    """
+    Write a function to calculate electricity bill.
+    """

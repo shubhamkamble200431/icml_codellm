@@ -1,0 +1,6 @@
+def no_of_subsequences(arr, k):
+    """
+    Write a function to find the number of subsequences having product smaller than k for the given non negative array.
+    """
+    n = len(arr)
+    return sum(1 for combo in combinations(arr, r) if 1 <= prod(combo) < k)

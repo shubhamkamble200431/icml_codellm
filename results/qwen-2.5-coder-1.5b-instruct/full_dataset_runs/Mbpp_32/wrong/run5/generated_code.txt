@@ -1,0 +1,4 @@
+def solution(*args):
+    """
+    Write a python function to find the largest prime factor of a given number.
+    """

@@ -1,0 +1,15 @@
+def find_demlo(s):
+    """
+    Write a function to find the demlo number for the given number.
+    """
+    n = int(s)
+    if n == 1:
+        return "1"
+
+    while n != 1:
+        if n % 2 == 0:
+            n //= 2
+        else:
+            n = 3 * n + 1
+
+    return str(n)

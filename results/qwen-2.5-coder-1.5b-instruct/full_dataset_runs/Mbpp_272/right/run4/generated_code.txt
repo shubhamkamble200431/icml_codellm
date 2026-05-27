@@ -1,0 +1,6 @@
+def rear_extract(test_list):
+    """
+    Write a function to perfom the rear element extraction from list of tuples records.
+    """
+    # Extract the last element from each tuple in the list using list comprehension and the slice operator
+    return [item[-1] for item in test_list]

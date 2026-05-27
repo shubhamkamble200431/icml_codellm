@@ -1,0 +1,5 @@
+def snake_to_camel(word):
+    """
+    Write a function to convert the given snake case string to camel case string by using regex.
+    """
+    return ''.join(word.title() if index == 0 else word[index] for index in range(len(word)))

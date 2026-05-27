@@ -1,0 +1,23 @@
+def max_sub_array_sum_repeated(a, n, k):
+    """
+    Write a function to find the largest sum of contiguous array in the modified array which is formed by repeating the given array k times.
+    """
+    if k == 0:
+        return 0
+
+    # Calculate the maximum subarray sum in the original array
+    max_sum = float('-inf')
+    current_sum = 0
+    for num in a:
+        current_sum += num
+        max_sum = max(max_sum, current_sum)
+
+    # If the sum of the entire array is negative, return 0
+    if max_sum <= 0:
+        return 0
+
+    # Calculate the total sum of elements in the repeated array
+    total_sum = n * (sum(a) + max_sum)
+    
+    # The maximum subarray sum in the repeated array is the minimum of the two sums
+    return min(total_sum, max_sum)

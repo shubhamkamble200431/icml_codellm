@@ -1,0 +1,5 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    return [key * int(value) for key, value in groupby(alist, lambda x: x if isinstance(x, str) else None)]

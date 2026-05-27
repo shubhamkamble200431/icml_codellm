@@ -1,0 +1,5 @@
+def check_value(dict, n):
+    """
+    Write a function to check if all values are same in a dictionary.
+    """
+    return all(value == n for value in dict.values())

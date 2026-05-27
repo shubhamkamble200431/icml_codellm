@@ -1,0 +1,18 @@
+def counting_sort(my_list):
+    """
+    Write a function to sort the given array by using counting sort.
+    """
+    max_element = max(my_list)
+    count_array = [0] * (max_element + 1)
+
+    # Count occurrences of each element in the list
+    for num in my_list:
+        count_array[num] += 1
+
+    # Build sorted array based on the counts
+    sorted_index = 0
+    for i in range(len(count_array)):
+        while count_array[i]:
+            my_list[sorted_index] = i
+            sorted_index += 1
+            count_array[i] -= 1

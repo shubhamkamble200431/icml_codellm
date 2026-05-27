@@ -1,0 +1,7 @@
+def most_occurrences(test_list):
+    """
+    Write a function to get the word with most number of occurrences in the given strings list.
+    """
+    count = Counter(test_list)
+    max_count = max(count.values())
+    return [word for word, freq in count.items() if freq == max_count]

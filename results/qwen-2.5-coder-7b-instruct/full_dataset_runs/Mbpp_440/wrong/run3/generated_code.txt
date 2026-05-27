@@ -1,0 +1,10 @@
+def find_adverb_position(text):
+    """
+    Write a function to find all adverbs and their positions in a given sentence.
+    """
+    adverb_positions = []
+    for match in re.finditer(r"\b\w+ly\b", text):
+        start = match.start()
+        end = match.end()
+        adverb_positions.append((match.group(), start, end))
+    return adverb_positions

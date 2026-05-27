@@ -1,0 +1,19 @@
+def make_flip(ch):
+    """
+    Write a function to find the number of flips required to make the given binary string a sequence of alternate characters.
+    """
+    def flip(s):
+        return s[1:] + s[0]
+
+    count = 0
+    current_flip = ''
+    for c in ch:
+        if c != current_flip:
+            count += 1
+            current_flip = flip(current_flip)
+
+    # Check the last character and its flip
+    if ch[-1] != current_flip:
+        count += 1
+
+    return count

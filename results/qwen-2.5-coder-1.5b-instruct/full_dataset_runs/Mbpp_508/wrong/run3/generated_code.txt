@@ -1,0 +1,9 @@
+def same_order(l1, l2):
+    """
+    Write a function to check if the common elements between two given lists are in the same order or not.
+    """
+    c1 = Counter(l1)
+    c2 = Counter(l2)
+
+    # Check if the intersection of both counters is not empty and its sorted list matches the original list
+    return (set(c1.keys()) & set(c2.keys())) == sorted(set(c1.keys()))

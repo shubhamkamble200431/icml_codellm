@@ -1,0 +1,5 @@
+def is_undulating(n):
+    """
+    Write a function to check whether the given number is undulating or not.
+    """
+    return n % 2 == 0 and (n // 10 % 2 != n % 10) or (n % 2 != 0 and (n // 10 % 2 == n % 10))

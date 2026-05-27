@@ -1,0 +1,5 @@
+def encode_list(list1):
+    """
+    Write a function to reflect the run-length encoding from a list.
+    """
+    return [(k, sum(1 for _ in group)) for k, group in itertools.groupby(list1)]

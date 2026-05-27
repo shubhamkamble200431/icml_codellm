@@ -1,0 +1,6 @@
+def remove_splchar(text):
+    """
+    Write a function to remove everything except alphanumeric characters from a string.
+    """
+    # Using regular expression to replace all non-alphanumeric characters with an empty string
+    return re.sub(r'[^a-zA-Z0-9]', '', text)

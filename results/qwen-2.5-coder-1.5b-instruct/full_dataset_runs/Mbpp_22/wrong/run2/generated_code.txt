@@ -1,0 +1,12 @@
+def find_first_duplicate(nums):
+    """
+    Write a function to find the first duplicate element in a given array of integers.
+    """
+    seen = defaultdict(int)
+
+    for num in nums:
+        if seen[num]:
+            return num
+        seen[num] += 1
+
+    return -1

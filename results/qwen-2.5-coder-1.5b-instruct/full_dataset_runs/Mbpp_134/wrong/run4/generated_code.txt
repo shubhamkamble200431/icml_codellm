@@ -1,0 +1,19 @@
+def solution(*args):
+    """
+    Write a python function to check whether the last element of given array is even or odd after performing an operation p times.
+    """
+    if len(args) < 3:
+        raise ValueError("At least three arguments are required")
+
+    n = args[0]
+    k = args[1]
+    p = args[2]
+
+    # Calculate the total number of operations that can be performed on all numbers
+    total_operations = (n * (n - 1)) // 2
+
+    # Check if the total number of operations is sufficient to change at least one number to its square root
+    if total_operations >= (k + 1):
+        return "Even"
+    else:
+        return "Odd"

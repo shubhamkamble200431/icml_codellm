@@ -1,0 +1,9 @@
+def solution(*args):
+    """
+    Write a python function to find the first digit of a given number.
+    """
+    for num in args:
+        if isinstance(num, (int, float)):
+            return str(abs(num))[0]
+        else:
+            raise TypeError("All arguments must be numbers.")

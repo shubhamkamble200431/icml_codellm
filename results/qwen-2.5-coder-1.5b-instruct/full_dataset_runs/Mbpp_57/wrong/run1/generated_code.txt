@@ -1,0 +1,20 @@
+def solution(*args):
+    """
+    Write a python function to find the largest number that can be formed with the given digits.
+    """
+    if len(args) == 0:
+        return 0
+
+    # Convert arguments to list of integers
+    numbers = [int(digit) for digit in args]
+
+    # Sort the list in descending order
+    sorted_numbers = sorted(numbers, reverse=True)
+
+    # Join the sorted digits into a single string
+    largest_number_str = ''.join(map(str, sorted_numbers))
+
+    # Convert the string back to an integer
+    largest_number = int(largest_number_str)
+
+    return largest_number

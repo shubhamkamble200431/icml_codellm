@@ -1,0 +1,5 @@
+def text_match(text):
+    """
+    Write a function to find sequences of lowercase letters joined with an underscore using regex.
+    """
+    return re.findall(r'[a-z]+_[a-z]+', text)

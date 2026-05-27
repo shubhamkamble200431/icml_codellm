@@ -1,0 +1,20 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    if n < 1:
+        return None
+    primes = [2]
+    i = 3
+
+    while len(primes) < n:
+        isPrime = True
+        for p in primes:
+            if i % p == 0:
+                isPrime = False
+                break
+        if isPrime:
+            primes.append(i)
+        i += 2
+
+    return primes[-1]

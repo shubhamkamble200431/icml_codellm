@@ -1,0 +1,10 @@
+def cal_sum(n):
+    """
+    Write a function to calculate the sum of perrin numbers.
+    """
+    a, b, c = 3, 0, 2
+    total = 0
+    for _ in range(n):
+        total += a
+        a, b, c = b + c, a, b
+    return total

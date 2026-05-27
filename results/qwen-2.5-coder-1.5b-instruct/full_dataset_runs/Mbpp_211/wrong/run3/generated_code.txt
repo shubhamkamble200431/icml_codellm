@@ -1,0 +1,6 @@
+def count_Num(n):
+    """
+    Write a python function to count numbers whose oth and nth bits are set.
+    """
+    # Count the number of times the least significant bit is 1
+    return bin(n & -n).count('1')

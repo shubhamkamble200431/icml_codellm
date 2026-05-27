@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    return max(map(lambda x: (x[0] * x[1] * x[2], (x[0] + x[1] + x[2])), itertools.permutations(args)))

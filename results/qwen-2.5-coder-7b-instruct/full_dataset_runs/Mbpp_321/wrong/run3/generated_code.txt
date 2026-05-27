@@ -1,0 +1,5 @@
+def find_demlo(s):
+    """
+    Write a function to find the demlo number for the given number.
+    """
+    return s * (s + 1) // 2

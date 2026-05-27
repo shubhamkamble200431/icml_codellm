@@ -1,0 +1,12 @@
+def is_allowed_specific_char(string):
+    """
+    Write a function to check that the given string contains only a certain set of characters(in this case a-z, a-z and 0-9) by using regex.
+    """
+    # Define a regular expression pattern that matches any character that is not in the allowed set (a-z, A-Z, 0-9)
+    pattern = '[^a-zA-Z0-9]'
+
+    # Use the re.search() method to search the string for the pattern
+    if re.search(pattern, string):
+        return False  # Return False if there is at least one character that is not allowed
+    else:
+        return True   # Return True if all characters are allowed

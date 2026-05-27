@@ -1,0 +1,6 @@
+def surfacearea_cone(r,h):
+    """
+    Write a function to find the surface area of a cone.
+    """
+    s = math.sqrt(r**2 + h**2)
+    return math.pi * r * (r + s)

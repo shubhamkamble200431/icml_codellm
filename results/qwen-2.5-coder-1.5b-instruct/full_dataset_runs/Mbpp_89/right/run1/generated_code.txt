@@ -1,0 +1,5 @@
+def closest_num(N):
+    """
+    Write a function to find the closest smaller number than n.
+    """
+    return max([i for i in range(N) if i < N])

@@ -1,0 +1,5 @@
+def area_pentagon(a):
+    """
+    Write a function to find the area of a pentagon.
+    """
+    return (sqrt(5 * (5 + 2 * sqrt(5))) / 4) * a**2

@@ -1,0 +1,15 @@
+def babylonian_squareroot(number):
+    """
+    Write a function for computing square roots using the babylonian method.
+    """
+    if number < 0:
+        raise ValueError("Cannot compute square root of negative numbers")
+
+    # Initial guess for the square root
+    guess = number / 2
+
+    while True:
+        next_guess = (guess + number / guess) / 2
+        if abs(guess - next_guess) < 1e-6:  # Check for convergence
+            return next_guess
+        guess = next_guess

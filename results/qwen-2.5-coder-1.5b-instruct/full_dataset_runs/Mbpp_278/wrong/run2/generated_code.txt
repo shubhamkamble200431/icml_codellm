@@ -1,0 +1,14 @@
+def count_first_elements(test_tup):
+    """
+    Write a function to find the element count that occurs before the record in the given tuple.
+    """
+    first_count = 0
+    current_element = None
+
+    for i, element in enumerate(test_tup):
+        if element == current_element:
+            first_count += 1
+        else:
+            current_element = element
+
+    return first_count

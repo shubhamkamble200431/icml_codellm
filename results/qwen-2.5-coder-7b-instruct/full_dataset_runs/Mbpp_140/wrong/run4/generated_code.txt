@@ -1,0 +1,6 @@
+def extract_singly(test_list):
+    """
+    Write a function to extract elements that occur singly in the given tuple list.
+    """
+    count = Counter(element for sublist in test_list for element in sublist)
+    return [element for element in test_list if count[element] == 1]

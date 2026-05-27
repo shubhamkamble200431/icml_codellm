@@ -1,0 +1,13 @@
+def count_Rectangles(radius):
+    """
+    Write a python function to count the number of rectangles in a circle of radius r.
+    """
+    n = 0
+    for x1 in range(-radius, radius + 1):
+        for y1 in range(-radius, radius + 1):
+            if x1**2 + y1**2 <= radius**2:
+                for x2 in range(x1, radius + 1):
+                    for y2 in range(y1, radius + 1):
+                        if (x2 - x1)**2 + (y2 - y1)**2 <= radius**2:
+                            n += 1
+    return n

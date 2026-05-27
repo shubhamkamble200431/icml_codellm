@@ -1,0 +1,12 @@
+def max_path_sum(tri, m, n):
+    """
+    Write a function to find the maximum total path sum in the given triangle.
+    """
+    # Start from the bottom of the triangle and work our way up
+    for i in range(m-2, -1, -1):
+        for j in range(i+1):
+            # Add the maximum value from the two adjacent cells below to the current cell
+            tri[i][j] += max(tri[i+1][j], tri[i+1][j+1])
+
+    # The top element now contains the maximum total path sum
+    return tri[0][0]

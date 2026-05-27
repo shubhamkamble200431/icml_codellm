@@ -1,0 +1,9 @@
+def float_sort(price):
+    """
+    Write a function to sort a tuple by its float element.
+    """
+    # Extract the float from each element in the tuple
+    price_float = tuple(float(item[1]) for item in price)
+    # Sort the list of floats
+    sorted_price_float = sorted(price_float)
+    return [(item[0], str(num)) for num in sorted_price_float]

@@ -1,0 +1,5 @@
+def sum_difference(n):
+    """
+    Write a function to calculate the difference between the squared sum of first n natural numbers and the sum of squared first n natural numbers.
+    """
+    return (n * (n + 1) // 2) ** 2 - n * (n + 1) * (2 * n + 1) // 6

@@ -1,0 +1,16 @@
+def sort_mixed_list(mixed_list):
+    """
+    Write a function to sort a given mixed list of integers and strings.
+    """
+    # Separate integer and string elements
+    int_elements = [x for x in mixed_list if isinstance(x, int)]
+    str_elements = [x for x in mixed_list if isinstance(x, str)]
+
+    # Sort integer and string lists separately
+    int_elements.sort()
+    str_elements.sort()
+
+    # Merge sorted lists into a new list
+    sorted_list = int_elements + str_elements
+
+    return sorted_list

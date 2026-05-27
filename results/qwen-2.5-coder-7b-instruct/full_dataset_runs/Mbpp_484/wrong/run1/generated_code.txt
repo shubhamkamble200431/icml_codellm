@@ -1,0 +1,5 @@
+def remove_matching_tuple(test_list1, test_list2):
+    """
+    Write a function to remove the matching tuples from the given two tuples.
+    """
+    return tuple(item for item in test_list1 if item not in test_list2)

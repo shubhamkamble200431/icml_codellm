@@ -1,0 +1,14 @@
+def common_in_nested_lists(nestedlist):
+    """
+    Write a function to find common elements in given nested lists. * list item * list item * list item * list item
+    """
+    if not nestedlist:
+        return []
+
+    # Flatten the list of lists
+    flattened = [item for sublist in nestedlist for item in sublist]
+
+    # Find the intersection of all sets created from sublists
+    common_elements = set(flattened[0]).intersection(*map(set, flattened[1:]))
+
+    return list(common_elements)

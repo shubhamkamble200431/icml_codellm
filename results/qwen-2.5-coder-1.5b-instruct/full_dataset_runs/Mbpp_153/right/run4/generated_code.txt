@@ -1,0 +1,7 @@
+def parabola_vertex(a, b, c):
+    """
+    Write a function to find the vertex of a parabola.
+    """
+    x = -b / (2 * a)
+    y = a * x**2 + b * x + c
+    return (x, y)

@@ -1,0 +1,10 @@
+def is_majority(arr, n, x):
+    """
+    Write a function to check for majority element in the given sorted array.
+    """
+    first_index = find_first_occurrence(arr, x)
+    if first_index == -1:
+        return False
+    if (first_index + n // 2) < n and arr[first_index + n // 2] == x:
+        return True
+    return False

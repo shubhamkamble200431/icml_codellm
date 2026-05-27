@@ -1,0 +1,7 @@
+def max_Product(arr):
+    """
+    Write a python function to find a pair with highest product from a given array of integers.
+    """
+    arr.sort()
+    n = len(arr)
+    return arr[n-1] * arr[n-2]

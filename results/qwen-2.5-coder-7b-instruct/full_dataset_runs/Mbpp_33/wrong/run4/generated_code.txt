@@ -1,0 +1,5 @@
+def decimal_To_Binary(N):
+    """
+    Write a python function to convert a decimal number to binary number.
+    """
+    return bin(N).replace("0b", "")

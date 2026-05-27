@@ -1,0 +1,13 @@
+def compute_Last_Digit(A,B):
+    """
+    Write a python function to find the last digit when factorial of a divides factorial of b.
+    """
+    if A == B:
+        return 1
+    elif (A - B) >= 5:
+        return 0
+    else:
+        last_digit = 1
+        for i in range(B + 1, A + 1):
+            last_digit = (last_digit * (i % 10)) % 10
+        return last_digit

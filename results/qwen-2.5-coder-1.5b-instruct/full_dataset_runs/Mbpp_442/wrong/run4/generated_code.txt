@@ -1,0 +1,8 @@
+def positive_count(nums):
+    """
+    Write a function to find the ration of positive numbers in an array of integers.
+    """
+    if not nums:
+        return 0
+    count = sum(1 for num in nums if num > 0)
+    return count / len(nums)

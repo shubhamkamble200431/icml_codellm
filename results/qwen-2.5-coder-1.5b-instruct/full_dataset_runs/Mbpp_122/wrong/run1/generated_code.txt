@@ -1,0 +1,4 @@
+def smartNumber(n):
+    """
+    Write a function to find n’th smart number.
+    """

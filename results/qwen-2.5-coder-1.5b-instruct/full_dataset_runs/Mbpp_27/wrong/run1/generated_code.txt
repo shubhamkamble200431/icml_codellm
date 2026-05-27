@@ -1,0 +1,5 @@
+def remove(list):
+    """
+    Write a python function to remove all digits from a list of strings.
+    """
+    return [s.replace(str(i), '') for i in range(10) for s in list if str(i) in s]

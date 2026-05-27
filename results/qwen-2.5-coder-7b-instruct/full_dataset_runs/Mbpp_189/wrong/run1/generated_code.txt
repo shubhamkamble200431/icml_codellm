@@ -1,0 +1,34 @@
+def first_Missing_Positive(arr,n):
+    """
+    Write a python function to find the first missing positive number.
+    """
+    contains_one = False
+    for i in range(n):
+        if arr[i] == 1:
+            contains_one = True
+            break
+    if not contains_one:
+        return 1
+
+    arr[0] = 1
+    n = max(2, n)
+
+    for i in range(n):
+        if abs(arr[i]) > n:
+            arr[i] = 1
+
+    for i in range(n):
+        index = abs(arr[i])
+        if index == n:
+            arr[0] = -abs(arr[0])
+        else:
+            arr[index] = -abs(arr[index])
+
+    for i in range(1, n):
+        if arr[i] > 0:
+            return i
+
+    if arr[0] > 0:
+        return n
+
+    return n + 1

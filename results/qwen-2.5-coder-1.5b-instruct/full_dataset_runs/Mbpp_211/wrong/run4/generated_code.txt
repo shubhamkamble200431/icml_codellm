@@ -1,0 +1,14 @@
+def count_Num(n):
+    """
+    Write a python function to count numbers whose oth and nth bits are set.
+    """
+    if n == 0:
+        return 0
+
+    count = 1
+    while n > 1:
+        n >>= 1
+        count <<= 1
+        count += n & 1
+
+    return count

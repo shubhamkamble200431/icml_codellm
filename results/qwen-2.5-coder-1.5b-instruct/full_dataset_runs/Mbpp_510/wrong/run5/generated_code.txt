@@ -1,0 +1,26 @@
+def no_of_subsequences(arr, k):
+    """
+    Write a function to find the number of subsequences having product smaller than k for the given non negative array.
+    """
+    count = 0
+
+    # Sort the array in ascending order
+    arr.sort()
+
+    # Iterate over all possible subsequence lengths
+    for i in range(1, len(arr) + 1):
+        for j in range(len(arr) - i + 1):
+            product = 1
+            is_valid = True
+
+            # Calculate the product of elements in the current subsequence
+            for num in arr[j:j+i]:
+                product *= num
+
+            # Check if the product is less than k
+            if product < k:
+                count += 1
+            else:
+                break
+
+    return count

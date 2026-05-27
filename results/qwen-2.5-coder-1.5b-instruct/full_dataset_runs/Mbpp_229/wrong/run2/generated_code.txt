@@ -1,0 +1,23 @@
+def re_arrange_array(arr, n):
+    """
+    Write a function to re-arrange the elements of the given array so that all negative elements appear before positive ones.
+    """
+    # Initialize pointers for negative and positive elements
+    left = 0
+    right = n - 1
+
+    # Traverse the array from both ends towards the center
+    while left < right:
+        # Move the left pointer until it encounters a non-negative element
+        while left < right and arr[left] < 0:
+            left += 1
+
+        # Move the right pointer until it encounters a non-positive element
+        while left < right and arr[right] > 0:
+            right -= 1
+
+        # If both pointers haven't crossed, swap the elements at these positions
+        if left < right:
+            arr[left], arr[right] = arr[right], arr[left]
+
+    return arr

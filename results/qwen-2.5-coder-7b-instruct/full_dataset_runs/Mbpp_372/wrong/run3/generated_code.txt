@@ -1,0 +1,9 @@
+def heap_assending(nums):
+    """
+    Write a function to sort a given list of elements in ascending order using heap queue algorithm.
+    """
+    heapq.heapify(nums)
+    sorted_list = []
+    while nums:
+        sorted_list.append(heapq.heappop(nums))
+    return sorted_list

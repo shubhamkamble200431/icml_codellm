@@ -1,0 +1,5 @@
+def angle_complex(a,b):
+    """
+    Write a function to get the angle of a complex number.
+    """
+    return cmath.phase(complex(a, b))

@@ -1,0 +1,8 @@
+def sequential_search(dlist, item):
+    """
+    Write a function to search an element in the given array by using sequential search.
+    """
+for i, x in enumerate(dlist):
+    if x == item:
+        return i  # Return index if item is found
+return -1  # Return -1 if item is not found

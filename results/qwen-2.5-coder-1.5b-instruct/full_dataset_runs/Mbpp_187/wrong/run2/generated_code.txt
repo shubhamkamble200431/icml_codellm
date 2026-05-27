@@ -1,0 +1,11 @@
+def longest_common_subsequence(X, Y, m, n):
+    """
+    Write a function to find the longest common subsequence for the given two sequences.
+    """
+if m == 0 or n == 0:
+    return ''
+else:
+    if X[m-1] == Y[n-1]:
+        return longest_common_subsequence(X, Y, m-1, n-1) + X[m-1]
+    else:
+        return max(longest_common_subsequence(X, Y, m-1, n), longest_common_subsequence(X, Y, m, n-1))

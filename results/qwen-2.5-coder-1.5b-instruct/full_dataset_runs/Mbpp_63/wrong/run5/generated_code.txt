@@ -1,0 +1,17 @@
+def max_difference(test_list):
+    """
+    Write a function to find the maximum difference between available pairs in the given tuple list.
+    """
+    if len(test_list) < 2:
+        return "Not enough elements"
+
+    min_val = test_list[0]
+    max_diff = 0
+
+    for i in range(1, len(test_list)):
+        if test_list[i] < min_val:
+            min_val = test_list[i]
+        elif test_list[i] - min_val > max_diff:
+            max_diff = test_list[i] - min_val
+
+    return max_diff

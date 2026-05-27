@@ -1,0 +1,10 @@
+def cal_electbill(units):
+    """
+    Write a function to calculate electricity bill.
+    """
+    if units <= 100:
+        return units * 0.50
+    elif units > 100 and units <= 200:
+        return 50 + (units - 100) * 0.75
+    else:
+        return 150 + (units - 200) * 1.00

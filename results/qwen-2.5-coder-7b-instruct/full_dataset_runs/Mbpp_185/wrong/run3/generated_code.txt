@@ -1,0 +1,5 @@
+def parabola_focus(a, b, c):
+    """
+    Write a function to find the focus of a parabola.
+    """
+    return (-b / (2 * a), c - ((4 * a * c) - (b ** 2)) / (4 * a))

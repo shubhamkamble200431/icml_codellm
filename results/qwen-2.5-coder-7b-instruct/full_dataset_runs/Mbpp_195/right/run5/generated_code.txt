@@ -1,0 +1,17 @@
+def first(arr,x,n):
+    """
+    Write a python function to find the first position of an element in a sorted array.
+    """
+    def binary_search_first_position(arr, x, low, high):
+        if high >= low:
+            mid = (high + low) // 2
+            if (mid == 0 or x > arr[mid - 1]) and (arr[mid] == x):
+                return mid
+            elif x > arr[mid]:
+                return binary_search_first_position(arr, x, mid + 1, high)
+            else:
+                return binary_search_first_position(arr, x, low, mid - 1)
+        else:
+            return -1
+
+    return binary_search_first_position(arr, x, 0, n - 1)

@@ -1,0 +1,11 @@
+def first_Repeated_Char(str):
+    """
+    Write a python function to find the first repeated character in a given string.
+    """
+    char_count = {}
+    for char in str:
+        if char in char_count:
+            return char
+        else:
+            char_count[char] = 1
+    return None

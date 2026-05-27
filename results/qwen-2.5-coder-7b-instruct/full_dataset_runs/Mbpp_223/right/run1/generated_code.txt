@@ -1,0 +1,23 @@
+def is_majority(arr, n, x):
+    """
+    Write a function to check for majority element in the given sorted array.
+    """
+    def binary_search_first(arr, x):
+        low = 0
+        high = len(arr) - 1
+        while low <= high:
+            mid = (low + high) // 2
+            if (mid == 0 or x > arr[mid - 1]) and (arr[mid] == x):
+                return mid
+            elif x > arr[mid]:
+                low = mid + 1
+            else:
+                high = mid - 1
+        return -1
+
+    index = binary_search_first(arr, x)
+    if index == -1:
+        return False
+    if (index + n // 2) < len(arr) and arr[index + n // 2] == x:
+        return True
+    return False

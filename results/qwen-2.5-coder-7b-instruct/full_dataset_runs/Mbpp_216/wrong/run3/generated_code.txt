@@ -1,0 +1,5 @@
+def check_subset_list(list1, list2):
+    """
+    Write a function to check if a nested list is a subset of another nested list.
+    """
+    return set(map(tuple, list1)).issubset(set(map(tuple, list2)))

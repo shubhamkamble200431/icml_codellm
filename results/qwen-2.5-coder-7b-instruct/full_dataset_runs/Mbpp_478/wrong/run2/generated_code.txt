@@ -1,0 +1,5 @@
+def remove_lowercase(str1):
+    """
+    Write a function to remove lowercase substrings from a given string.
+    """
+    return re.sub(r'[a-z]+', '', str1)

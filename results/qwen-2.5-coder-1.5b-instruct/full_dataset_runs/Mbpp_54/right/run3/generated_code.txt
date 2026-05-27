@@ -1,0 +1,20 @@
+def counting_sort(my_list):
+    """
+    Write a function to sort the given array by using counting sort.
+    """
+    max_val = max(my_list)
+    count_array = [0] * (max_val + 1)
+    sorted_index = 0
+
+    # Count each element's frequency
+    for num in my_list:
+        count_array[num] += 1
+
+    # Build the output array
+    for i in range(len(count_array)):
+        while count_array[i] > 0:
+            my_list[sorted_index] = i
+            sorted_index += 1
+            count_array[i] -= 1
+
+    return my_list

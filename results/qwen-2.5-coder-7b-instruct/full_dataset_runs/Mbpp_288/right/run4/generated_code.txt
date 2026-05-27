@@ -1,0 +1,5 @@
+def modular_inverse(arr, N, P):
+    """
+    Write a function to count array elements having modular inverse under given prime number p equal to itself.
+    """
+    return sum(1 for x in arr if (x * x) % P == 1)

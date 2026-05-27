@@ -1,0 +1,9 @@
+def __init__(self, value, list_num, index):
+    """
+    Write a function to find the smallest range that includes at-least one element from each of the given arrays.
+    """
+    self.value = value
+    self.list_num = list_num
+    self.index = index
+    self.heap = [(item[index], i, 0) for i, item in enumerate(list_num)]
+    heapq.heapify(self.heap)

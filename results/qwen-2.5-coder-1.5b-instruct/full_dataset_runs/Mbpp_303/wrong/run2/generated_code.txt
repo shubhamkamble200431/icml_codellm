@@ -1,0 +1,21 @@
+def solve(a,n):
+    """
+    Write a python function to check whether the count of inversion of two types are same or not.
+    """
+    # Initialize variables to keep track of counts
+    inv_count1 = 0
+    inv_count2 = 0
+
+    # First pass: Count the number of inversions in the array
+    for i in range(n-1):
+        for j in range(i+1, n):
+            if a[i] > a[j]:
+                inv_count1 += 1
+
+    # Second pass: Count the number of inversions in the reversed array
+    for i in range(n-1):
+        for j in range(i+1, n):
+            if a[n-i-1] > a[n-j-1]:
+                inv_count2 += 1
+
+    return inv_count1 == inv_count2

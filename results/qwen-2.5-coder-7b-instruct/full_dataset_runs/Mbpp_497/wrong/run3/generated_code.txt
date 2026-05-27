@@ -1,0 +1,8 @@
+def surfacearea_cone(r,h):
+    """
+    Write a function to find the surface area of a cone.
+    """
+    slant_height = math.sqrt(r**2 + h**2)
+    base_area = math.pi * r**2
+    lateral_surface_area = math.pi * r * slant_height
+    return base_area + lateral_surface_area

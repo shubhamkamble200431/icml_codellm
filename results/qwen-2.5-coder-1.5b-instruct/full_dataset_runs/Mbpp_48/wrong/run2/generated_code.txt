@@ -1,0 +1,5 @@
+def odd_bit_set_number(n):
+    """
+    Write a python function to set all odd bits of a given number.
+    """
+    return n | 0xAAAAAAAA

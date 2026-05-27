@@ -1,0 +1,6 @@
+def frequency_lists(list1):
+    """
+    Write a function to find frequency count of list of lists.
+    """
+    flattened_list = [item for sublist in list1 for item in sublist]
+    return dict(Counter(flattened_list))

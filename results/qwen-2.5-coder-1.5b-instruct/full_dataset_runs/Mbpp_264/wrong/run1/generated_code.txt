@@ -1,0 +1,5 @@
+def dog_age(h_age):
+    """
+    Write a function to calculate a dog's age in dog's years.
+    """
+    return 7 * h_age  # Assuming each human year is equivalent to 7 dog years

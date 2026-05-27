@@ -1,0 +1,17 @@
+def solution(*args):
+    """
+    Write a python function to find the average of odd numbers till a given odd number.
+    """
+    if len(args) < 1:
+        return "Please provide at least one argument."
+
+    odd_numbers = [x for x in args if x % 2 != 0]
+
+    if not odd_numbers:
+        return "No odd numbers provided."
+
+    total_sum = sum(odd_numbers)
+    count_of_odd_numbers = len(odd_numbers)
+
+    average = total_sum / count_of_odd_numbers
+    return average

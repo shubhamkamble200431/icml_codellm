@@ -1,0 +1,12 @@
+def month_season(month,days):
+    """
+    Write a function to print the season for the given month and day.
+    """
+    if (month == 12) or (month == 1) or (month == 2):
+        return 'Winter'
+    elif (month == 3) or (month == 4) or (month == 5):
+        return 'Spring'
+    elif (month == 6) or (month == 7) or (month == 8):
+        return 'Summer'
+    else:
+        return 'Autumn'

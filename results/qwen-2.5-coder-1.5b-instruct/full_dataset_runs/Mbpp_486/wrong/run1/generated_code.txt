@@ -1,0 +1,7 @@
+def nCr(n, r):
+    """
+    Write a function to compute binomial probability for the given number.
+    """
+    if r > n:
+        return 0
+    return comb(n, r)

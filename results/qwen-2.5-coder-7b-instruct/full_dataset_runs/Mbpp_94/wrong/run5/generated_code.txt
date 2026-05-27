@@ -1,0 +1,5 @@
+def index_minimum(test_list):
+    """
+    Write a function to extract the index minimum value record from the given tuples.
+    """
+return min(range(len(test_list)), key=lambda i: test_list[i])

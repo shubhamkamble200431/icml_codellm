@@ -1,0 +1,12 @@
+def eulerian_num(n, m):
+    """
+    Write a function to find eulerian number a(n, m).
+    """
+    if n == 0:
+        return int(m == 0)
+    
+    result = 0
+    for i in range(min(n + 1, m + 2)):
+        result += (-1) ** (n - i) * math.comb(i, min(m + 2, i)) * math.comb(n - i, i - m - 1)
+    
+    return int(result)

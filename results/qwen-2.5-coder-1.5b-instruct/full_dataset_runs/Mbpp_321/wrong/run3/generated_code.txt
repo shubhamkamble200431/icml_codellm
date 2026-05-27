@@ -1,0 +1,19 @@
+def find_demlo(s):
+    """
+    Write a function to find the demlo number for the given number.
+    """
+    if len(s) == 1:
+        return s
+
+    # Convert string to integer to perform operations
+    num = int(s)
+
+    # Loop until the number is 1
+    while num != 1:
+        # Calculate the next number by reversing and adding it to itself
+        next_num = int(str(num)[::-1]) + num
+
+        # Update the number for the next iteration
+        num = next_num
+
+    return str(num)

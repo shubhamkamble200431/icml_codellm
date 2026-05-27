@@ -1,0 +1,19 @@
+def rearange_string(S):
+    """
+    Write a function to check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.
+    """
+    char_count = {}
+
+    # Count occurrences of each character
+    for char in S:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    # Check if any character occurs more than once
+    if max(char_count.values()) > 1:
+        return False
+
+    # If no character repeats, we can always rearrange the string as required
+    return True

@@ -1,0 +1,19 @@
+def swap_count(s):
+    """
+    Write a function to find out the minimum no of swaps required for bracket balancing in the given string.
+    """
+    stack = []
+    swaps = 0
+
+    for char in s:
+        if char == '(':
+            stack.append(char)
+        elif char == ')':
+            if not stack:
+                # If there's no matching opening parenthesis, this is an imbalance
+                return len(s)  # All remaining characters need to be moved to balance them
+            stack.pop()
+            swaps += 1
+
+    # Remaining unmatched opening parentheses require additional swaps
+    return swaps + len(stack)

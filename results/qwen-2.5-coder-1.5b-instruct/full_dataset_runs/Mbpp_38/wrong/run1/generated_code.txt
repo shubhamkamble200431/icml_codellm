@@ -1,0 +1,4 @@
+def div_even_odd(list1):
+    """
+    Write a function to find the division of first even and odd number of a given list.
+    """

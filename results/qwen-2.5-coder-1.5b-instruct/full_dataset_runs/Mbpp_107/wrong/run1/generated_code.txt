@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """
+    start = int(args[0], 16)
+    end = int(args[1], 16) + 1
+    return sum(1 for num in range(start, end) if is_hexadecimal(num))

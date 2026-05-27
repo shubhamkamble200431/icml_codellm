@@ -1,0 +1,5 @@
+def is_num_decagonal(n):
+    """
+    Write a function to find the nth decagonal number.
+    """
+    return n * (3*n - 2) // 2 == int(n * (3*n - 2) / 2)

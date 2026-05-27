@@ -1,0 +1,28 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    def is_newman_shanks_williams_prime(num):
+        if num <= 1:
+            return False
+        
+        # Check if it's of the form 2^k + 1
+        if (num - 1) % 3 == 0:
+            return True
+        
+        for i in range(1, int(math.sqrt(num)) + 1):
+            if i * i > num:
+                break
+            if num % (i * i) == 0:
+                return False
+        
+        return True
+    
+    k = 1
+    while True:
+        m = 2**k + 1
+        if is_newman_shanks_williams_prime(m):
+            n -= 1
+            if n == 0:
+                return m
+        k += 1

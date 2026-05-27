@@ -1,0 +1,5 @@
+def intersection_nested_lists(l1, l2):
+    """
+    Write a function to find the nested list elements which are present in another list.
+    """
+    return [item for sublist in l1 for item in sublist if item in l2]

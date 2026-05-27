@@ -1,0 +1,10 @@
+def zigzag(n, k):
+    """
+    Write a function to find entringer number e(n, k).
+    """
+    if n == 1:
+        return 0
+    elif k > n - 2:
+        return n - 2
+    else:
+        return k * (n // 2) + min(k - (n % 2), n - k)

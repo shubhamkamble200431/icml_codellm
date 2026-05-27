@@ -1,0 +1,8 @@
+def solution(*args):
+    """
+    Write a python function to check whether the given string is a binary string or not.
+    """
+    for arg in args:
+        if not all(char in '01' for char in arg):
+            return False
+    return True

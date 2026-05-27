@@ -1,0 +1,20 @@
+def is_samepatterns(colors, patterns):
+    """
+    Write a function to check whether it follows the sequence given in the patterns array.
+    """
+    color_map = {}
+    pattern_set = set()
+
+    for i in range(len(patterns)):
+        if patterns[i] not in pattern_set:
+            pattern_set.add(patterns[i])
+            if i == 0:
+                color_map[patterns[i]] = colors[0]
+            else:
+                if colors[i] != colors[i-1]:
+                    return False
+                color_map[patterns[i]] = colors[i]
+        elif color_map[patterns[i]] != colors[i]:
+            return False
+
+    return True

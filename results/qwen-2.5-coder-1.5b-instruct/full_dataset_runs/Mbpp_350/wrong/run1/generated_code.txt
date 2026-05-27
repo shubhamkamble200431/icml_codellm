@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to minimize the length of the string by removing occurrence of only one character.
+    """
+    result = args[0]
+    # Use regular expression to find and replace occurrences of any single character with an empty string
+    return re.sub(r'(.)\1+', '', result)

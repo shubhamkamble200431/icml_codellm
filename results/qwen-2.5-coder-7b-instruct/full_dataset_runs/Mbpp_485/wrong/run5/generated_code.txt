@@ -1,0 +1,18 @@
+def solution(*args):
+    """
+    Write a function to find the largest palindromic number in the given array.
+    """
+    def is_palindrome(num):
+        return str(num) == str(num)[::-1]
+
+    largest_palindrome = None
+
+    for arg in args:
+        if isinstance(arg, list):
+            for num in arg:
+                if is_palindrome(num) and (largest_palindrome is None or num > largest_palindrome):
+                    largest_palindrome = num
+        elif is_palindrome(arg) and (largest_palindrome is None or arg > largest_palindrome):
+            largest_palindrome = arg
+
+    return largest_palindrome

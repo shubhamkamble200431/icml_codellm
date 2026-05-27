@@ -1,0 +1,12 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    i = 2
+    count = 0
+    while True:
+        if sympy.isprime(i) and sympy.isprime((3 * (2 ** i - 1) + 1) // 2):
+            count += 1
+            if count == n:
+                return i
+        i += 1

@@ -1,0 +1,4 @@
+def get_maxgold(gold, m, n):
+    """
+    Write a function to solve gold mine problem.
+    """

@@ -1,0 +1,5 @@
+def remove_odd(l):
+    """
+    Write a python function to remove odd numbers from a given list.
+    """
+return [x for x in l if x % 2 == 0]

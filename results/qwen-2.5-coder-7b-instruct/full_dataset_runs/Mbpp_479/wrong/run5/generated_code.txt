@@ -1,0 +1,8 @@
+def solution(*args):
+    """
+    Write a python function to find the first digit of a given number.
+    """
+    num = args[0]
+    while num >= 10:
+        num //= 10
+    return num

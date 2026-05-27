@@ -1,0 +1,16 @@
+def Find_Min(lst):
+    """
+    Write a python function to find the sublist having minimum length.
+    """
+    # Initialize the minimum list to the first element of the list
+    min_list = lst[0]
+
+    # Iterate through the list starting from the second element
+    for i in range(1, len(lst)):
+        # If the current sublist is shorter than the current minimum list
+        if len(lst[i]) < len(min_list):
+            # Update the minimum list to the current sublist
+            min_list = lst[i]
+
+    # Return the minimum list found
+    return min_list

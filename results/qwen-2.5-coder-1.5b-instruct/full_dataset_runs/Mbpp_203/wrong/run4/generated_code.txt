@@ -1,0 +1,23 @@
+def solution(*args):
+    """
+    Write a python function to find the hamming distance between given two integers.
+    """
+    if len(args) != 2:
+        raise ValueError("Exactly two arguments should be provided.")
+
+    num1 = args[0]
+    num2 = args[1]
+
+    hamming_distance = 0
+
+    while num1 > 0 or num2 > 0:
+        bit1 = num1 & 1
+        bit2 = num2 & 1
+
+        if bit1 != bit2:
+            hamming_distance += 1
+
+        num1 >>= 1
+        num2 >>= 1
+
+    return hamming_distance

@@ -1,0 +1,19 @@
+def shell_sort(my_list):
+    """
+    Write a function to sort the given array by using shell sort.
+    """
+    n = len(my_list)
+    # Start with a big gap and reduce it
+    interval = n // 2
+
+    while interval > 0:
+        for i in range(interval, n):
+            temp = my_list[i]
+            j = i
+            # Shift earlier interval-sorted elements to make space for temp
+            while j >= interval and my_list[j - interval] > temp:
+                my_list[j] = my_list[j - interval]
+                j -= interval
+            my_list[j] = temp
+        interval //= 2
+    return my_list

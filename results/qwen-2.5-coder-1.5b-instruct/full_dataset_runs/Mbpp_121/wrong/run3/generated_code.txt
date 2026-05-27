@@ -1,0 +1,22 @@
+def check_triplet(A, n, sum, count):
+    """
+    Write a function to find the triplet with sum of the given array
+    """
+    A.sort()  # Sort the array in ascending order
+    for i in range(n - 2):  # Iterate through the array excluding the last two elements
+        left = i + 1  # Initialize the left pointer
+        right = n - 1  # Initialize the right pointer
+
+        while left < right:
+            current_sum = A[i] + A[left] + A[right]
+
+            if current_sum == sum:
+                count += 1
+                left += 1
+                right -= 1
+            elif current_sum < sum:
+                left += 1
+            else:
+                right -= 1
+
+    return count

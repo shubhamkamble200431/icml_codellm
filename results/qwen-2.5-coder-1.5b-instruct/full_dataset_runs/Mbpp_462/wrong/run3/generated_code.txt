@@ -1,0 +1,12 @@
+def combinations_list(list1):
+    """
+    Write a function to find all possible combinations of the elements of a given list.
+    """
+    if len(list1) == 0:
+        return [[]]
+    else:
+        first_element = list1[0]
+        rest_of_list = list1[1:]
+        combinations_without_first = combinations_list(rest_of_list)
+        combinations_with_first = [comb + [first_element] for comb in combinations_without_first]
+        return combinations_without_first + combinations_with_first

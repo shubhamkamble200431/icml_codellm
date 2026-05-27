@@ -1,0 +1,18 @@
+def pancake_sort(nums):
+    """
+    Write a function to sort a list of elements using pancake sort.
+    """
+    def flip(sublist, k):
+        sublist[:k+1] = reversed(sublist[:k+1])
+
+    def find_max_index(sublist):
+        return sublist.index(max(sublist))
+
+    n = len(nums)
+    while n > 1:
+        max_idx = find_max_index(nums[:n])
+        if max_idx != n - 1:
+            flip(nums, max_idx)
+            flip(nums, n - 1)
+        n -= 1
+    return nums

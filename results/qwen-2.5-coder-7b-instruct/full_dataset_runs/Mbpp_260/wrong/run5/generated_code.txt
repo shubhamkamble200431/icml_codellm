@@ -1,0 +1,13 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    i = 1
+    count = 0
+    while True:
+        ns_number = (2**(2**i) - 1) // (2**i - 1)
+        if sympy.isprime(ns_number):
+            count += 1
+            if count == n:
+                return ns_number
+        i += 1

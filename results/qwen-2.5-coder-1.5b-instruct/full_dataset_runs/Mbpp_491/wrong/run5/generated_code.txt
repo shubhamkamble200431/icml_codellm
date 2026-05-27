@@ -1,0 +1,4 @@
+def sum_gp(a,n,r):
+    """
+    Write a function to find the sum of geometric progression series.
+    """

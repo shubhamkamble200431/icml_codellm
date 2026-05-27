@@ -1,0 +1,17 @@
+def max_Product(arr):
+    """
+    Write a python function to find a pair with highest product from a given array of integers.
+    """
+    # Find the maximum and minimum numbers in the array
+    max_num = max(arr)
+    min_num = min(arr)
+    
+    # If there are two elements with the same maximum absolute value,
+    # we need to check if their product is greater than the product of the other two
+    if max_num == min_num:
+        max_product = max(max_num * max_num, min_num * min_num)
+    else:
+        # The product of the maximum and minimum numbers will give us the highest product
+        max_product = max_num * min_num
+    
+    return max_product

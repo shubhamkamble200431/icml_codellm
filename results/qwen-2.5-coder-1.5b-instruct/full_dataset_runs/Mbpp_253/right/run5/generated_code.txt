@@ -1,0 +1,9 @@
+def count_integer(list1):
+    """
+    Write a python function to count integers from a given list.
+    """
+    count = 0
+    for item in list1:
+        if isinstance(item, int):
+            count += 1
+    return count

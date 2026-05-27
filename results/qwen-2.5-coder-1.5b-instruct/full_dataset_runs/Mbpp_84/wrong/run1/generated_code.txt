@@ -1,0 +1,16 @@
+def sequence(n):
+    """
+    Write a function to find the n-th number in newman conway sequence.
+    """
+    if n == 0:
+        return 1
+    elif n == 1:
+        return 2
+
+    fib = [1, 1]
+
+    while len(fib) < n + 1:
+        next_num = fib[-1] + fib[-2]
+        fib.append(next_num)
+
+    return fib[n - 1]

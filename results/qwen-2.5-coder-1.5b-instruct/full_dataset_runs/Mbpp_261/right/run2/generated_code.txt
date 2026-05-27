@@ -1,0 +1,6 @@
+def division_elements(test_tup1, test_tup2):
+    """
+    Write a function to perform mathematical division operation across the given tuples.
+    """
+    # Using map and lambda to apply the division operation between corresponding elements of the tuples
+    return tuple(map(lambda x, y: x / y if y != 0 else None, test_tup1, test_tup2))

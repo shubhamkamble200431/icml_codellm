@@ -1,0 +1,28 @@
+def lps(str):
+    """
+    Write a function to find the longest palindromic subsequence in the given string.
+    """
+    n = len(str)
+
+    # Create a table of size n x n that will hold length of 
+    # Longest Palindromic Subsequence subproblems.
+    L = [[0 for x in range(n)] for y in range(n)]
+
+    # Strings of length 1 are palindrome of length 1.
+    for i in range(n):
+        L[i][i] = 1
+
+    # Build L[m+1][][] in bottom up manner. Note that we need one 
+    # extra row and column to be maintained which is used for base case
+    for cl in range(2, n+1):
+        for i in range(n-cl+1):
+            j = i + cl - 1
+            if str[i] == str[j] and cl == 2:
+                L[i][j] = 2
+            elif str[i] == str[j]:
+                L[i][j] = L[i+1][j-1] + 2
+            else:
+                L[i][j] = max(L[i][j-1], L[i+1][j])
+
+    # The length of the longest palindromic subseqence is L[0][n-1]
+    return L[0][n-1]

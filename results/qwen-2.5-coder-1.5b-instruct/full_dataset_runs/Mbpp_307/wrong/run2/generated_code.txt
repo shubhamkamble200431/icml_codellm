@@ -1,0 +1,5 @@
+def colon_tuplex(tuplex,m,n):
+    """
+    Write a function to get a colon of a tuple.
+    """
+    return tuple(tuplex[i] for i in range(m, n+1))

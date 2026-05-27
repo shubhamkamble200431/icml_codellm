@@ -1,0 +1,5 @@
+def multi_list(rownum,colnum):
+    """
+    Write a function to generate a two-dimensional array.
+    """
+    return [[0 for _ in range(colnum)] for _ in range(rownum)]

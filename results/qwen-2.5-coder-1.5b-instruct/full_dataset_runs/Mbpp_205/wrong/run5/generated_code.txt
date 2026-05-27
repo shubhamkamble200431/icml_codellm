@@ -1,0 +1,23 @@
+def inversion_elements(test_tup):
+    """
+    Write a function to find the inversions of tuple elements in the given tuple list.
+    """
+    # Convert the input tuple into a list for manipulation
+    test_list = list(test_tup)
+
+    # Calculate the total number of elements in the list
+    n = len(test_list)
+
+    # Initialize a counter for inversions
+    inversion_count = 0
+
+    # Iterate over each element in the list
+    for i in range(n):
+        # For each element, compare it with all other elements after it
+        for j in range(i + 1, n):
+            # If the current element is greater than the compared element, it's an inversion
+            if test_list[i] > test_list[j]:
+                inversion_count += 1
+
+    # Return the total count of inversions
+    return inversion_count

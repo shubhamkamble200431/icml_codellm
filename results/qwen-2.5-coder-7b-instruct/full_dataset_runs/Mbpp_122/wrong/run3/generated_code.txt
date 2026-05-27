@@ -1,0 +1,15 @@
+def smartNumber(n):
+    """
+    Write a function to find n’th smart number.
+    """
+    def is_smart(num):
+        return len(set(int(digit) for digit in str(num))) == 3
+
+    count = 0
+    num = 1
+    while True:
+        if is_smart(num):
+            count += 1
+            if count == n:
+                return num
+        num += 1

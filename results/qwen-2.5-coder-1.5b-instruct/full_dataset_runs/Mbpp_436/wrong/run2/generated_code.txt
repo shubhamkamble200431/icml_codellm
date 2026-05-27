@@ -1,0 +1,6 @@
+def neg_nos(list1):
+    """
+    Write a python function to print negative numbers in a list.
+    """
+    # Using list comprehension to filter out negative numbers from the list
+    return [num for num in list1 if num < 0]

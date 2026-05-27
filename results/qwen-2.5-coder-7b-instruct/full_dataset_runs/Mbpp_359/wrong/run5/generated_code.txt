@@ -1,0 +1,10 @@
+def Check_Solution(a,b,c):
+    """
+    Write a python function to check whether one root of the quadratic equation is twice of the other or not.
+    """
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return False
+    root1 = (-b + discriminant**0.5) / (2*a)
+    root2 = (-b - discriminant**0.5) / (2*a)
+    return root1 == 2*root2 or root2 == 2*root1

@@ -1,0 +1,11 @@
+def char_frequency(str1):
+    """
+    Write a function to count character frequency of a given string.
+    """
+    freq_dict = {}
+    for char in str1:
+        if char in freq_dict:
+            freq_dict[char] += 1
+        else:
+            freq_dict[char] = 1
+    return freq_dict

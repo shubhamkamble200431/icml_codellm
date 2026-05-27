@@ -1,0 +1,4 @@
+def swap_numbers(a,b):
+    """
+    Write a function to swap two numbers.
+    """

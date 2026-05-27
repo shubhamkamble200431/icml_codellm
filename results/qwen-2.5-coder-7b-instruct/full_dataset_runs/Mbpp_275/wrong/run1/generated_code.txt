@@ -1,0 +1,5 @@
+def get_Position(a,n,m):
+    """
+    Write a python function to find the position of the last removed element from the given array.
+    """
+    return (n * m - 1) % m

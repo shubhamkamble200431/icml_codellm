@@ -1,0 +1,6 @@
+def subject_marks(subjectmarks):
+    """
+    Write a function to sort a list of tuples using lambda.
+    """
+subject_marks = [('Math', 85), ('Science', 92), ('History', 78)]
+sorted_subject_marks = sorted(subject_marks, key=lambda x: x[1], reverse=True)

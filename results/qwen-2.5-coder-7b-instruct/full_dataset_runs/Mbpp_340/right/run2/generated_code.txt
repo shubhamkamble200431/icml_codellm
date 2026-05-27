@@ -1,0 +1,9 @@
+def sum_three_smallest_nums(lst):
+    """
+    Write a python function to find the sum of the three lowest positive numbers from a given list of numbers.
+    """
+    # Filter out non-positive numbers and sort the remaining list
+    sorted_positive_nums = sorted([num for num in lst if num > 0])
+
+    # Sum the first three elements of the sorted list
+    return sum(sorted_positive_nums[:3])

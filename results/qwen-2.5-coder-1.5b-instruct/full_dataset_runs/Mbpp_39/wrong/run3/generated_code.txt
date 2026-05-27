@@ -1,0 +1,18 @@
+def rearange_string(S):
+    """
+    Write a function to check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.
+    """
+    char_count = Counter(S)
+    max_char_count = max(char_count.values())
+
+    # If there is more than one character with a count greater than half the length of S,
+    # it's impossible to rearrange the string as required
+    if len(S) % 2 == 0 and max_char_count > len(S) // 2:
+        return "No"
+
+    # If the number of characters with the highest frequency is odd, we need at least two such characters
+    if max_char_count % 2 != 0 and max_char_count >= len(S) // 2 + 1:
+        return "No"
+
+    # If all characters have counts less than or equal to half the length of S, it's possible to rearrange the string
+    return "Yes"

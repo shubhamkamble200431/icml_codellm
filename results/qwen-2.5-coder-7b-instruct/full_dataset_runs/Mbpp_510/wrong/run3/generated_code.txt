@@ -1,0 +1,14 @@
+def no_of_subsequences(arr, k):
+    """
+    Write a function to find the number of subsequences having product smaller than k for the given non negative array.
+    """
+    def helper(index, current_product):
+        if index == len(arr):
+            return 1 if current_product < k else 0
+        include = 0
+        if arr[index] <= k / current_product:
+            include = helper(index + 1, current_product * arr[index])
+        exclude = helper(index + 1, current_product)
+        return include + exclude - (include and exclude)
+
+    return helper(0, 1) - 1

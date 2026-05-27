@@ -1,0 +1,11 @@
+def count_common(words):
+    """
+    Write a function to count the most common words in a dictionary.
+    """
+    # Count the frequency of each word in the dictionary
+    word_counts = Counter(words)
+
+    # Get the top 3 most common words
+    top_words = word_counts.most_common(3)
+
+    return top_words

@@ -1,0 +1,5 @@
+def pos_count(list):
+    """
+    Write a python function to count positive numbers in a list.
+    """
+    return sum(1 for x in list if x > 0)

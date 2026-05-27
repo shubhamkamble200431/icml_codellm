@@ -1,0 +1,12 @@
+def __init__(self, value, list_num, index):
+    """
+    Write a function to find the smallest range that includes at-least one element from each of the given arrays.
+    """
+    self.value = value
+    self.list_num = list_num
+    self.index = index
+    # Sort the lists based on their values
+    self.lists = sorted([sorted(lst) for lst in zip(*list_num)])
+    # Calculate the minimum and maximum values in the sorted lists
+    self.min_val = min(min(lst) for lst in self.lists)
+    self.max_val = max(max(lst) for lst in self.lists)

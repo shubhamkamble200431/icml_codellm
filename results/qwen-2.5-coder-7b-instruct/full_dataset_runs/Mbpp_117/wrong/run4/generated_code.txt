@@ -1,0 +1,5 @@
+def list_to_float(test_list):
+    """
+    Write a function to convert all possible convertible elements in the list to float.
+    """
+    return [float(item) if isinstance(item, (int, float)) else item for item in test_list]

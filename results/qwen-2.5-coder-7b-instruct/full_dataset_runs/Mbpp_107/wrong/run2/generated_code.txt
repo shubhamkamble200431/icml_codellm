@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """
+    return len([x for x in args if isinstance(x, int) and 0 <= x < 16])

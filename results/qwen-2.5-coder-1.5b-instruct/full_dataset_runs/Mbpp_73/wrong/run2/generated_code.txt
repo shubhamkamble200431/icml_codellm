@@ -1,0 +1,9 @@
+def multiple_split(text):
+    """
+    Write a function to split the given string with multiple delimiters by using regex.
+    """
+    # Define the regular expression pattern for multiple delimiters
+    pattern = r'[ ,;]\s*'
+
+    # Split the text using the defined pattern
+    return re.split(pattern, text)

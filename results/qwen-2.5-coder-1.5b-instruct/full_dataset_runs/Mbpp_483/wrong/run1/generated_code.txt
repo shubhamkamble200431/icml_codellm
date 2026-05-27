@@ -1,0 +1,10 @@
+def first_Factorial_Divisible_Number(x):
+    """
+    Write a python function to find the first natural number whose factorial is divisible by x.
+    """
+    i = 1
+    while True:
+        factorial = math.factorial(i)
+        if factorial % x == 0:
+            return i
+        i += 1

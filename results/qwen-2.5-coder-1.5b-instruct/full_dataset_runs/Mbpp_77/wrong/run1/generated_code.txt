@@ -1,0 +1,22 @@
+def is_Diff(n):
+    """
+    Write a python function to find the difference between sum of even and odd digits.
+    """
+    if n < 0:
+        return "Negative numbers do not have digits"
+
+    # Convert the number to string to easily iterate over each digit
+    num_str = str(abs(n))
+
+    even_sum = 0
+    odd_sum = 0
+
+    for digit in num_str:
+        digit_int = int(digit)
+
+        if digit_int % 2 == 0:
+            even_sum += digit_int
+        else:
+            odd_sum += digit_int
+
+    return even_sum - odd_sum

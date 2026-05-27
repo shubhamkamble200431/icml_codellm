@@ -1,0 +1,13 @@
+def find_peak_util(arr, low, high, n):
+    """
+    Write a function to find the peak element in the given array.
+    """
+    if low == high:
+        return arr[low]
+
+    mid = (low + high) // 2
+
+    if arr[mid] > arr[mid + 1]:
+        return find_peak_util(arr, low, mid, n)
+    else:
+        return find_peak_util(arr, mid + 1, high, n)

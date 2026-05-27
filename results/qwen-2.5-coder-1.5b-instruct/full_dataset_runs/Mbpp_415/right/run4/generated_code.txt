@@ -1,0 +1,16 @@
+def max_Product(arr):
+    """
+    Write a python function to find a pair with highest product from a given array of integers.
+    """
+    # Initialize the variables for the maximum product and the pair
+    max_product = float('-inf')
+    pair = (0, 0)
+
+    # Iterate through the array to find the maximum product
+    for i in range(len(arr)):
+        for j in range(i + 1, len(arr)):
+            if arr[i] * arr[j] > max_product:
+                max_product = arr[i] * arr[j]
+                pair = (arr[i], arr[j])
+
+    return pair

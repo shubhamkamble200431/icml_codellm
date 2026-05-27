@@ -1,0 +1,21 @@
+def func(nums, k):
+    """
+    Write a function to find the top k integers that occur most frequently from given lists of sorted and distinct integers using heap queue algorithm.
+    """
+    counter = {}
+    for num in nums:
+        if num in counter:
+            counter[num] += 1
+        else:
+            counter[num] = 1
+
+    max_heap = []
+    for key, value in counter.items():
+        if len(max_heap) < k:
+            heapq.heappush(max_heap, (-value, key))
+        elif -value > max_heap[0][0]:
+            heapq.heappop(max_heap)
+            heapq.heappush(max_heap, (-value, key))
+
+    result = [heapq.heappop(max_heap)[1] for _ in range(k)]
+    return result

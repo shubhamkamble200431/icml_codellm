@@ -1,0 +1,26 @@
+def longest_subseq_with_diff_one(arr, n):
+    """
+    Write a function to find the longest subsequence such that the difference between adjacents is one for the given array.
+    """
+    memo = defaultdict(lambda: -1)
+
+    def dp(i, prev):
+        if i == n:
+            return 0
+
+        key = (i, prev)
+        if memo[key] != -1:
+            return memo[key]
+
+        max_length = 0
+        # Include the current element if it can be part of the subsequence
+        if abs(arr[i] - prev) == 1:
+            max_length = 1 + dp(i + 1, arr[i])
+
+        # Exclude the current element and move to the next index
+        max_length = max(max_length, dp(i + 1, prev))
+
+        memo[key] = max_length
+        return max_length
+
+    return dp(0, None)

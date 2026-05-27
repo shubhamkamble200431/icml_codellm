@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to check whether the given string is a binary string or not.
+    """
+    return all(arg in ['0', '1'] for arg in args)

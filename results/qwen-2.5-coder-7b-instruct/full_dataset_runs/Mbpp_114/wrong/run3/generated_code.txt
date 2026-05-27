@@ -1,0 +1,5 @@
+def assign_freq(test_list):
+    """
+    Write a function to assign frequency to each tuple in the given tuple list.
+    """
+    return [(item, freq) for item, freq in Counter(test_list).items()]

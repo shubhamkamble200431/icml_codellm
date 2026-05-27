@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to find element at a given index after number of rotations.
+    """
+    n = len(args)
+    k = args[0]
+    target_index = args[1]
+
+    # Calculate new index considering rotation
+    if k < 0:
+        k += n
+
+    rotated_array = args[:k] + args[k:]  # Rotate array by 'k' positions
+    return rotated_array[target_index]

@@ -1,0 +1,12 @@
+def text_match_string(text):
+    """
+    Write a function that matches a word at the beginning of a string.
+    """
+    # Define a regular expression pattern that matches a word at the beginning of a string
+    pattern = r'^\w+'
+    
+    # Use the re.match function to check if the entire string matches the pattern
+    match = re.match(pattern, text)
+    
+    # If a match is found, return True, otherwise return False
+    return bool(match)

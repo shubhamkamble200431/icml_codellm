@@ -1,0 +1,5 @@
+def check_Equality(s):
+    """
+    Write a python function to count the number of substrings with same first and last characters.
+    """
+    return sum(s[i] == s[-i-1] for i in range(len(s)))

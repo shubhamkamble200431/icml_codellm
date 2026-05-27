@@ -1,0 +1,21 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    size = len(my_matrix)
+    total_sum = sum(range(1, size * size + 1))
+
+    # Check rows and columns
+    for i in range(size):
+        row_sum = sum(my_matrix[i])
+        col_sum = sum(my_matrix[j][i] for j in range(size))
+        if row_sum != total_sum or col_sum != total_sum:
+            return False
+
+    # Check diagonals
+    main_diag_sum = sum(my_matrix[i][i] for i in range(size))
+    anti_diag_sum = sum(my_matrix[i][size - 1 - i] for i in range(size))
+    if main_diag_sum != total_sum or anti_diag_sum != total_sum:
+        return False
+
+    return True

@@ -1,0 +1,13 @@
+def remove_replica(test_tup):
+    """
+    Write a function to remove tuple elements that occur more than once and replace the duplicates with some custom value.
+    """
+    res = []
+    seen = set()
+    for ele in test_tup:
+        if ele in seen:
+            res.append('custom_value')
+        else:
+            seen.add(ele)
+            res.append(ele)
+    return tuple(res)

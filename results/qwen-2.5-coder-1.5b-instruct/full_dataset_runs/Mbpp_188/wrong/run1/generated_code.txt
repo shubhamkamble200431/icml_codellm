@@ -1,0 +1,20 @@
+def prod_Square(n):
+    """
+    Write a python function to check whether the given number can be represented by product of two squares or not.
+    """
+    if n < 1:
+        return False
+
+    root = int(math.sqrt(n))
+
+    while root > 0:
+        if (n % root) == 0:
+            factor1 = root
+            factor2 = n // root
+
+            # Check if both factors are perfect squares
+            if is_perfect_square(factor1) and is_perfect_square(factor2):
+                return True
+        root -= 1
+
+    return False

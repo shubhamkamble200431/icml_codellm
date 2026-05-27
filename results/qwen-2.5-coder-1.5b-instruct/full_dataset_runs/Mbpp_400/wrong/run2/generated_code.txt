@@ -1,0 +1,5 @@
+def extract_freq(test_list):
+    """
+    Write a function to extract the frequency of unique tuples in the given list order irrespective.
+    """
+    return dict(Counter(tuple(t) for t in test_list))

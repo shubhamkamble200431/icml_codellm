@@ -1,0 +1,15 @@
+def solution(*args):
+    """
+    Write a python function to find the largest prime factor of a given number.
+    """
+    max_factor = -float('inf')
+    for arg in args:
+        while arg > 1:
+            if is_prime(arg):
+                max_factor = max(max_factor, arg)
+                break
+            for divisor in range(2, int(arg**0.5) + 1):
+                if arg % divisor == 0:
+                    arg //= divisor
+                    break
+    return max_factor

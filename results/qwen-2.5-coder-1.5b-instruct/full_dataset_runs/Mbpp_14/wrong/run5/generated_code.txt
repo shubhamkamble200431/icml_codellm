@@ -1,0 +1,9 @@
+def solution(*args):
+    """
+    Write a python function to find the volume of a triangular prism.
+    """
+    base = args[0]
+    height = args[1]
+    depth = args[2]
+
+    return 0.5 * base * height * depth

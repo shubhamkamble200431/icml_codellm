@@ -1,0 +1,5 @@
+def modular_inverse(arr, N, P):
+    """
+    Write a function to count array elements having modular inverse under given prime number p equal to itself.
+    """
+from typing import List

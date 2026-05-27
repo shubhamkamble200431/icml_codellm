@@ -1,0 +1,6 @@
+def position_max(list1):
+    """
+    Write a function to find all index positions of the maximum values in a given list.
+    """
+    max_val = max(list1)
+    return [i for i, val in enumerate(list1) if val == max_val]

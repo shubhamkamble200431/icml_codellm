@@ -1,0 +1,25 @@
+def solution(*args):
+    """
+    Write a python function to find the largest prime factor of a given number.
+    """
+    args = list(args)
+    num = args[0]
+    factors = []
+
+    while num > 1:
+        # If num is divisible by a prime factor, divide it and add it to the factors list
+        while num % factors[-1] == 0:
+            factors.append(factors[-1])
+            num //= factors[-1]
+        # Find the next smallest prime factor
+        for factor in range(max(2, factors[-1]), int(math.sqrt(num)) + 1):
+            if num % factor == 0:
+                factors.append(factor)
+                num //= factor
+                break
+        else:
+            factors.append(num)
+            num = 1
+
+    # Return the last element of the factors list, which will be the largest prime factor
+    return factors[-1]

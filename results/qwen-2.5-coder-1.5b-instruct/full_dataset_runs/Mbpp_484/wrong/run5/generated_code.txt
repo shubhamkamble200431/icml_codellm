@@ -1,0 +1,5 @@
+def remove_matching_tuple(test_list1, test_list2):
+    """
+    Write a function to remove the matching tuples from the given two tuples.
+    """
+from typing import List, Tuple

@@ -1,0 +1,12 @@
+def remove_matching_tuple(test_list1, test_list2):
+    """
+    Write a function to remove the matching tuples from the given two tuples.
+    """
+    # Using set intersection to find common elements
+    common_elements = set(test_list1) & set(test_list2)
+
+    # Removing common elements from both lists
+    test_list1 = [item for item in test_list1 if item not in common_elements]
+    test_list2 = [item for item in test_list2 if item not in common_elements]
+
+    return test_list1, test_list2

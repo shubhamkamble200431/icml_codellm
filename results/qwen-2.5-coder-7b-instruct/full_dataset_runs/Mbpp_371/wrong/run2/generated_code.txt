@@ -1,0 +1,12 @@
+def smallest_missing(A, left_element, right_element):
+    """
+    Write a function to find the smallest missing element in a sorted array.
+    """
+    if left_element == right_element:
+        return A[left_element] + 1
+    
+    mid = (left_element + right_element) // 2
+    if A[mid] == mid + A[0]:
+        return smallest_missing(A, mid + 1, right_element)
+    else:
+        return smallest_missing(A, left_element, mid)

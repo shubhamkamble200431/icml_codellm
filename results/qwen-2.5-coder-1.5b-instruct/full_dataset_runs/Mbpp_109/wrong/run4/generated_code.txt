@@ -1,0 +1,17 @@
+def odd_Equivalent(s,n):
+    """
+    Write a python function to find the count of rotations of a binary string with odd value.
+    """
+    # Initialize the count of rotations that result in an odd value
+    count = 0
+
+    # Iterate over each possible starting point for rotation
+    for start in range(n):
+        # Extract the substring starting from the current position and length n
+        sub_str = s[start:start+n]
+
+        # Convert the substring into an integer and check if it is odd
+        if int(sub_str) % 2 != 0:
+            count += 1
+
+    return count

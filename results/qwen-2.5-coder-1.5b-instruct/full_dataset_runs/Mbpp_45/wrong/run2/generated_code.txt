@@ -1,0 +1,7 @@
+def find_gcd(x, y):
+    """
+    Write a function to find the gcd of the given array elements.
+    """
+    while y != 0:
+        x, y = y, x % y
+    return x

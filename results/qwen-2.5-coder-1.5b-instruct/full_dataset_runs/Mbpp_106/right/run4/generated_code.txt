@@ -1,0 +1,5 @@
+def add_lists(test_list, test_tup):
+    """
+    Write a function to add the given list to the given tuples.
+    """
+    return test_tup + tuple(test_list)

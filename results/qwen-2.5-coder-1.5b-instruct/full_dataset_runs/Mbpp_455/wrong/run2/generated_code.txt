@@ -1,0 +1,5 @@
+def check_monthnumb_number(monthnum2):
+    """
+    Write a function to check whether the given month number contains 31 days or not.
+    """
+    return (monthnum2 in range(1, 7)) + (monthnum2 in [9, 11])

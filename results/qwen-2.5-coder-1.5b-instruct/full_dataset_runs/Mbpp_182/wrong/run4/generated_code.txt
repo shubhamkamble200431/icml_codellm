@@ -1,0 +1,5 @@
+def find_character(string):
+    """
+    Write a function to find uppercase, lowercase, special character and numeric values using regex.
+    """
+import re

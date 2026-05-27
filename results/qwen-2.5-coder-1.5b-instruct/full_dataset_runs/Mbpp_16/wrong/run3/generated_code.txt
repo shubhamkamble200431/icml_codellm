@@ -1,0 +1,8 @@
+def text_lowercase_underscore(text):
+    """
+    Write a function to find sequences of lowercase letters joined with an underscore.
+    """
+    # Find all sequences of lowercase letters surrounded by underscores
+    pattern = r'(?<=_)\w+(?=_)'
+    matches = re.findall(pattern, text)
+    return matches

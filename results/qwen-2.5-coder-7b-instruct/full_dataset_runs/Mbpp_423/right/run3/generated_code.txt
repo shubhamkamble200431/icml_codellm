@@ -1,0 +1,15 @@
+def get_maxgold(gold, m, n):
+    """
+    Write a function to solve gold mine problem.
+    """
+    dp = [[0] * n for _ in range(m)]
+    
+    for col in range(n-1, -1, -1):
+        for row in range(m):
+            right = 0 if col == n - 1 else dp[row][col + 1]
+            right_up = 0 if row == 0 or col == n - 1 else dp[row - 1][col + 1]
+            right_down = 0 if row == m - 1 or col == n - 1 else dp[row + 1][col + 1]
+            
+            dp[row][col] = gold[row][col] + max(right, right_up, right_down)
+    
+    return max(dp[row][0] for row in range(m))

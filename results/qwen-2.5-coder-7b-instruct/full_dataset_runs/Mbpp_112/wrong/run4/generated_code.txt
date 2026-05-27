@@ -1,0 +1,10 @@
+def solution(*args):
+    """
+    Write a python function to find the perimeter of a cylinder.
+    """
+    if len(args) != 2:
+        raise ValueError("The function requires exactly two arguments: radius and height.")
+
+    radius, height = args
+
+    return 2 * math.pi * radius * (radius + height)

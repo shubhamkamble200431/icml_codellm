@@ -1,0 +1,6 @@
+def count_Squares(m,n):
+    """
+    Write a python function to count the number of squares in a rectangle.
+    """
+from typing import *
+import numpy as np

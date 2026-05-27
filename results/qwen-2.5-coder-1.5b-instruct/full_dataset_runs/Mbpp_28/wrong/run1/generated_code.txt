@@ -1,0 +1,4 @@
+def binomial_Coeff(n,k):
+    """
+    Write a python function to find binomial co-efficient.
+    """

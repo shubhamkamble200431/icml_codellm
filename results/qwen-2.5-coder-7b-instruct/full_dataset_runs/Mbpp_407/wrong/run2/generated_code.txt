@@ -1,0 +1,14 @@
+def rearrange_bigger(n):
+    """
+    Write a function to create the next bigger number by rearranging the digits of a given number.
+    """
+    digits = list(str(n))
+    for i in range(len(digits)-2, -1, -1):
+        if digits[i] < digits[i+1]:
+            right_part = digits[i:]
+            min_greater = min(filter(lambda x: x > right_part[0], right_part))
+            right_part.remove(min_greater)
+            right_part.sort()
+            digits[i:] = [min_greater] + right_part
+            return int("".join(digits))
+    return -1

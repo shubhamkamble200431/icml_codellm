@@ -1,0 +1,10 @@
+def No_of_Triangle(N,K):
+    """
+    Write a python function to count the maximum number of equilateral triangles that can be formed within a given equilateral triangle.
+    """
+    if K < 3:
+        return 0
+    if N == K:
+        return 1
+    else:
+        return (N * (N - 1) * (N - 2)) // 6

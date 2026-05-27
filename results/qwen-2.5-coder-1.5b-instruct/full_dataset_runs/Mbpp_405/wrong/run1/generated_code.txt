@@ -1,0 +1,8 @@
+def check_tuplex(tuplex,tuple1):
+    """
+    Write a function to check whether an element exists within a tuple.
+    """
+    if any(element in tuplex for element in tuple1):
+        return True
+    else:
+        return False

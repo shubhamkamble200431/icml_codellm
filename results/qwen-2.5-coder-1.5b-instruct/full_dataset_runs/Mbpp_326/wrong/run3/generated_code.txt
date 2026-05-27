@@ -1,0 +1,6 @@
+def most_occurrences(test_list):
+    """
+    Write a function to get the word with most number of occurrences in the given strings list.
+    """
+    counter = Counter(word for sentence in test_list for word in sentence.split())
+    return max(counter.keys(), key=counter.get)

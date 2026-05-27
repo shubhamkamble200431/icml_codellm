@@ -1,0 +1,5 @@
+def is_Monotonic(A):
+    """
+    Write a python function to check whether the given array is monotonic or not.
+    """
+    return np.all(np.diff(A) <= 0) or np.all(np.diff(A) >= 0)

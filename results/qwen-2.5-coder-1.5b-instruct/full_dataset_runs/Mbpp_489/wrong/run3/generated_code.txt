@@ -1,0 +1,6 @@
+def frequency_Of_Largest(n,arr):
+    """
+    Write a python function to find the frequency of the largest value in a given array.
+    """
+max_val = max(arr)
+return arr.count(max_val)

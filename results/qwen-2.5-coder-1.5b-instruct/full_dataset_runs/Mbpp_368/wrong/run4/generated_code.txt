@@ -1,0 +1,12 @@
+def repeat_tuples(test_tup, N):
+    """
+    Write a function to repeat the given tuple n times.
+    """
+    count = defaultdict(int)
+    for t in test_tup:
+        count[t] += 1
+    result = []
+    for i in range(N):
+        for t, c in count.items():
+            result.extend([t] * c)
+    return tuple(result)

@@ -1,0 +1,12 @@
+def same_order(l1, l2):
+    """
+    Write a function to check if the common elements between two given lists are in the same order or not.
+    """
+    i, j = 0, 0
+    while i < len(l1) and j < len(l2):
+        if l1[i] == l2[j]:
+            i += 1
+            j += 1
+        else:
+            j += 1
+    return i == len(l1)

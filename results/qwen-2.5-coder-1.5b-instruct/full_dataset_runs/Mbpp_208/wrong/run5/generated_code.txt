@@ -1,0 +1,6 @@
+def is_decimal(num):
+    """
+    Write a function to check the given decimal with a precision of 2 by using regex.
+    """
+    # Regular expression to match a decimal number with exactly two decimal places
+    return bool(re.match(r'^\d+\.\d{2}$', num))

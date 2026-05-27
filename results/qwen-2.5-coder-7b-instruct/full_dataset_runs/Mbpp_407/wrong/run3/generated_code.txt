@@ -1,0 +1,21 @@
+def rearrange_bigger(n):
+    """
+    Write a function to create the next bigger number by rearranging the digits of a given number.
+    """
+    num_str = list(str(n))
+    i = len(num_str) - 2
+    while i >= 0 and num_str[i] >= num_str[i + 1]:
+        i -= 1
+    
+    if i < 0:
+        return -1
+    
+    j = len(num_str) - 1
+    while num_str[j] <= num_str[i]:
+        j -= 1
+    
+    num_str[i], num_str[j] = num_str[j], num_str[i]
+    
+    num_str[i + 1:] = reversed(num_str[i + 1:])
+    
+    return int("".join(num_str))

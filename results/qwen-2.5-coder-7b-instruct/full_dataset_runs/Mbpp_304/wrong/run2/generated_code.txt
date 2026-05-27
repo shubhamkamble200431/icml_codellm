@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to find element at a given index after number of rotations.
+    """
+    n = len(args)
+    rotation_index = args[-1]
+    target_index = args[0]
+
+    effective_rotation = rotation_index % n
+
+    if target_index < effective_rotation:
+        return None
+    else:
+        return args[target_index - effective_rotation + 1]

@@ -1,0 +1,17 @@
+def solution(*args):
+    """
+    Write a python function to find the perimeter of a cylinder.
+    """
+    if len(args) != 2:
+        raise ValueError("The input must contain exactly two arguments.")
+
+    radius, height = args
+
+    # Calculate the circumference and the area of the base
+    circumference = 2 * math.pi * radius
+    area_base = math.pi * radius ** 2
+
+    # Calculate the total perimeter of the cylinder
+    perimeter = 2 * circumference + 2 * area_base
+
+    return perimeter

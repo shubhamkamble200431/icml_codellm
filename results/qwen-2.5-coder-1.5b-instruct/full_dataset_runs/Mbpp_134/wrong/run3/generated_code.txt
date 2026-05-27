@@ -1,0 +1,12 @@
+def solution(*args):
+    """
+    Write a python function to check whether the last element of given array is even or odd after performing an operation p times.
+    """
+    # Assuming p is defined somewhere in your code, replace it with actual value
+    p = 2
+
+    # Calculate the new number after performing the operation p times
+    new_number = args[-1] + p
+
+    # Check if the last element is even or odd
+    return "even" if new_number % 2 == 0 else "odd"

@@ -1,0 +1,6 @@
+def next_Perfect_Square(N):
+    """
+    Write a python function to find the next perfect square greater than a given number.
+    """
+    root = int(math.sqrt(N)) + 1
+    return root ** 2

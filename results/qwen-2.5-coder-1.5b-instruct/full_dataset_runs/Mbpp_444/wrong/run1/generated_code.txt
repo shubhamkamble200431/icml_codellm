@@ -1,0 +1,5 @@
+def trim_tuple(test_list, K):
+    """
+    Write a function to trim each tuple by k in the given tuple list.
+    """
+    return tuple(x[:K] for x in test_list)

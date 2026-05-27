@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to find the last digit of a given number.
+    """
+return args[-1] % 10 if args else None

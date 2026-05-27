@@ -1,0 +1,4 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """

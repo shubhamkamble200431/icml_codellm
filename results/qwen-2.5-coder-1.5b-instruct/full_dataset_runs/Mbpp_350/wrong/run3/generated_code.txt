@@ -1,0 +1,13 @@
+def solution(*args):
+    """
+    Write a python function to minimize the length of the string by removing occurrence of only one character.
+    """
+    from collections import Counter
+
+    # Count occurrences of each character in all strings
+    char_counts = Counter(''.join(args))
+
+    # Remove characters that appear more than once
+    unique_chars = ''.join([char for char, count in char_counts.items() if count == 1])
+
+    return unique_chars

@@ -1,0 +1,5 @@
+def get_Inv_Count(arr,n):
+    """
+    Write a python function to count inversions in an array.
+    """
+from typing import List

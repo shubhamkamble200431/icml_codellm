@@ -1,0 +1,9 @@
+def remove_tuple(test_tup):
+    """
+    Write a function to remove the duplicates from the given tuple.
+    """
+    # Convert the tuple into a dictionary using Counter to count occurrences of each element
+    element_counts = Counter(test_tup)
+
+    # Create a new list from the keys of the dictionary, which will be the unique elements
+    return tuple(element_counts.keys())

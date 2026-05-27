@@ -1,0 +1,13 @@
+def max_difference(test_list):
+    """
+    Write a function to find the maximum difference between available pairs in the given tuple list.
+    """
+    # Calculate the minimum and maximum values from the test list
+    min_val = min(test_list)
+    max_val = max(test_list)
+
+    # Check if there is at least one pair of numbers that form the maximum difference
+    if max_val - min_val > 0:
+        return max_val - min_val
+    else:
+        return 0

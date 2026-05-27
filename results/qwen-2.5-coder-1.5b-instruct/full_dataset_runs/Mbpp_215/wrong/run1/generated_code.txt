@@ -1,0 +1,5 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    return [x[1] * x[0] for x in alist]

@@ -1,0 +1,16 @@
+def extract_singly(test_list):
+    """
+    Write a function to extract elements that occur singly in the given tuple list.
+    """
+    # Use dictionary to count occurrences of each element
+    element_count = {}
+    for item in test_list:
+        if item in element_count:
+            element_count[item] += 1
+        else:
+            element_count[item] = 1
+
+    # Extract elements that occur exactly once
+    single_elements = [item for item, count in element_count.items() if count == 1]
+
+    return single_elements

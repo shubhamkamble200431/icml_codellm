@@ -1,0 +1,5 @@
+def remove(list):
+    """
+    Write a python function to remove all digits from a list of strings.
+    """
+    return [word for word in list if not any(char.isdigit() for char in word)]

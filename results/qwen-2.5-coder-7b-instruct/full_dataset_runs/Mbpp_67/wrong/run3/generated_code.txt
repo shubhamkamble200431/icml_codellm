@@ -1,0 +1,5 @@
+def bell_number(n):
+    """
+    Write a function to find the number of ways to partition a set of bell numbers.
+    """
+    return sum(stirling_second_kind(n, k) for k in range(n + 1))

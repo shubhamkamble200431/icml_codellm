@@ -1,0 +1,5 @@
+def sort_tuple(tup):
+    """
+    Write a function to sort a list of tuples in increasing order by the last element in each tuple.
+    """
+return sorted(tup, key=lambda x: x[-1])

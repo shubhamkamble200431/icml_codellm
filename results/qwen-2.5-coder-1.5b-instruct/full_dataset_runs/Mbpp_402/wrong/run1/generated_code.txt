@@ -1,0 +1,11 @@
+def ncr_modp(n, r, p):
+    """
+    Write a function to compute the value of ncr%p.
+    """
+    if r > n:
+        return 0
+    if r == 0 or r == n:
+        return 1
+
+    # Using the property (n+r)! / (r! * n!) % p = (n+r)C(r) % p
+    return (factorial(n + r) // (factorial(r) * factorial(n))) % p

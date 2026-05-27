@@ -1,0 +1,7 @@
+def __init__(self, data):
+    """
+    Write a function to check if a binary tree is balanced or not.
+    """
+    self.data = data
+    self.left = None
+    self.right = None

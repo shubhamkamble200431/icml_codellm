@@ -1,0 +1,14 @@
+def bell_number(n):
+    """
+    Write a function to find the number of ways to partition a set of bell numbers.
+    """
+    def stirling_second_kind(m, k):
+        return sum((-1)**(k-j) * binomial_coefficient(k, j) * j**m for j in range(k + 1))
+
+    def binomial_coefficient(n, k):
+        return factorial(n) // (factorial(k) * factorial(n - k))
+
+    if n == 0:
+        return 1
+    else:
+        return sum(stirling_second_kind(i, n) for i in range(n + 1))

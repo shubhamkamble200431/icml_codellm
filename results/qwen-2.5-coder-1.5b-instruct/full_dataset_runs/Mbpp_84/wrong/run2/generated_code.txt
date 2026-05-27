@@ -1,0 +1,27 @@
+def sequence(n):
+    """
+    Write a function to find the n-th number in newman conway sequence.
+    """
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    
+    # Initialize sequences
+    c = [0] * (n + 1)
+    p = [0] * (n + 1)
+    
+    # Base cases
+    c[0], c[1] = 0, 1
+    p[0], p[1] = 0, 1
+    
+    # Fill the sequences
+    for i in range(2, n + 1):
+        if c[i - 1] > c[i - 2]:
+            p[i] = p[c[i - 1]]
+            c[i] = c[c[i - 2]]
+        else:
+            p[i] = c[c[i - 2]] + c[c[i - 1]]
+            c[i] = p[p[i - 1]]
+    
+    return p[n]

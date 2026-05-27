@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to minimize the length of the string by removing occurrence of only one character.
+    """
+    s = ''.join(args)
+    counter = Counter(s)
+    min_length = len(s)
+
+    for char in set(s):
+        new_length = len(s) - counter[char]
+        if new_length < min_length:
+            min_length = new_length
+
+    return min_length

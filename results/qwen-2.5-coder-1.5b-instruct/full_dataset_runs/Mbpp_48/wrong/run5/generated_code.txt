@@ -1,0 +1,15 @@
+def odd_bit_set_number(n):
+    """
+    Write a python function to set all odd bits of a given number.
+    """
+    # Convert number to binary string and remove the '0b' prefix
+    bin_str = bin(n)[2:]
+
+    # Iterate over each bit in the binary string
+    for i in range(len(bin_str)):
+        # Set the ith bit to 1 if it's odd (i.e., i is odd)
+        if i % 2 == 1:
+            bin_str = bin_str[:i] + '1' + bin_str[i+1:]
+
+    # Convert the modified binary string back to decimal and return
+    return int(bin_str, 2)

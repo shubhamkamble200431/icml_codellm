@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to find the perimeter of a cylinder.
+    """
+    radius = args[0]
+    height = args[1]
+    return 2 * pi * radius * (radius + height)

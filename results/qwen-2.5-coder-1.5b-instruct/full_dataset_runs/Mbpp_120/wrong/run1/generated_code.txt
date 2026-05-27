@@ -1,0 +1,12 @@
+def max_product_tuple(list1):
+    """
+    Write a function to find the maximum product from the pairs of tuples within a given list.
+    """
+    # Sort the list based on the difference between the second element and the first element in descending order
+    sorted_list = sorted(list1, key=lambda x: abs(x[1] - x[0]), reverse=True)
+
+    # Iterate through the sorted list to find the pair with the maximum product
+    for i in range(len(sorted_list) - 1):
+        if sorted_list[i][0] * sorted_list[i + 1][1] > sorted_list[i][1] * sorted_list[i + 1][0]:
+            return sorted_list[i][0] * sorted_list[i + 1][1]
+    return None

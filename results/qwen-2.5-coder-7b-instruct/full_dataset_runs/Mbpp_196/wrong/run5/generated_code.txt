@@ -1,0 +1,5 @@
+def remove_tuples(test_list, K):
+    """
+    Write a function to remove all the tuples with length k.
+    """
+return [tup for tup in test_list if len(tup) != K]

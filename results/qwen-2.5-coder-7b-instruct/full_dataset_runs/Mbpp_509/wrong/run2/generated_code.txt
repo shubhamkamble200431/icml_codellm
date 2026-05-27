@@ -1,0 +1,11 @@
+def solution(*args):
+    """
+    Write a python function to find the average of odd numbers till a given odd number.
+    """
+    total = 0
+    count = 0
+    for num in args:
+        if num % 2 != 0:
+            total += num
+            count += 1
+    return total / count if count > 0 else 0

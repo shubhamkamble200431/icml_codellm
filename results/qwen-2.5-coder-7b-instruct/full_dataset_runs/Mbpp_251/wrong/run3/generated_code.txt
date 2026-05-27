@@ -1,0 +1,5 @@
+def insert_element(list,element):
+    """
+    Write a function to insert an element before each element of a list.
+    """
+return [element] + list

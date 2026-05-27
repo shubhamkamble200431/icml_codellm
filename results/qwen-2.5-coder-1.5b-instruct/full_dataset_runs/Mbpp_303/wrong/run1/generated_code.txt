@@ -1,0 +1,73 @@
+def solve(a,n):
+    """
+    Write a python function to check whether the count of inversion of two types are same or not.
+    """
+    invA = 0  # Initialize inversion counter for array 'a'
+    invB = 0  # Initialize inversion counter for array 'b'
+
+    # Count inversion in array 'a' using merge sort technique
+    def mergeSort(arr, low, high):  
+        if low < high:
+            mid = (low + high) // 2
+
+            # Sort first and second halves
+            mergeSort(arr, low, mid)
+            mergeSort(arr, mid + 1, high)
+
+            # Merge the sorted halves
+            i = j = k = low
+            while i <= mid and j <= high:
+                if arr[i] < arr[j]:
+                    arr[k] = arr[i]
+                    i += 1
+                else:
+                    arr[k] = arr[j]
+                    invA += mid - i + 1  # Update inversion count for array 'a'
+                    j += 1
+                k += 1
+
+            # Copy remaining elements of left half
+            while i <= mid:
+                arr[k] = arr[i]
+                i += 1
+                k += 1
+
+            # Copy remaining elements of right half
+            while j <= high:
+                arr[k] = arr[j]
+                j += 1
+                k += 1
+
+    mergeSort(a, 0, n-1)
+
+    # Count inversion in array 'b' using merge sort technique
+    def mergeSort(b, low, high):  
+        if low < high:
+            mid = (low + high) // 2
+
+            # Sort first and second halves
+            mergeSort(b, low, mid)
+            mergeSort(b, mid + 1, high)
+
+            # Merge the sorted halves
+            i = j = k = low
+            while i <= mid and j <= high:
+                if b[i] < b[j]:
+                    arr[k] = b[i]
+                    i += 1
+                else:
+                    arr[k] = b[j]
+                    invB += mid - i + 1  # Update inversion count for array 'b'
+                    j += 1
+                k += 1
+
+            # Copy remaining elements of left half
+            while i <= mid:
+                arr[k] = b[i]
+                i += 1
+                k += 1
+
+            # Copy remaining elements of right half
+            while j <= high:
+                arr[k] = b[j]
+                j +=

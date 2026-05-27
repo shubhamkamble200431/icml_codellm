@@ -1,0 +1,7 @@
+def dig_let(s):
+    """
+    Write a function to calculate the number of digits and letters in a string.
+    """
+    digits = sum(c.isdigit() for c in s)
+    letters = sum(c.isalpha() for c in s)
+    return digits, letters

@@ -1,0 +1,11 @@
+def specified_element(nums, N):
+    """
+    Write a function to extract every first or specified element from a given two-dimensional list.
+    """
+    result = []
+    for row in nums:
+        if N == 1:  # Extracting the first element of each row
+            result.append(row[0])
+        elif N == 2:  # Extracting the second element of each row
+            result.append(row[1])
+    return result

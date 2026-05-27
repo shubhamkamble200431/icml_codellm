@@ -1,0 +1,20 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    if len(args) != 3:
+        raise ValueError("Input must contain exactly three values")
+
+    # Generate all possible combinations of sides
+    sides = list(itertools.permutations(args))
+
+    max_volume = -float('inf')
+    best_combination = None
+
+    for combination in sides:
+        # Calculate volume and check if it is greater than the current maximum volume
+        if combination[0] * combination[1] * combination[2] > max_volume:
+            max_volume = combination[0] * combination[1] * combination[2]
+            best_combination = combination
+
+    return max_volume, best_combination

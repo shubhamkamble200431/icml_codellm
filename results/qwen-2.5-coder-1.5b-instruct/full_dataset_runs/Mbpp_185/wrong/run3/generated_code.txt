@@ -1,0 +1,5 @@
+def parabola_focus(a, b, c):
+    """
+    Write a function to find the focus of a parabola.
+    """
+import math

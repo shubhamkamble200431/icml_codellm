@@ -1,0 +1,5 @@
+def max_val(listval):
+    """
+    Write a function to find the maximum value in a given heterogeneous list.
+    """
+max_val = lambda lst: max(lst) if all(isinstance(x, (int, float)) for x in lst) else None

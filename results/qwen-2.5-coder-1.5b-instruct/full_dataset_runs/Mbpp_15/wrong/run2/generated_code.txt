@@ -1,0 +1,5 @@
+def split_lowerstring(text):
+    """
+    Write a function to split a string at lowercase letters.
+    """
+    return [text[i:j] for i in range(len(text)) if text[i].islower() and (j - i) > 1]

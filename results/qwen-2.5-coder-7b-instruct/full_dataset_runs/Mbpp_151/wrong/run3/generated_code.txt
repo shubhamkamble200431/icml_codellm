@@ -1,0 +1,7 @@
+def gcd(p,q):
+    """
+    Write a python function to check whether the given number is co-prime or not.
+    """
+    while q:
+        p, q = q, p % q
+    return p == 1

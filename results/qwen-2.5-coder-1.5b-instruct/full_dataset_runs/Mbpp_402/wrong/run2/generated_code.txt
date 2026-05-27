@@ -1,0 +1,17 @@
+def ncr_modp(n, r, p):
+    """
+    Write a function to compute the value of ncr%p.
+    """
+    if r > n:
+        return 0
+    if r == 0 or r == n:
+        return 1
+
+    # Calculate C(n, r)
+    numerator = mod_factorial(n, r, p)
+    denominator = mod_factorial(n - r, n - r, p)
+
+    # Result is (nCr) % p
+    result = (numerator * pow(denominator, p - 2, p)) % p
+
+    return result

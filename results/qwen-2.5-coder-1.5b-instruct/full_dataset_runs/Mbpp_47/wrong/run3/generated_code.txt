@@ -1,0 +1,18 @@
+def compute_Last_Digit(A,B):
+    """
+    Write a python function to find the last digit when factorial of a divides factorial of b.
+    """
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+    if A > B:
+        return 0  # If A is greater than B, there cannot be any factorials between them
+
+    a_factorial = factorial(A)
+    b_factorial = factorial(B)
+
+    # The last digit of a/b is simply the last digit of a/(b % a)
+    return a_factorial // (b % a) % 10

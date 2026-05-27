@@ -1,0 +1,11 @@
+def solution(*args):
+    """
+    Write a python function to find the element that appears only once in a sorted array.
+    """
+    # Use collections.Counter to count occurrences of each element
+    counter = collections.Counter(args)
+
+    # Find and return the element that appears only once
+    for key, value in counter.items():
+        if value == 1:
+            return key

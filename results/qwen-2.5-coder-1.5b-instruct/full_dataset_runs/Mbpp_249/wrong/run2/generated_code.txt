@@ -1,0 +1,5 @@
+def intersection_array(array_nums1,array_nums2):
+    """
+    Write a function to find the intersection of two arrays using lambda function.
+    """
+intersection_array = lambda array_nums1, array_nums2: list(set(array_nums1) & set(array_nums2))

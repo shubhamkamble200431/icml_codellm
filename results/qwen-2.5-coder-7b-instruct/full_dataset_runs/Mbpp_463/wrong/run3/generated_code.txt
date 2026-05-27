@@ -1,0 +1,15 @@
+def max_subarray_product(arr):
+    """
+    Write a function to find the maximum product subarray of the given array.
+    """
+    if not arr:
+        return 0
+    
+    max_current = max_global = arr[0]
+    
+    for num in arr[1:]:
+        temp_max = max(num, max_current * num, max_global * num)
+        max_global = max(max_global, temp_max)
+        max_current = temp_max
+    
+    return max_global

@@ -1,0 +1,29 @@
+def is_woodall(x):
+    """
+    Write a function to check if the given number is woodball or not.
+    """
+    # Helper function to check if a number is prime
+    def is_prime(n):
+        if n <= 1:
+            return False
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    # Start from 1 and check each number
+    num = 1
+    while True:
+        # Calculate the square of the current number
+        square = num * num
+
+        # If the square equals x, it's a woodball number
+        if square == x:
+            return True
+
+        # If the square exceeds x, it can't be a woodball number
+        if square > x:
+            return False
+
+        # Increment the number to check the next square
+        num += 1

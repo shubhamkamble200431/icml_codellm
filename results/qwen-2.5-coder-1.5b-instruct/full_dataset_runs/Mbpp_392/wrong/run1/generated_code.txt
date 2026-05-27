@@ -1,0 +1,23 @@
+def solution(*args):
+    """
+    Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).
+    """
+    def recursive_f(n):
+        if n <= 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            return max(recursive_f(n//2) + recursive_f(n//3) + recursive_f(n//4) + recursive_f(n//5), n)
+
+    # Check if all elements in args are integers and positive
+    if not all(isinstance(i, int) and i > 0 for i in args):
+        raise ValueError("All elements must be positive integers")
+
+    # Calculate the sum of all input numbers
+    total_sum = sum(args)
+
+    # Use the recursive function to find the maximum sum
+    max_sum = recursive_f(total_sum)
+
+    return max_sum

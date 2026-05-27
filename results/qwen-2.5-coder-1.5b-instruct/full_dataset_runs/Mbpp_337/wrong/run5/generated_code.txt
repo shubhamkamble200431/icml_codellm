@@ -1,0 +1,16 @@
+def text_match_word(text):
+    """
+    Write a function that matches a word at the end of a string, with optional punctuation.
+    """
+    # Define the pattern to match words at the end of a string
+    pattern = r'\b\w+\b'
+
+    # Use re.search to find the pattern in the given text
+    match = re.search(pattern, text)
+
+    if match:
+        # If a match is found, return the matched word
+        return match.group(0)
+    else:
+        # If no match is found, return None
+        return None

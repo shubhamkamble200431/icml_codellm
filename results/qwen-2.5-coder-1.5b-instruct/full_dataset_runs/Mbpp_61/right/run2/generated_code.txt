@@ -1,0 +1,17 @@
+def count_Substrings(s,n):
+    """
+    Write a python function to count number of substrings with the sum of digits equal to their length.
+    """
+    from collections import Counter
+
+    def sum_of_digits(num):
+        return sum(int(digit) for digit in str(num))
+
+    count = 0
+    for i in range(n):
+        total_sum = 0
+        for j in range(i, n):
+            total_sum += int(s[j])
+            if total_sum == j - i + 1:
+                count += 1
+    return count

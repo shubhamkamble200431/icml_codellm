@@ -1,0 +1,5 @@
+def extract_missing(test_list, strt_val, stop_val):
+    """
+    Write a function to extract the ranges that are missing from the given list with the given start range and end range values.
+    """
+    return list(np.setdiff1d(range(strt_val, stop_val + 1), test_list))

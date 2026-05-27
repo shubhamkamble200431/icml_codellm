@@ -1,0 +1,5 @@
+def find_adverb_position(text):
+    """
+    Write a function to find all adverbs and their positions in a given sentence.
+    """
+import re

@@ -1,0 +1,12 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    n = len(args)
+    max_volume = 0
+    for perm in permutations(args, n):
+        if sum(perm) == args[0]:
+            volume = perm[0] * perm[1] * perm[2]
+            if volume > max_volume:
+                max_volume = volume
+    return max_volume

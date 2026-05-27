@@ -1,0 +1,5 @@
+def area_pentagon(a):
+    """
+    Write a function to find the area of a pentagon.
+    """
+    return (5 * a ** 2) / (4 * math.tan(math.pi / 5))

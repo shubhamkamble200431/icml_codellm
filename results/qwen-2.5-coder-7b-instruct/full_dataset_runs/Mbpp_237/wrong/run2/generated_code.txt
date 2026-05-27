@@ -1,0 +1,14 @@
+def check_occurences(test_list):
+    """
+    Write a function to check the occurrences of records which occur similar times in the given tuples.
+    """
+    freq_dict = defaultdict(int)
+    for record in test_list:
+        freq_dict[record] += 1
+
+    result = {}
+    for record, freq in freq_dict.items():
+        if freq > 1:
+            result[record] = freq
+
+    return result

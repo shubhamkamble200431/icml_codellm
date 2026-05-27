@@ -1,0 +1,7 @@
+def tuple_intersection(test_list1, test_list2):
+    """
+    Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.
+    """
+    # Use set operations to find common elements in both lists and convert back to tuple
+    result = tuple(set(test_list1) & set(test_list2))
+    return result

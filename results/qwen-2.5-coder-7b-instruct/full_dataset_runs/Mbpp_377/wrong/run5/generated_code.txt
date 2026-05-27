@@ -1,0 +1,13 @@
+def solution(*args):
+    """
+    Write a python function to remove all occurrences of a character in a given string.
+    """
+    if len(args) != 2:
+        raise ValueError("Exactly two arguments are required: a string and a character to remove.")
+
+    input_string, char_to_remove = args
+
+    if len(char_to_remove) != 1:
+        raise ValueError("The second argument must be a single character.")
+
+    return input_string.replace(char_to_remove, "")

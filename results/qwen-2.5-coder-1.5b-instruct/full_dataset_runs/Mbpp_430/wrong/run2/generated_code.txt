@@ -1,0 +1,17 @@
+def parabola_directrix(a, b, c):
+    """
+    Write a function to find the directrix of a parabola.
+    """
+    # Calculate the x-coordinate of the focus
+    x_focus = -b / (2 * a)
+
+    # Calculate the y-coordinate of the focus using the quadratic formula
+    y_focus = (1 - b**2 + 4*a*c) / (4*a)
+
+    # Calculate the distance from the vertex to the focus (semi-major axis)
+    semi_major_axis = abs(y_focus)
+
+    # The directrix is at a vertical line that is the same distance from the vertex as the focus
+    directrix_x = x_focus
+
+    return directrix_x

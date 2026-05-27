@@ -1,0 +1,6 @@
+def text_lowercase_underscore(text):
+    """
+    Write a function to find sequences of lowercase letters joined with an underscore.
+    """
+    pattern = r'(?<=[a-z])(?=[a-z])'
+    return [match.group(0) for match in re.finditer(pattern, text)]

@@ -1,0 +1,22 @@
+def smartNumber(n):
+    """
+    Write a function to find n’th smart number.
+    """
+    pq = [1]
+    seen = {1}
+
+    for _ in range(1, n + 1):
+        current = heapq.heappop(pq)
+        while current in seen:
+            current = heapq.heappop(pq)
+
+        if current * 2 not in seen:
+            heapq.heappush(pq, current * 2)
+        if current * 3 not in seen:
+            heapq.heappush(pq, current * 3)
+        if current * 5 not in seen:
+            heapq.heappush(pq, current * 5)
+
+        seen.add(current)
+
+    return current

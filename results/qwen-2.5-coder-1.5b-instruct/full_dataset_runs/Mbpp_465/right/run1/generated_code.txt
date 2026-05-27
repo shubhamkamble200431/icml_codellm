@@ -1,0 +1,5 @@
+def drop_empty(dict1):
+    """
+    Write a function to drop empty items from a given dictionary.
+    """
+    return {key: value for key, value in dict1.items() if value}

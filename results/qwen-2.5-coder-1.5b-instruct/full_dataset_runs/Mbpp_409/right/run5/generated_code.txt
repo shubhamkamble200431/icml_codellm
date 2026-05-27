@@ -1,0 +1,5 @@
+def min_product_tuple(list1):
+    """
+    Write a function to find the minimum product from the pairs of tuples within a given list.
+    """
+    return min(a*b for a, b in list1)

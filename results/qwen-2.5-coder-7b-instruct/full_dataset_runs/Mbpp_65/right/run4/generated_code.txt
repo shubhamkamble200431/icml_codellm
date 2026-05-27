@@ -1,0 +1,8 @@
+def recursive_list_sum(data_list):
+    """
+    Write a function of recursion list sum.
+    """
+    if isinstance(data_list, list):
+        return sum(recursive_list_sum(item) if isinstance(item, list) else item for item in data_list)
+    else:
+        raise ValueError("Input must be a list")

@@ -1,0 +1,6 @@
+def text_match_string(text):
+    """
+    Write a function that matches a word at the beginning of a string.
+    """
+    pattern = '^\w+'
+    return bool(re.match(pattern, text))

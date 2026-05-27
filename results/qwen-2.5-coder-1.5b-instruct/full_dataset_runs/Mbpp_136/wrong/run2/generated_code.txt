@@ -1,0 +1,22 @@
+def cal_electbill(units):
+    """
+    Write a function to calculate electricity bill.
+    """
+    # Define basic rates and charges
+    flat_rate = 50.00
+    per_unit_charge = 0.20
+    surcharge = 0.10
+
+    # Calculate base bill
+    base_bill = flat_rate + (per_unit_charge * units)
+
+    # Calculate surcharge based on units consumed
+    if units > 100:
+        surcharge_amount = (units - 100) * surcharge
+    else:
+        surcharge_amount = 0
+
+    # Calculate total bill
+    total_bill = base_bill + surcharge_amount
+
+    return total_bill

@@ -1,0 +1,11 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    decoded = []
+    for item in alist:
+        if isinstance(item, list):
+            decoded.extend(decode_list(item))
+        else:
+            decoded.append(item)
+    return decoded

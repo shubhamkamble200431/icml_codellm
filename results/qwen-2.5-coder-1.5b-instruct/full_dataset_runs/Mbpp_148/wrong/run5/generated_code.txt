@@ -1,0 +1,13 @@
+def solution(*args):
+    """
+    Write a function to divide a number into two parts such that the sum of digits is maximum.
+    """
+    # Find the maximum sum of digits in all numbers
+    max_sum = 0
+    for num in args:
+        digit_sum = sum(int(digit) for digit in str(num))
+        if digit_sum > max_sum:
+            max_sum = digit_sum
+
+    # Divide each number by the maximum sum of its digits
+    return [num // max_sum for num in args]

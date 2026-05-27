@@ -1,0 +1,11 @@
+def bell_number(n):
+    """
+    Write a function to find the number of ways to partition a set of bell numbers.
+    """
+    if n == 0:
+        return 1
+    bell = [0] * (n + 1)
+    bell[0] = 1
+    for i in range(1, n + 1):
+        bell[i] = sum(bell[j - 1] for j in range(i))
+    return bell[n]

@@ -1,0 +1,5 @@
+def string_literals(patterns,text):
+    """
+    Write a function to search some literals strings in a string.
+    """
+import re

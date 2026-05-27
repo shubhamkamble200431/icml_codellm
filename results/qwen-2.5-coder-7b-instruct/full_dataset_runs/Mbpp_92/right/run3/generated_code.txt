@@ -1,0 +1,8 @@
+def is_undulating(n):
+    """
+    Write a function to check whether the given number is undulating or not.
+    """
+    n = str(n)
+    if len(n) < 3:
+        return False
+    return all(n[i] == n[i-2] for i in range(2, len(n)))

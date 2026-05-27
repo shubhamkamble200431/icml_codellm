@@ -1,0 +1,6 @@
+def does_Contain_B(a,b,c):
+    """
+    Write a python function to find whether the given number is present in the infinite sequence or not.
+    """
+from typing import *
+from collections import *

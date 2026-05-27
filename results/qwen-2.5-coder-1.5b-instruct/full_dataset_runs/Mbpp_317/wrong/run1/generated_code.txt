@@ -1,0 +1,20 @@
+def modified_encode(alist):
+    """
+    Write a function to reflect the modified run-length encoding from a list.
+    """
+    # Initialize an empty dictionary to store the encoded data
+    encoded_data = {}
+
+    # Iterate over each tuple in the list
+    for item in alist:
+        if item[0] in encoded_data:
+            # If the character already exists in the dictionary, increment its count
+            encoded_data[item[0]] += 1
+        else:
+            # If the character does not exist, add it to the dictionary with its count of 1
+            encoded_data[item[0]] = 1
+
+    # Convert the dictionary into a list of tuples and sort by the count of elements (descending)
+    encoded_list = sorted(encoded_data.items(), key=lambda x: -x[1])
+
+    return encoded_list

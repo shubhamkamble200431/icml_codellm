@@ -1,0 +1,20 @@
+def max_aggregate(stdata):
+    """
+    Write a function to calculate the maximum aggregate from the list of tuples.
+    """
+    # Initialize variables to keep track of the maximum aggregate and the tuple with that value
+    max_agg = float('-inf')
+    max_tuple = None
+    
+    # Iterate over each tuple in the list
+    for data in stdata:
+        # Calculate the sum of values in the current tuple
+        current_agg = sum(data)
+        
+        # Update the maximum aggregate if the current one is greater
+        if current_agg > max_agg:
+            max_agg = current_agg
+            max_tuple = data
+    
+    # Return the tuple with the maximum aggregate
+    return max_tuple

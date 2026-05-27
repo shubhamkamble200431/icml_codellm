@@ -1,0 +1,6 @@
+def solution(*args):
+    """
+    Write a python function to toggle all even bits of a given number.
+    """
+    mask = 0xAAAAAAAA
+    return args[0] ^ mask

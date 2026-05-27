@@ -1,0 +1,31 @@
+def __init__(self, data):
+    """
+    Write a function to check if a binary tree is balanced or not.
+    """
+        self.root = None
+        if data:
+            self.root = TreeNode(data[0])
+            queue = [self.root]
+            i = 1
+            while i < len(data) and queue:
+                node = queue.pop(0)
+                if i < len(data) and data[i] is not None:
+                    node.left = TreeNode(data[i])
+                    queue.append(node.left)
+                i += 1
+                if i < len(data) and data[i] is not None:
+                    node.right = TreeNode(data[i])
+                    queue.append(node.right)
+                i += 1
+
+    def isBalanced(self, root):
+        def height(node):
+            if not node:
+                return 0
+            return max(height(node.left), height(node.right)) + 1
+
+        if not root:
+            return True
+        left_height = height(root.left)
+        right_height = height(root.right)
+        return abs(left_height - right_height) <= 1 and self.isBalanced(root.left) and self.isBalanced(root.right)

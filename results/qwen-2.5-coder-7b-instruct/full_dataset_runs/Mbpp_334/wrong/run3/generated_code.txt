@@ -1,0 +1,8 @@
+def check_Validity(a,b,c):
+    """
+    Write a python function to check whether the triangle is valid or not if sides are given.
+    """
+if a + b > c and a + c > b and b + c > a:
+        return True
+    else:
+        return False

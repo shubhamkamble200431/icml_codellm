@@ -1,0 +1,5 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    return [item for sublist in ((key, len(list(group))) for key, group in groupby(alist)) for item in [sublist[0]] * sublist[1]]

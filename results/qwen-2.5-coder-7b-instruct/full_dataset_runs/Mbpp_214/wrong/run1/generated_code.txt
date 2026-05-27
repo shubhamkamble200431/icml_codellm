@@ -1,0 +1,5 @@
+def degree_radian(radian):
+    """
+    Write a function to convert radians to degrees.
+    """
+    return radian * (180 / math.pi)

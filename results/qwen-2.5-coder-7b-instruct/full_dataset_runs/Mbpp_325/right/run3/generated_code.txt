@@ -1,0 +1,19 @@
+def get_Min_Squares(n):
+    """
+    Write a python function to find the minimum number of squares whose sum is equal to a given number.
+    """
+    # Base cases
+    if n <= 3:
+        return n
+
+    res = n
+
+    # Loop through all smaller numbers to recursively find minimum
+    for x in range(1, n + 1):
+        temp = x * x
+        if temp > n:
+            break
+        else:
+            res = min(res, 1 + get_Min_Squares(n - temp))
+
+    return res

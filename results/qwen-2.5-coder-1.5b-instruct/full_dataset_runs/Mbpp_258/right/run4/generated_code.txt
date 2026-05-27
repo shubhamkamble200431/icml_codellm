@@ -1,0 +1,5 @@
+def count_odd(array_nums):
+    """
+    Write a function to find number of odd elements in the given list using lambda function.
+    """
+count_odd = lambda array_nums: sum(1 for num in array_nums if num % 2 != 0)

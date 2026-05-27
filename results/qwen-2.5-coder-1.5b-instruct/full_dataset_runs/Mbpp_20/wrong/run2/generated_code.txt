@@ -1,0 +1,6 @@
+def is_woodall(x):
+    """
+    Write a function to check if the given number is woodball or not.
+    """
+    n = int(math.log2(x + 1))
+    return (x == 2**(n*(n+1)) - 1) and is_prime(n)

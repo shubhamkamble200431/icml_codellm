@@ -1,0 +1,11 @@
+def len_log(list1):
+    """
+    Write a python function to find the length of the longest word.
+    """
+    max_length = 0
+    for word in list1:
+        if all(char.isalpha() or char.isspace() for char in word):
+            length = len(word)
+            if length > max_length:
+                max_length = length
+    return max_length

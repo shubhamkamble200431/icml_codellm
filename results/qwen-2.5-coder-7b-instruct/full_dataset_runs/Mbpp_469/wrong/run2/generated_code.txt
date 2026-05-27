@@ -1,0 +1,17 @@
+def max_profit(price, k):
+    """
+    Write a function to find the maximum profit earned from a maximum of k stock transactions
+    """
+    n = len(price)
+    if n == 0:
+        return 0
+
+    profit = [[0 for _ in range(k + 1)] for _ in range(n)]
+
+    for i in range(1, n):
+        max_diff = -price[0]
+        for j in range(1, k + 1):
+            profit[i][j] = max(profit[i-1][j], price[i] + max_diff)
+            max_diff = max(max_diff, profit[i-1][j] - price[i])
+
+    return profit[n-1][k]

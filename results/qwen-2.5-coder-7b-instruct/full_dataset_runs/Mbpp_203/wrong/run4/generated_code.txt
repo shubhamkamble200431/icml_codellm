@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to find the hamming distance between given two integers.
+    """
+import functools
+
+@functools.reduce

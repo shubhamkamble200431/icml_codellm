@@ -1,0 +1,5 @@
+def decimal_to_Octal(deciNum):
+    """
+    Write a python function to convert decimal number to octal number.
+    """
+    return oct(deciNum)[2:]

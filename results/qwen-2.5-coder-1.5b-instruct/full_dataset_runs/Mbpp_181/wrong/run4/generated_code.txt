@@ -1,0 +1,12 @@
+def common_prefix_util(str1, str2):
+    """
+    Write a function to find the longest common prefix in the given set of strings.
+    """
+    if not str1 or not str2:
+        return ""
+    
+    i = 0
+    while i < min(len(str1), len(str2)) and str1[i] == str2[i]:
+        i += 1
+    
+    return str1[:i]

@@ -1,0 +1,12 @@
+def is_octagonal(n):
+    """
+    Write a function to find the nth octagonal number.
+    """
+    # Calculate the discriminant of the quadratic equation 8n^2 - 3n - 1 = 0
+    discriminant = (3**2) + (4*8*(-1))
+
+    # Check if the discriminant is a perfect square
+    if discriminant >= 0 and int(math.isqrt(discriminant))**2 == discriminant:
+        return True
+    else:
+        return False

@@ -1,0 +1,6 @@
+def find_max(test_list):
+    """
+    Write a function to find the maximum element of all the given tuple records.
+    """
+max_value = max(test_list)
+return max_value

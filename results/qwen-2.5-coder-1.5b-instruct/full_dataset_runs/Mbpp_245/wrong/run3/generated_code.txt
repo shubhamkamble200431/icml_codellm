@@ -1,0 +1,25 @@
+def max_sum(arr, n):
+    """
+    Write a function to find the maximum sum of bi-tonic sub-sequence for the given array.
+    """
+    increasing = [0] * n
+    decreasing = [0] * n
+
+    # Calculate the increasing subsequences starting from each element
+    for i in range(n):
+        for j in range(i):
+            if arr[i] > arr[j]:
+                increasing[i] = max(increasing[i], increasing[j] + 1)
+
+    # Calculate the decreasing subsequences ending at each element
+    for i in range(n-1, -1, -1):
+        for j in range(i+1, n):
+            if arr[i] > arr[j]:
+                decreasing[i] = max(decreasing[i], decreasing[j] + 1)
+
+    # Find the maximum sum of bi-tonic subsequence
+    max_sum = float('-inf')
+    for i in range(n):
+        max_sum = max(max_sum, increasing[i] + decreasing[i] - 1)
+
+    return max_sum

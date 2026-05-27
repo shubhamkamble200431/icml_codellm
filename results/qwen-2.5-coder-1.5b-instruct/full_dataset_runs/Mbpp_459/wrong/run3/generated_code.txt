@@ -1,0 +1,6 @@
+def remove_uppercase(str1):
+    """
+    Write a function to remove uppercase substrings from a given string by using regex.
+    """
+    # Use regex to find all uppercase substrings and replace them with an empty string
+    return re.sub('[A-Z]', '', str1)

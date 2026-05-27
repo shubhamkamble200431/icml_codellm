@@ -1,0 +1,8 @@
+def flatten_list(list1):
+    """
+    Write a function to flatten a given nested list structure.
+    """
+    if all(isinstance(item, (list, tuple)) for item in list1):
+        return list(itertools.chain.from_iterable(list1))
+    else:
+        return [item] if isinstance(list1, list) else list1

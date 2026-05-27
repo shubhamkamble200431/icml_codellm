@@ -1,0 +1,15 @@
+def set_left_most_unset_bit(n):
+    """
+    Write a python function to set the left most unset bit.
+    """
+    if n == 0:
+        return 1
+
+    # Find the position of the rightmost set bit
+    rightmost_set_bit = 0
+    while (n & 1) == 1:
+        rightmost_set_bit += 1
+        n >>= 1
+
+    # Set the leftmost unset bit by flipping the rightmost set bit and all bits after it
+    return (n | (1 << (rightmost_set_bit - 1)))

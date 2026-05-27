@@ -1,0 +1,10 @@
+def frequency_Of_Smallest(n,arr):
+    """
+    Write a python function to find the frequency of the smallest value in a given array.
+    """
+    min_val = min(arr)
+    count = 0
+    for i in range(n):
+        if arr[i] == min_val:
+            count += 1
+    return count

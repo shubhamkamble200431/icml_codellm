@@ -1,0 +1,17 @@
+def count_Set_Bits(n):
+    """
+    Write a python function to count set bits of a given number.
+    """
+    # Initialize bit counter
+    count = 0
+
+    # Loop through all bits of n
+    while n > 0:
+        # Check if the least significant bit is set (1)
+        if n & 1 == 1:
+            count += 1
+
+        # Right shift n by 1 to process the next bit
+        n >>= 1
+
+    return count

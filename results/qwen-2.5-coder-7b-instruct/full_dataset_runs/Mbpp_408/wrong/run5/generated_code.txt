@@ -1,0 +1,5 @@
+def k_smallest_pairs(nums1, nums2, k):
+    """
+    Write a function to find k number of pairs which consist of one element from the first array and one element from the second array.
+    """
+    return nsmallest(k, ((x, y) for x in nums1 for y in nums2))

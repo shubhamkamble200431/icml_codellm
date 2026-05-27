@@ -1,0 +1,5 @@
+def remove_odd(str1):
+    """
+    Write a function to remove odd characters in a string.
+    """
+    return ''.join(c for c in str1 if int(ord(c)) % 2 == 0)

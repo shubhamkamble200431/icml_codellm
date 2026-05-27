@@ -1,0 +1,6 @@
+def position_min(list1):
+    """
+    Write a function to find all index positions of the minimum values in a given list.
+    """
+    min_value = min(list1)
+    return [i for i, value in enumerate(list1) if value == min_value]

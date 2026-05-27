@@ -1,0 +1,24 @@
+def solution(*args):
+    """
+    Write a python function to find the average of odd numbers till a given odd number.
+    """
+    if len(args) == 0:
+        return None
+    start = args[0]
+    if start % 2 == 0:
+        return "Invalid input. The first argument must be an odd number."
+
+    total_sum = 0
+    count = 0
+    current_number = start
+
+    while current_number <= args[-1]:
+        if current_number % 2 != 0:
+            total_sum += current_number
+            count += 1
+        current_number += 2
+
+    if count > 0:
+        return total_sum // count
+    else:
+        return None

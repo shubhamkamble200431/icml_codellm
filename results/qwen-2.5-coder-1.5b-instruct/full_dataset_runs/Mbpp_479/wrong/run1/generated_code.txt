@@ -1,0 +1,12 @@
+def solution(*args):
+    """
+    Write a python function to find the first digit of a given number.
+    """
+    # Convert all arguments to strings
+    str_args = [str(arg) for arg in args]
+
+    # Find the smallest non-empty string and get its first character
+    min_str = min(str_args, key=len)
+    first_digit = min_str[0]
+
+    return int(first_digit)

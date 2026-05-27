@@ -1,0 +1,11 @@
+def check_Triangle(x1,y1,x2,y2,x3,y3):
+    """
+    Write a python function to check whether the triangle is valid or not if 3 points are given.
+    """
+    # Calculate the lengths of the sides of the triangle
+    side_a = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+    side_b = math.sqrt((x3 - x2)**2 + (y3 - y2)**2)
+    side_c = math.sqrt((x1 - x3)**2 + (y1 - y3)**2)
+
+    # Check the triangle inequality theorem
+    return (side_a + side_b > side_c) and (side_b + side_c > side_a) and (side_a + side_c > side_b)

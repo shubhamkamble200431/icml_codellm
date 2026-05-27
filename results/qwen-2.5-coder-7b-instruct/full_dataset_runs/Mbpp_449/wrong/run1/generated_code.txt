@@ -1,0 +1,16 @@
+def check_Triangle(x1,y1,x2,y2,x3,y3):
+    """
+    Write a python function to check whether the triangle is valid or not if 3 points are given.
+    """
+    dx1 = x2 - x1
+    dy1 = y2 - y1
+    dx2 = x3 - x2
+    dy2 = y3 - y2
+    dx3 = x1 - x3
+    dy3 = y1 - y3
+
+    dot_product_1 = dx1 * dx2 + dy1 * dy2
+    dot_product_2 = dx2 * dx3 + dy2 * dy3
+    dot_product_3 = dx3 * dx1 + dy3 * dy1
+
+    return dot_product_1 >= 0 and dot_product_2 >= 0 and dot_product_3 >= 0

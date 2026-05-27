@@ -1,0 +1,21 @@
+def is_num_keith(x):
+    """
+    Write a function to find if the given number is a keith number or not.
+    """
+    sequence = []
+    temp = x
+    while temp > 0:
+        digit = temp % 10
+        sequence.insert(0, digit)
+        temp //= 10
+
+    sum_digits = sum(sequence)
+    count_digits = len(sequence)
+
+    num = x
+    while num < x:
+        sequence.pop(0)
+        sequence.append(sum_digits)
+        sum_digits = sum(sequence)
+
+    return sum_digits == x

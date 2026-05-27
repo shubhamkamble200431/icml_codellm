@@ -1,0 +1,5 @@
+def upper_ctr(str):
+    """
+    Write a python function to count the upper case characters in a given string.
+    """
+    return sum(1 for c in str if c.isupper())

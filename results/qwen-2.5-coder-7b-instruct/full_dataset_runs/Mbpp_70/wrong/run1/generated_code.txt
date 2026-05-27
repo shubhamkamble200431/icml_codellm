@@ -1,0 +1,5 @@
+def find_equal_tuple(Input, k):
+    """
+    Write a function to find whether all the given tuples have equal length or not.
+    """
+    return all(len(t) == len(Input[0]) for t in Input)

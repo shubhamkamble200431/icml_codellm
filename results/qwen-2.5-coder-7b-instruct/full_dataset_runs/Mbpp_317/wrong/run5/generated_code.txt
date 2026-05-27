@@ -1,0 +1,5 @@
+def modified_encode(alist):
+    """
+    Write a function to reflect the modified run-length encoding from a list.
+    """
+    return [(len(list(group)), key) for key, group in groupby(alist)]

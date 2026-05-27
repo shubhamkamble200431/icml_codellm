@@ -1,0 +1,5 @@
+def find_Max_Len_Even(str):
+    """
+    Write a python function to find the first maximum length of even word.
+    """
+    return max(len(word) for word in str.split() if len(word) % 2 == 0)

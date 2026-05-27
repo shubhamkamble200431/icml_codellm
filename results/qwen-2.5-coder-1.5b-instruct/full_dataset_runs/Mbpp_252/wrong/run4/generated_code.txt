@@ -1,0 +1,6 @@
+def convert(numbers):
+    """
+    Write a python function to convert complex numbers to polar coordinates.
+    """
+    # Convert each number in the list to polar coordinates and return them as a list of tuples
+    return [(cmath.polar(num)[0], cmath.polar(num)[1]) for num in numbers]

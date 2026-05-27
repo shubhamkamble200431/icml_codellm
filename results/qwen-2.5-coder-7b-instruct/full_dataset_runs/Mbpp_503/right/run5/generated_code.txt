@@ -1,0 +1,5 @@
+def add_consecutive_nums(nums):
+    """
+    Write a function to add consecutive numbers of a given list.
+    """
+    return [sum(nums[i:i+2]) for i in range(len(nums)-1)]

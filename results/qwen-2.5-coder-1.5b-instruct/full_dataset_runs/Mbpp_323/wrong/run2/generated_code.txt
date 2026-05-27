@@ -1,0 +1,20 @@
+def right_rotate(arr, n, out_of_place, cur):
+    """
+    Write a function to re-arrange the given array in alternating positive and negative items.
+    """
+    while True:
+        # If both pointers meet at out_of_place, we've processed all elements.
+        if cur == out_of_place:
+            break
+
+        # Find the next positive element after out_of_place.
+        j = out_of_place + 1
+        while j < n and arr[j] <= 0:
+            j += 1
+
+        # Swap the elements if they are out of order.
+        if j < n and abs(arr[cur]) > abs(arr[j]):
+            arr[cur], arr[j] = arr[j], arr[cur]
+
+        # Move out_of_place to the right.
+        out_of_place += 1

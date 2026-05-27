@@ -1,0 +1,4 @@
+def is_valid_parenthese( str1):
+    """
+    Write a function to verify validity of a string of parentheses.
+    """

@@ -1,0 +1,5 @@
+def ngcd(x,y):
+    """
+    Write a python function to find common divisor between two numbers in a given pair.
+    """
+import math

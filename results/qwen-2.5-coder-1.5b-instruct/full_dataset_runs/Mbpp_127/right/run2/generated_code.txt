@@ -1,0 +1,11 @@
+def multiply_int(x, y):
+    """
+    Write a function to multiply two integers without using the * operator in python.
+    """
+    result = 0
+    if y < 0:
+        x, y = -x, -y
+    while y > 0:
+        result += x
+        y -= 1
+    return result

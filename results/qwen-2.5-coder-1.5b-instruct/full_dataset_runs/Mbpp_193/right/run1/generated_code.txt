@@ -1,0 +1,5 @@
+def remove_tuple(test_tup):
+    """
+    Write a function to remove the duplicates from the given tuple.
+    """
+    return tuple(set(test_tup))

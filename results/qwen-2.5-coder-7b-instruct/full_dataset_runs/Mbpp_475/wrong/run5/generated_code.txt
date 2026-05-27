@@ -1,0 +1,5 @@
+def sort_counter(dict1):
+    """
+    Write a function to sort counter by value.
+    """
+    return dict(sorted(Counter(dict1).items(), key=lambda item: item[1]))

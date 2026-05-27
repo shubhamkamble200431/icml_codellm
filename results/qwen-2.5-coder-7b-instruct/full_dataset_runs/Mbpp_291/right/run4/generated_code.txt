@@ -1,0 +1,16 @@
+def count_no_of_ways(n, k):
+    """
+    Write a function to find out the number of ways of painting the fence such that at most 2 adjacent posts have the same color for the given fence with n posts and k colors.
+    """
+    if n == 0:
+        return 0
+    if n == 1:
+        return k
+    mod = 10**9 + 7
+    same, diff = k, k * (k - 1)
+    total = same + diff
+    for _ in range(3, n + 1):
+        same = diff % mod
+        diff = total * (k - 1) % mod
+        total = (same + diff) % mod
+    return total

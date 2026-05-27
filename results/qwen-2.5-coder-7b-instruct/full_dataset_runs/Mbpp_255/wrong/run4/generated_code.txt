@@ -1,0 +1,5 @@
+def combinations_colors(l, n):
+    """
+    Write a function to choose specified number of colours from three different colours and generate all the combinations with repetitions.
+    """
+    return [''.join(p) for p in product("RGB", repeat=n)]

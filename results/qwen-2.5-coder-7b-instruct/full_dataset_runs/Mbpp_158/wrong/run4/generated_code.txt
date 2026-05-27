@@ -1,0 +1,7 @@
+def min_Ops(arr,n,k):
+    """
+    Write a python function to find k number of operations required to make all elements equal.
+    """
+    arr.sort()
+    median = arr[n // 2]
+    return sum(abs(x - median) for x in arr)

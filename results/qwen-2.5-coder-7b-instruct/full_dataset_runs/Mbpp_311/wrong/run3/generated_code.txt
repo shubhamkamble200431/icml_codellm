@@ -1,0 +1,5 @@
+def set_left_most_unset_bit(n):
+    """
+    Write a python function to set the left most unset bit.
+    """
+    return n | (1 << ((n.bit_length() if n else 0) + 1))

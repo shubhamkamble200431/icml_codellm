@@ -1,0 +1,19 @@
+def solution(*args):
+    """
+    Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.
+    """
+    # Initialize variables to store the maximum sum with and without taking the current element
+    max_sum_with = args[0]
+    max_sum_without = 0
+    
+    # Iterate through each element in the list starting from the second element
+    for num in args[1:]:
+        # Update the maximum sum with and without including the current element
+        new_max_sum_with = max(max_sum_without + num, max_sum_with)
+        new_max_sum_without = max(max_sum_without, max_sum_with - num)
+        
+        # Update the previous values
+        max_sum_with, max_sum_without = new_max_sum_with, new_max_sum_without
+    
+    # Return the maximum sum found after processing all elements
+    return max(max_sum_with, max_sum_without)

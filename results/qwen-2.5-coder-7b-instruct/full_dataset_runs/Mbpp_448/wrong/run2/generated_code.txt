@@ -1,0 +1,16 @@
+def cal_sum(n):
+    """
+    Write a function to calculate the sum of perrin numbers.
+    """
+    def perrin(n):
+        if n == 0:
+            return 3
+        elif n == 1 or n == 2:
+            return 0
+        else:
+            return perrin(n-2) + perrin(n-3)
+
+    total = 0
+    for i in range(n+1):
+        total += perrin(i)
+    return total

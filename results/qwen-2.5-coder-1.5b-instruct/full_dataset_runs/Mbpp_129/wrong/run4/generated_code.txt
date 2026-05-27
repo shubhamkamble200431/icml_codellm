@@ -1,0 +1,6 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+from typing import *
+from collections import *

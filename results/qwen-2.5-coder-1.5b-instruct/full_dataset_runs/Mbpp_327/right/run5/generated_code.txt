@@ -1,0 +1,5 @@
+def check_isosceles(x,y,z):
+    """
+    Write a function to print check if the triangle is isosceles or not.
+    """
+    return x == y or x == z or y == z

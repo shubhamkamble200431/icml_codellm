@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a function to find x and y that satisfies ax + by = n.
+    """
+from itertools import product

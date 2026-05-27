@@ -1,0 +1,8 @@
+def solution(*args):
+    """
+    Write a python function to count the occurrence of a given character in a string.
+    """
+    char = args[0]
+    string = ' '.join(args[1:])
+
+    return string.count(char)

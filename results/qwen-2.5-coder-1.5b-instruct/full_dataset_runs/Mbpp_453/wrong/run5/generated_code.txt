@@ -1,0 +1,11 @@
+def solution(*args):
+    """
+    Write a python function to find the sum of even factors of a number.
+    """
+    total_sum = 0
+    num = args[0]
+    while num > 1:
+        if num % 2 == 0:
+            total_sum += num
+        num //= 2
+    return total_sum

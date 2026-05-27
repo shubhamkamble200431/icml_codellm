@@ -1,0 +1,18 @@
+def binary_search(item_list,item):
+    """
+    Write a function to search an element in the given array by using binary search.
+    """
+    left = 0
+    right = len(item_list) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if item_list[mid] == item:
+            return True
+        elif item_list[mid] < item:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return False

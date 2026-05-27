@@ -1,0 +1,14 @@
+def len_log(list1):
+    """
+    Write a python function to find the length of the longest word.
+    """
+    if not list1:  # Check if the list is empty
+        return 0
+
+    max_length = 0  # Initialize maximum length to zero
+    for word in list1:
+        current_length = len(word)  # Calculate the length of the current word
+        if current_length > max_length:  # If current length is greater than max_length
+            max_length = current_length  # Update max_length
+
+    return max_length

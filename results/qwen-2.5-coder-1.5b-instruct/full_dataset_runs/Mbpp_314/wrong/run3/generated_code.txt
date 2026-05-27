@@ -1,0 +1,20 @@
+def solution(*args):
+    """
+    Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.
+    """
+    n = args[0]
+
+    # Create a 2D array to store the maximum sum at each position
+    dp = np.zeros((n + 1, n + 1))
+
+    # Base cases: if there is only one element, the max sum is the element itself
+    for i in range(n):
+        dp[i][i] = args[1][i]
+
+    # Fill the dp table
+    for l in range(2, n + 1):  # Length of the subarray
+        for i in range(n - l + 1):  # Start index of the subarray
+            j = i + l - 1  # End index of the subarray
+            dp[i][j] = max(dp[i+1][j], dp[i][j-1]) + args[1][j]
+
+    return int(dp[0][-1])

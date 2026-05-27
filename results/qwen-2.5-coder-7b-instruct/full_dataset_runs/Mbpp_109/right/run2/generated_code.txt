@@ -1,0 +1,12 @@
+def odd_Equivalent(s,n):
+    """
+    Write a python function to find the count of rotations of a binary string with odd value.
+    """
+    def is_odd_value(binary_str):
+        return int(binary_str, 2) % 2 == 1
+
+    count = 0
+    for i in range(n):
+        if is_odd_value(s[i:] + s[:i]):
+            count += 1
+    return count

@@ -1,0 +1,15 @@
+def prod_Square(n):
+    """
+    Write a python function to check whether the given number can be represented by product of two squares or not.
+    """
+    if n < 0:
+        return False
+    if n == 0 or n == 1:
+        return True
+
+    max_root = int(math.sqrt(n))
+    for i in range(2, max_root + 1):
+        if n % (i * i) == 0 and math.isqrt(n // (i * i)) ** 2 == n // (i * i):
+            return True
+
+    return False

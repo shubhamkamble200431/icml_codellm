@@ -1,0 +1,5 @@
+def zigzag(n, k):
+    """
+    Write a function to find entringer number e(n, k).
+    """
+    return comb(n + k - 1, k) - comb(n + k - 2, k)

@@ -1,0 +1,10 @@
+def count_bidirectional(test_list):
+    """
+    Write a function to count bidirectional tuple pairs.
+    """
+    bidirectional_count = 0
+    for i in range(len(test_list)):
+        for j in range(i + 1, len(test_list)):
+            if test_list[i] == (test_list[j][0], test_list[j][1]) and test_list[j] == (test_list[i][1], test_list[i][0]):
+                bidirectional_count += 1
+    return bidirectional_count

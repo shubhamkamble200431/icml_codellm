@@ -1,0 +1,5 @@
+def dict_filter(dict,n):
+    """
+    Write a function to filter a dictionary based on values.
+    """
+    return {key: value for key, value in dict.items() if len(value) > n}

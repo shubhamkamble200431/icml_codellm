@@ -1,0 +1,9 @@
+def check_integer(text):
+    """
+    Write a function to check if a string represents an integer or not.
+    """
+    # Regular expression pattern to match an integer
+    pattern = r'^-?\d+$'
+
+    # Check if the text matches the pattern
+    return bool(re.match(pattern, text))

@@ -1,0 +1,5 @@
+def is_undulating(n):
+    """
+    Write a function to check whether the given number is undulating or not.
+    """
+    return str(n) == str(n)[::-1] and len(str(n)) > 3

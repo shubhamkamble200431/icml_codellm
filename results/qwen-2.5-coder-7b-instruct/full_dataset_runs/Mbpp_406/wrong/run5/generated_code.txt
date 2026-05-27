@@ -1,0 +1,5 @@
+def find_Parity(x):
+    """
+    Write a python function to find the parity of a given number.
+    """
+    return "Even" if x % 2 == 0 else "Odd"

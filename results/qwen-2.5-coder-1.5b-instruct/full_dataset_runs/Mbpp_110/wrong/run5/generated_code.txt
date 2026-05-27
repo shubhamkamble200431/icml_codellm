@@ -1,0 +1,26 @@
+def extract_missing(test_list, strt_val, stop_val):
+    """
+    Write a function to extract the ranges that are missing from the given list with the given start range and end range values.
+    """
+    # Initialize an empty list to store the missing ranges
+    missing_ranges = []
+
+    # Sort the test list in ascending order
+    sorted_test_list = sorted(test_list)
+
+    # Iterate through the sorted test list
+    for i in range(len(sorted_test_list) - 1):
+        # Calculate the current range of elements
+        current_range = (sorted_test_list[i], sorted_test_list[i + 1])
+
+        # Check if there is a gap between the current range and the next one
+        if current_range[1] != current_range[0] + 1:
+            # If there is a gap, calculate the missing range
+            missing_start = current_range[0] + 1
+            missing_end = current_range[1] - 1
+
+            # Add the missing range to the list
+            missing_ranges.append((missing_start, missing_end))
+
+    # Return the list of missing ranges
+    return missing_ranges

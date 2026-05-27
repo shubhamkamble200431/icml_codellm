@@ -1,0 +1,5 @@
+def distance_lat_long(slat,slon,elat,elon):
+    """
+    Write a function to calculate distance between two points using latitude and longitude.
+    """
+import math

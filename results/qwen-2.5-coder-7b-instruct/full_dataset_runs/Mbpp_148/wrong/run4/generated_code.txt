@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a function to divide a number into two parts such that the sum of digits is maximum.
+    """
+    num = max(args)
+    digits = sorted(str(num), reverse=True)
+    return int(''.join(digits[:len(digits)//2])), int(''.join(digits[len(digits)//2:]))

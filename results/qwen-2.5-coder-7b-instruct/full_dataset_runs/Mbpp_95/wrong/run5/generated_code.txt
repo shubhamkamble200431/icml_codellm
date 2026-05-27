@@ -1,0 +1,5 @@
+def Find_Min_Length(lst):
+    """
+    Write a python function to find the minimum length of sublist.
+    """
+return min(len(sublist) for sublist in lst)

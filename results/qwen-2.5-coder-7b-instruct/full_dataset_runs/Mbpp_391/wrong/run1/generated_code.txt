@@ -1,0 +1,12 @@
+def convert_list_dictionary(l1, l2, l3):
+    """
+    Write a function to convert more than one list to nested dictionary.
+    """
+    def build_dict(lists):
+        if len(lists) == 0:
+            return {}
+        key = lists[0].pop(0)
+        value = build_dict(lists[1:]) if lists[1:] else None
+        return {key: value}
+
+    return build_dict([l1, l2, l3])

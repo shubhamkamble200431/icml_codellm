@@ -1,0 +1,24 @@
+def rearrange_bigger(n):
+    """
+    Write a function to create the next bigger number by rearranging the digits of a given number.
+    """
+    n = str(n)
+    if n == max(n):  # If all digits are in descending order, return -1 as there is no larger number
+        return -1
+    else:
+        # Find the first digit that is smaller than its successor
+        i = len(n) - 2
+        while i >= 0 and n[i] >= n[i + 1]:
+            i -= 1
+        if i < 0:  # No such digit found, return -1
+            return -1
+        # Find the smallest digit in the remaining part of the string that is greater than the digit at index i
+        j = len(n) - 1
+        while j > i and n[j] <= n[i]:
+            j -= 1
+        # Swap the two digits found
+        n[i], n[j] = n[j], n[i]
+        # Sort the rest of the string in ascending order
+        n[i+1:] = sorted(n[i+1:])
+        # Convert the string back to an integer
+        return int(''.join(n))

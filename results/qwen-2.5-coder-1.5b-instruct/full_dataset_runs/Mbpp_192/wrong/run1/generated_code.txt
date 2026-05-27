@@ -1,0 +1,12 @@
+def check_String(str):
+    """
+    Write a python function to check whether a string has atleast one letter and one number.
+    """
+    # Regular expression to match at least one letter and one number in the string
+    pattern = r'[a-zA-Z0-9]'
+
+    # Search for the pattern in the input string
+    if re.search(pattern, str):
+        return True
+    else:
+        return False

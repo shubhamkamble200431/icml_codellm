@@ -1,0 +1,12 @@
+def rearange_string(S):
+    """
+    Write a function to check if the letters of a given string can be rearranged so that two characters that are adjacent to each other are different.
+    """
+    if can_rearrange(S):
+        rearranged = can_rearrange(S)
+        if rearranged == S:
+            return "Not possible"
+        else:
+            return rearranged
+    else:
+        return "Not possible"

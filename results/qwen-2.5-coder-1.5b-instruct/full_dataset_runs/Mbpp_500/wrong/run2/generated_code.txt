@@ -1,0 +1,5 @@
+def concatenate_elements(list):
+    """
+    Write a function to concatenate all elements of the given list into a string.
+    """
+    return ''.join(str(item) for item in list)

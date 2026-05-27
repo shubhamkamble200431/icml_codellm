@@ -1,0 +1,5 @@
+def most_occurrences(test_list):
+    """
+    Write a function to get the word with most number of occurrences in the given strings list.
+    """
+    return Counter(test_list).most_common(1)[0][0]

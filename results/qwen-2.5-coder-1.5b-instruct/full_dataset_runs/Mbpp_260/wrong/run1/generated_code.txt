@@ -1,0 +1,5 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    return list(primerange(1, n + 1))[n]

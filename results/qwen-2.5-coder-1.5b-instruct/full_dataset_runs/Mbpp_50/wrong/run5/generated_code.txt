@@ -1,0 +1,5 @@
+def min_length_list(input_list):
+    """
+    Write a function to find the list with minimum length using lambda function.
+    """
+from typing import List

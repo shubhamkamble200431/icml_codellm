@@ -1,0 +1,9 @@
+def convert_list_dictionary(l1, l2, l3):
+    """
+    Write a function to convert more than one list to nested dictionary.
+    """
+    nested_dict = {}
+    for i in range(len(l1)):
+        key = f"{l1[i]}_{l2[i]}"
+        nested_dict[key] = l3[i]
+    return nested_dict

@@ -1,0 +1,10 @@
+def find_character(string):
+    """
+    Write a function to find uppercase, lowercase, special character and numeric values using regex.
+    """
+    return {
+        'uppercase': bool(re.search(r'[A-Z]', string)),
+        'lowercase': bool(re.search(r'[a-z]', string)),
+        'special': bool(re.search(r'[^A-Za-z0-9\s]', string)),
+        'numeric': bool(re.search(r'\d', string))
+    }

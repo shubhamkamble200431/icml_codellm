@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to toggle all even bits of a given number.
+    """
+    result = 0
+    for arg in args:
+        # Shift argument left by 1 bit and mask it with 1 to extract its least significant bit
+        if (arg & 1) == 0:
+            # If least significant bit is even, set corresponding bit in result
+            result |= 1 << arg.bit_length()
+        else:
+            # Otherwise, clear corresponding bit in result
+            result &= ~(1 << arg.bit_length())
+    return result

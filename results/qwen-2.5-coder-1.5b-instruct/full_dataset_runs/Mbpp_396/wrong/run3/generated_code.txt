@@ -1,0 +1,5 @@
+def check_char(string):
+    """
+    Write a function to check whether the given string starts and ends with the same character or not using regex.
+    """
+    return bool(re.match(r'^(.).*\1$', string))

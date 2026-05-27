@@ -1,0 +1,26 @@
+def permute_string(str):
+    """
+    Write a function to print all permutations of a given string including duplicates.
+    """
+    # Helper function to get all permutations of a list
+    def permute(lst):
+        if len(lst) == 1:
+            return [lst[0]]
+        else:
+            perms = []
+            for i in range(len(lst)):
+                element = lst[i]
+                remaining = lst[:i] + lst[i+1:]
+                for p in permute(remaining):
+                    perms.append(element + p)
+            return perms
+
+    # Convert input string into a list and sort it to handle duplicates correctly
+    str_list = sorted(list(str))
+
+    # Get all permutations of the sorted list
+    perms = permute(str_list)
+
+    # Join each permutation back into a string and print them
+    for perm in perms:
+        print(''.join(perm))

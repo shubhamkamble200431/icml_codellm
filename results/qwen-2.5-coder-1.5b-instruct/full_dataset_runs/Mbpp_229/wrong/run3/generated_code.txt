@@ -1,0 +1,21 @@
+def re_arrange_array(arr, n):
+    """
+    Write a function to re-arrange the elements of the given array so that all negative elements appear before positive ones.
+    """
+    i = 0
+    j = n - 1
+
+    while i < j:
+        # Move 'i' towards right until it finds a positive element
+        while arr[i] < 0:
+            i += 1
+
+        # Move 'j' towards left until it finds a negative element
+        while arr[j] >= 0:
+            j -= 1
+
+        # Swap elements at positions 'i' and 'j'
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+
+    return arr

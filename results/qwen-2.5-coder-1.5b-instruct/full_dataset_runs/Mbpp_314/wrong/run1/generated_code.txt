@@ -1,0 +1,18 @@
+def solution(*args):
+    """
+    Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.
+    """
+    if len(args) != 1:
+        raise ValueError("The input should be a single array")
+
+    arr = np.array(args[0])
+    if len(arr) % 2 != 0:
+        raise ValueError("The number of elements in the array must be even")
+
+    odd_indices = arr[::2]
+    even_indices = arr[1::2]
+
+    max_sum_odd = np.max(odd_indices)
+    max_sum_even = np.max(even_indices)
+
+    return max(max_sum_odd, max_sum_even)

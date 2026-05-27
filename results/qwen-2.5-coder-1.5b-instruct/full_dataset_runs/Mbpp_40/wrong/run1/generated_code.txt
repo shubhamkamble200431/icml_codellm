@@ -1,0 +1,5 @@
+def freq_element(nums):
+    """
+    Write a function to find frequency of the elements in a given list of lists using collections module.
+    """
+    return dict(Counter(num) for num in nums)

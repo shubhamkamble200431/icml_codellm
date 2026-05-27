@@ -1,0 +1,10 @@
+def get_carol(n):
+    """
+    Write a function to find the n’th carol number.
+    """
+    a = 2 ** n - 1
+    carol_number = a ** 2 - 2
+    if is_perfect_square(carol_number + 1):
+        return carol_number
+    else:
+        raise ValueError(f"{n} does not correspond to a Carol number")

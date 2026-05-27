@@ -1,0 +1,4 @@
+def merge(a,b):
+    """
+    Write a function to sort the given array by using merge sort.
+    """

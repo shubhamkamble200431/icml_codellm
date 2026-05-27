@@ -1,0 +1,6 @@
+def start_withp(words):
+    """
+    Write a function to match two words from a list of words starting with letter 'p'.
+    """
+    pattern = r'\b(p\w+)\b'
+    return [word for word in words if re.match(pattern, word)]

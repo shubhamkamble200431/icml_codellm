@@ -1,0 +1,11 @@
+def zigzag(n, k):
+    """
+    Write a function to find entringer number e(n, k).
+    """
+    if n == 1:
+        return k
+    elif n == 2:
+        return n * (n + 1) // 2
+    else:
+        # Recursively calculate the entringer number based on the values of n and k
+        return zigzag(n - 1, k) + n * (n + 1) // 2 - (k - 1) * n

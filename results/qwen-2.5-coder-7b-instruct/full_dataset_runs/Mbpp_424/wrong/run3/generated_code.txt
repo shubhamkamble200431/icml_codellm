@@ -1,0 +1,5 @@
+def extract_rear(test_tuple):
+    """
+    Write a function to extract only the rear index element of each string in the given tuple.
+    """
+return tuple(s[-1] for s in test_tuple)

@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to toggle all odd bits of a given number.
+    """
+    num = args[0]
+    mask = 0x55555555
+    return num ^ mask

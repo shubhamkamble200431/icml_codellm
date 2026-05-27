@@ -1,0 +1,13 @@
+def babylonian_squareroot(number):
+    """
+    Write a function for computing square roots using the babylonian method.
+    """
+    if number < 0:
+        return None  # Negative numbers do not have real square roots
+    guess = number / 2.0  # Initial guess is half of the number
+    while True:
+        next_guess = (guess + number / guess) / 2.0
+        if abs(next_guess - guess) < 1e-9:  # Check for convergence
+            break
+        guess = next_guess
+    return guess

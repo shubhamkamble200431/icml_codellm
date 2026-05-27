@@ -1,0 +1,5 @@
+def add_string(list,string):
+    """
+    Write a function to insert a given string at the beginning of all items in a list.
+    """
+return [string + item for item in list]

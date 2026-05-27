@@ -1,0 +1,22 @@
+def find_peak_util(arr, low, high, n):
+    """
+    Write a function to find the peak element in the given array.
+    """
+    # Base case: if there is only one element in the array, it is the peak
+    if (high == low):
+        return arr[low]
+
+    mid = (low + high) // 2
+
+    # If mid is peak point or its left neighbor is smaller than mid and right neighbor is greater than mid
+    if ((mid == 0 or arr[mid - 1] <= arr[mid]) and
+            (mid == n - 1 or arr[mid + 1] <= arr[mid])):
+        return arr[mid]
+
+    # If left neighbor is greater than mid, then peak is in left half
+    elif arr[mid - 1] > arr[mid]:
+        return find_peak_util(arr, low, (mid - 1), n)
+
+    # Else, peak is in right half
+    else:
+        return find_peak_util(arr, (mid + 1), high, n)

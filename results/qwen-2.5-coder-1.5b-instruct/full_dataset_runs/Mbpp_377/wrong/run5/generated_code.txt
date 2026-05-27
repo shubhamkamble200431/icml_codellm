@@ -1,0 +1,6 @@
+def solution(*args):
+    """
+    Write a python function to remove all occurrences of a character in a given string.
+    """
+    char_to_remove = args[0]
+    return ''.join([char for char in args[1] if char != char_to_remove])

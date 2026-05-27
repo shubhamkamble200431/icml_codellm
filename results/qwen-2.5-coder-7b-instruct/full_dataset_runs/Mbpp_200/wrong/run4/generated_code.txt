@@ -1,0 +1,5 @@
+def position_max(list1):
+    """
+    Write a function to find all index positions of the maximum values in a given list.
+    """
+    return np.where(np.array(list1) == max(list1))[0].tolist()

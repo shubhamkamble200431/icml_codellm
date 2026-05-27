@@ -1,0 +1,21 @@
+def find_last_occurrence(A, x):
+    """
+    Write a function to find the index of the last occurrence of a given number in a sorted array.
+    """
+    left, right = 0, len(A) - 1
+
+    while left <= right:
+        mid = (left + right) // 2
+
+        if A[mid] == x:
+            # Move to the right half to find the last occurrence
+            left = mid + 1
+        elif A[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    # If left is greater than the length of the array or points to a value that is not equal to x, return -1
+    if left > len(A) or A[left - 1] != x:
+        return -1
+    return left - 1

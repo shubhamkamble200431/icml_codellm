@@ -1,0 +1,10 @@
+def solution(*args):
+    """
+    Write a python function to check whether the last element of given array is even or odd after performing an operation p times.
+    """
+    arr, p = args[:-1], args[-1]
+    last_element = arr[-1]
+    if p % 2 == 0:
+        return "ODD" if last_element % 2 == 0 else "EVEN"
+    else:
+        return "EVEN" if last_element % 2 == 0 else "ODD"

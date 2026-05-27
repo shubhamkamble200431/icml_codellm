@@ -1,0 +1,29 @@
+def rearrange_bigger(n):
+    """
+    Write a function to create the next bigger number by rearranging the digits of a given number.
+    """
+    # Convert the number to a list of its digits
+    digits = [int(digit) for digit in str(n)]
+
+    # Find the index from which we need to swap and rotate
+    for i in range(len(digits)-2, -1, -1):
+        if digits[i] < digits[i+1]:
+            break
+
+    # If no such element is found, return -1
+    if i == -1:
+        return -1
+
+    # Find the smallest digit on the right side that is greater than digits[i]
+    for j in range(i+1, len(digits)):
+        if digits[j] > digits[i]:
+            break
+
+    # Swap digits[i] and digits[j]
+    digits[i], digits[j] = digits[j], digits[i]
+
+    # Sort the remaining part of the list (from i+1 to end)
+    digits[i+1:] = sorted(digits[i+1:])
+
+    # Convert the list back to an integer and return it
+    return int(''.join(map(str, digits)))

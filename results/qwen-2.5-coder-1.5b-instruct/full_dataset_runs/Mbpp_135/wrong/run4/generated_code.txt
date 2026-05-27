@@ -1,0 +1,5 @@
+def hexagonal_num(n):
+    """
+    Write a function to find the nth hexagonal number.
+    """
+    return 3*n*(n-1)//2

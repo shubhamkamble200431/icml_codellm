@@ -1,0 +1,41 @@
+def solve(a,n):
+    """
+    Write a python function to check whether the count of inversion of two types are same or not.
+    """
+    def merge_sort_and_count(arr):
+        if len(arr) <= 1:
+            return arr, 0
+
+        mid = len(arr) // 2
+        left, inv_left = merge_sort_and_count(arr[:mid])
+        right, inv_right = merge_sort_and_count(arr[mid:])
+        merged, inv_merge = merge_and_count(left, right)
+
+        total_inv = inv_left + inv_right + inv_merge
+        return merged, total_inv
+
+    def merge_and_count(left, right):
+        i = j = inv_count = 0
+        merged = []
+
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                merged.append(left[i])
+                i += 1
+            else:
+                merged.append(right[j])
+                j += 1
+                inv_count += (len(left) - i)
+
+        merged.extend(left[i:])
+        merged.extend(right[j:])
+
+        return merged, inv_count
+
+    arr = [a[i] for i in range(n)]
+    _, inv_type1 = merge_sort_and_count(arr.copy())
+
+    arr.sort()
+    _, inv_type2 = merge_sort_and_count(arr.copy())
+
+    return inv_type1 == inv_type2

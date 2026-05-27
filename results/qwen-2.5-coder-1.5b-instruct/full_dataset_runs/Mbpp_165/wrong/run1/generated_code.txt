@@ -1,0 +1,12 @@
+def count_char_position(str1):
+    """
+    Write a python function to count characters at same position in a given string (lower and uppercase characters) as in english alphabet.
+    """
+    char_position = {}
+
+    # Iterate over each character in the string
+    for i, char in enumerate(str1, start=1):
+        if char.isalpha():
+            char_position[char] = (i - 1) % 26
+
+    return char_position

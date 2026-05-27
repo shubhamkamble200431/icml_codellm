@@ -1,0 +1,16 @@
+def breakSum(n):
+    """
+    Write a function to find the maximum sum we can make by dividing number in three parts recursively and summing them up together for the given number.
+    """
+    if n == 0:
+        return 0
+    if n < 3:
+        return min(n)
+    max_sum = float('-inf')
+    # Try all possible cuts (i.e., i from 1 to n-1).
+    for i in range(1, n):
+        # Recursively calculate the sum of the remaining part after cutting at index i.
+        remaining_sum = breakSum(n - i)
+        # Update the maximum sum found so far.
+        max_sum = max(max_sum, i + remaining_sum)
+    return max_sum

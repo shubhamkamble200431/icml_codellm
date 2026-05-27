@@ -1,0 +1,5 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    return [x for x, group in itertools.groupby(alist) for _ in range(int(x))]

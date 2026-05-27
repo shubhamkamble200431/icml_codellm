@@ -1,0 +1,12 @@
+def check_literals(text, patterns):
+    """
+    Write a function to search some literals strings in a string by using regex.
+    """
+    result = {}
+    for pattern in patterns:
+        count = len(re.findall(pattern, text))
+        if count > 0:
+            result[pattern] = count
+        else:
+            result[pattern] = 0
+    return result

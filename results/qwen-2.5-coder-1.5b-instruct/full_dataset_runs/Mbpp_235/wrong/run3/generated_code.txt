@@ -1,0 +1,12 @@
+def even_bit_set_number(n):
+    """
+    Write a python function to set all even bits of a given number.
+    """
+    result = 0
+    i = 1
+    while n:
+        if i % 2 == 0:
+            result |= i
+        i <<= 1
+        n >>= 1
+    return result

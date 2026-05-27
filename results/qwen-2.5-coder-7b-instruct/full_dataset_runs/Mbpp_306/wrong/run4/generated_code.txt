@@ -1,0 +1,15 @@
+def max_sum_increasing_subseq(a, n, index, k):
+    """
+    Write a function to find the maximum sum of increasing subsequence from prefix till ith index and also including a given kth element which is after i, i.e., k > i .
+    """
+    if k == n - 1:
+        return a[index] + a[k]
+    
+    max_sum = a[index]
+    for j in range(index + 1, k):
+        if a[j] > a[index]:
+            current_sum = max_sum_increasing_subseq(a, n, j, k)
+            if current_sum > max_sum:
+                max_sum = current_sum
+    
+    return max_sum + a[k]

@@ -1,0 +1,27 @@
+def max_sum(arr, n):
+    """
+    Write a function to find the maximum sum of bi-tonic sub-sequence for the given array.
+    """
+    if n == 0:
+        return 0
+
+    # Initialize the list to store the maximum sum ending at each index
+    max_ending_here = [0] * n
+    max_so_far = arr[0]
+
+    # Compute the maximum sum ending at each index by iterating through the array
+    for i in range(1, n):
+        max_ending_here[i] = max(max_ending_here[i-1], arr[i]) + (i if arr[i-1] > arr[i] else 0)
+        max_so_far = max(max_so_far, max_ending_here[i])
+
+    # Reset the list to store the maximum sum starting from each index
+    max_starting_here = [0] * n
+    max_so_far = arr[n-1]
+
+    # Compute the maximum sum starting from each index by iterating through the array backwards
+    for i in range(n-2, -1, -1):
+        max_starting_here[i] = max(max_starting_here[i+1], arr[i]) + (i if arr[i+1] < arr[i] else 0)
+        max_so_far = max(max_so_far, max_starting_here[i])
+
+    # The maximum sum of bi-tonic sub-sequence is the maximum value between max_so_far and its complement
+    return max(max_so_far, sum(arr) - max_so_far)

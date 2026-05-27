@@ -1,0 +1,11 @@
+def extract_freq(test_list):
+    """
+    Write a function to extract the frequency of unique tuples in the given list order irrespective.
+    """
+    # Use Counter from collections module to count frequencies of each tuple
+    freq_dict = dict(Counter(test_list))
+    
+    # Convert the dictionary into a sorted list based on the values (frequencies) in descending order
+    sorted_freq_list = sorted(freq_dict.items(), key=lambda x: x[1], reverse=True)
+    
+    return sorted_freq_list

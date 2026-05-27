@@ -1,0 +1,17 @@
+def permutation_coefficient(n, k):
+    """
+    Write a function to calculate the permutation coefficient of given p(n, k).
+    """
+    # Base cases: permutation of 0 items is 1 and empty set is also 1
+    if n == 0 or k == 0:
+        return 1
+
+    # Calculate factorial using recursion
+    def factorial(x):
+        if x <= 1:
+            return 1
+        else:
+            return x * factorial(x-1)
+
+    # Calculate permutation coefficient using the formula P(n, k) = n! / (n-k)!
+    return factorial(n) // factorial(n - k)

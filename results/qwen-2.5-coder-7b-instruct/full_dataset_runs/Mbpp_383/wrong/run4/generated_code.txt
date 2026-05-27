@@ -1,0 +1,10 @@
+def solution(*args):
+    """
+    Write a python function to toggle all odd bits of a given number.
+    """
+    result = 0
+    for arg in args:
+        mask = 0x55555555  # Binary: 01010101... (32 bits)
+        toggled = arg ^ mask
+        result |= toggled
+    return result

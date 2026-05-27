@@ -1,0 +1,23 @@
+def k_smallest_pairs(nums1, nums2, k):
+    """
+    Write a function to find k number of pairs which consist of one element from the first array and one element from the second array.
+    """
+    # Create a min heap with the first k elements from both arrays
+    min_heap = [(nums1[i], nums2[0], i, 0) for i in range(min(k, len(nums1))]]
+
+    result = []
+
+    while min_heap:
+        num1, num2, i, j = heapq.heappop(min_heap)
+
+        result.append((num1, num2))
+
+        # If there is another element in nums1, add it to the heap
+        if j + 1 < len(nums2):
+            heapq.heappush(min_heap, (nums1[i], nums2[j+1], i, j+1))
+
+        # If the heap size exceeds k, remove the smallest element
+        if len(result) > k:
+            heapq.heappop(min_heap)
+
+    return result[:k]

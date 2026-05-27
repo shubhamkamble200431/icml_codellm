@@ -1,0 +1,5 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    return [item * count for item, count in Counter(alist).items()]

@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to find the average of odd numbers till a given odd number.
+    """
+    return sum(num for num in args if num % 2 != 0) / len([num for num in args if num % 2 != 0])

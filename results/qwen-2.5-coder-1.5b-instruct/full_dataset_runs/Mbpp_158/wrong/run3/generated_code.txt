@@ -1,0 +1,6 @@
+def min_Ops(arr,n,k):
+    """
+    Write a python function to find k number of operations required to make all elements equal.
+    """
+    max_val = max(arr)
+    return (k * max_val) - sum(arr)

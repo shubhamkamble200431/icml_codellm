@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to toggle all odd bits of a given number.
+    """
+    # Initialize the result variable
+    result = 0
+
+    # Iterate over each argument in the list
+    for arg in args:
+        # Toggle all odd bits of the current number
+        result |= (1 << arg)
+
+    # Return the final result
+    return result

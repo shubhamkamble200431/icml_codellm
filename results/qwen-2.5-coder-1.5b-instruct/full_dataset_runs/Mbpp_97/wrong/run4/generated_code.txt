@@ -1,0 +1,5 @@
+def frequency_lists(list1):
+    """
+    Write a function to find frequency count of list of lists.
+    """
+    return [Counter sublist for sublist in list1]

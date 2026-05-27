@@ -1,0 +1,5 @@
+def is_Diff(n):
+    """
+    Write a python function to find the difference between sum of even and odd digits.
+    """
+    return sum(int(digit) for digit in str(n) if int(digit) % 2 == 0) - sum(int(digit) for digit in str(n) if int(digit) % 2 != 0)

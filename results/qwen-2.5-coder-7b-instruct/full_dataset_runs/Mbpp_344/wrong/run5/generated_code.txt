@@ -1,0 +1,5 @@
+def count_Odd_Squares(n,m):
+    """
+    Write a python function to find number of elements with odd factors in a given range.
+    """
+    return (n // 2) * (m // 2)

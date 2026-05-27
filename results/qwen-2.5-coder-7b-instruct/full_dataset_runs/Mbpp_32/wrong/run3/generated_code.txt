@@ -1,0 +1,13 @@
+def solution(*args):
+    """
+    Write a python function to find the largest prime factor of a given number.
+    """
+    num = max(args)
+    largest_prime = -1
+    for i in range(2, int(sqrt(num)) + 1):
+        while num % i == 0 and is_prime(i):
+            largest_prime = i
+            num //= i
+    if num > 2 and is_prime(num):
+        largest_prime = num
+    return largest_prime

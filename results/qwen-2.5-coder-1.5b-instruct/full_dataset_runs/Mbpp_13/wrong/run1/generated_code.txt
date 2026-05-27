@@ -1,0 +1,6 @@
+def count_common(words):
+    """
+    Write a function to count the most common words in a dictionary.
+    """
+    word_counts = Counter(words)
+    return word_counts.most_common(1)[0]

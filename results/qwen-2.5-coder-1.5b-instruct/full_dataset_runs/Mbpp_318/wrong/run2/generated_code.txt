@@ -1,0 +1,20 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    total = sum(args)
+    max_volume = 0
+    # Iterate through all possible lengths of the cuboid
+    for length in range(1, total // 3 + 1):
+        # Check if remaining length is divisible by the width and height
+        if (total - length) % (length * 2) == 0:
+            width = (total - length) // (length * 2)
+            # Calculate height
+            height = total - length - width * 2
+            # Check if dimensions form a valid cuboid
+            if length > 0 and width > 0 and height > 0:
+                # Calculate volume and update max volume if current volume is greater
+                volume = length * width * height
+                if volume > max_volume:
+                    max_volume = volume
+    return max_volume

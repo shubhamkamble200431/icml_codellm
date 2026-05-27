@@ -1,0 +1,8 @@
+def count_binary_seq(n):
+    """
+    Write a function to find the count of all binary sequences of length 2n such that sum of first n bits is same as sum of last n bits.
+    """
+    total_count = 0
+    for i in range(n + 1):
+        total_count += comb(n, i) ** 2
+    return total_count

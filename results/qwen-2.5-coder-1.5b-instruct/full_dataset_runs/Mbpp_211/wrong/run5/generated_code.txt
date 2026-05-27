@@ -1,0 +1,5 @@
+def count_Num(n):
+    """
+    Write a python function to count numbers whose oth and nth bits are set.
+    """
+    return bin(n).count('1') % 2

@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """
+    return len([x for x in range(*args) if hex(x).startswith('0x')])

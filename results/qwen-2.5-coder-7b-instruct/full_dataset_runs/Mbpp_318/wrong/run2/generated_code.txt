@@ -1,0 +1,12 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    n = len(args)
+    max_volume = 0
+    for combination in itertools.combinations_with_replacement(range(1, sum(args) - n + 2), n-1):
+        sides = list(combination) + [sum(args) - sum(combination)]
+        volume = sides[0] * sides[1] * sides[2]
+        if volume > max_volume:
+            max_volume = volume
+    return max_volume

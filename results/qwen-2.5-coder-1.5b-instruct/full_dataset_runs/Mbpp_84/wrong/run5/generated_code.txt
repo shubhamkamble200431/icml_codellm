@@ -1,0 +1,12 @@
+def sequence(n):
+    """
+    Write a function to find the n-th number in newman conway sequence.
+    """
+    def nc(n):
+        if n == 0:
+            return 1
+        elif n == 1:
+            return 1
+        else:
+            return nc(nc(n-2)) + nc(n-1)
+    return nc(n - 1)

@@ -1,0 +1,5 @@
+def largest_neg(list1):
+    """
+    Write a python function to find the largest negative number from the given list.
+    """
+    return max(filter(lambda x: x < 0, list1), default=None)

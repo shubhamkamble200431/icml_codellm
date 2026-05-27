@@ -1,0 +1,14 @@
+def inversion_elements(test_tup):
+    """
+    Write a function to find the inversions of tuple elements in the given tuple list.
+    """
+    # Calculate the number of inversions using the bubble sort algorithm
+    n = len(test_tup)
+    inv_count = 0
+
+    for i in range(n):
+        for j in range(i+1, n):
+            if test_tup[i] > test_tup[j]:
+                inv_count += 1
+
+    return inv_count

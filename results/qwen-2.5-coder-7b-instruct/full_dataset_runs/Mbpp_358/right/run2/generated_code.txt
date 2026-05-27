@@ -1,0 +1,5 @@
+def moddiv_list(nums1,nums2):
+    """
+    Write a function to find modulo division of two lists using map and lambda function.
+    """
+    return list(map(lambda x, y: x % y if y != 0 else 'NaN', nums1, nums2))

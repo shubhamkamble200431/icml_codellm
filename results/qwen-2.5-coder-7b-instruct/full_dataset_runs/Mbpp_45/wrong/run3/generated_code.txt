@@ -1,0 +1,5 @@
+def find_gcd(x, y):
+    """
+    Write a function to find the gcd of the given array elements.
+    """
+    return math.gcd(x, y)

@@ -1,0 +1,35 @@
+def max_sum(arr, n):
+    """
+    Write a function to find the maximum sum of bi-tonic sub-sequence for the given array.
+    """
+    if n <= 1:
+        return arr[0]
+
+    # Create a temporary copy of the input array to avoid modifying it
+    temp_arr = arr.copy()
+
+    # Calculate the longest increasing subsequence (LIS) up to each element
+    lis_up_to_each = [1] * n
+    for i in range(1, n):
+        for j in range(i):
+            if temp_arr[j] < temp_arr[i]:
+                lis_up_to_each[i] = max(lis_up_to_each[i], lis_up_to_each[j] + 1)
+
+    # Create a temporary copy of the input array to avoid modifying it again
+    temp_arr = arr.copy()
+
+    # Calculate the longest decreasing subsequence (LDS) from each element
+    lds_from_each = [1] * n
+    for i in range(n - 2, -1, -1):
+        for j in range(i + 1, n):
+            if temp_arr[j] > temp_arr[i]:
+                lds_from_each[i] = max(lds_from_each[i], lds_from_each[j] + 1)
+
+    # Initialize the result with the first element
+    result = arr[0]
+
+    # Find the maximum sum of a bi-tonic sub-sequence by adding the first element to the largest possible LIS and LDS
+    for i in range(n):
+        result = max(result, lis_up_to_each[i] + lds_from_each[i] - 1)
+
+    return result

@@ -1,0 +1,16 @@
+def maximize_elements(test_tup1, test_tup2):
+    """
+    Write a function to maximize the given two tuples.
+    """
+    # Convert tuples to lists for element manipulation
+    list1 = list(test_tup1)
+    list2 = list(test_tup2)
+
+    # Use zip to pair elements from both lists and compare them
+    for i in range(len(list1)):
+        if list1[i] < list2[i]:
+            # If element in list1 is smaller, replace it with the larger element from list2
+            list1[i] = list2[i]
+
+    # Convert the modified lists back to tuples and return
+    return tuple(list1), tuple(list2)

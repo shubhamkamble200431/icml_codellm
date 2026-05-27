@@ -1,0 +1,5 @@
+def round_num(n,m):
+    """
+    Write a function to round the given number to the nearest multiple of a specific number.
+    """
+    return round(n / m) * m

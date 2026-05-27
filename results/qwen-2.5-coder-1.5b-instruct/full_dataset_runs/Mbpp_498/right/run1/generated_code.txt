@@ -1,0 +1,10 @@
+def gcd(x, y):
+    """
+    Write a python function to find gcd of two positive integers.
+    """
+    if x == 0:
+        return y
+    elif y == 0:
+        return x
+    else:
+        return gcd(y, x % y)

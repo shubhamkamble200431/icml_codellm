@@ -1,0 +1,13 @@
+def count_bidirectional(test_list):
+    """
+    Write a function to count bidirectional tuple pairs.
+    """
+    from collections import Counter
+
+    # Count occurrences of each tuple
+    counter = Counter(test_list)
+
+    # Filter tuples that appear twice (bidirectional pairs)
+    bidirectional_pairs = [pair for pair, count in counter.items() if count == 2]
+
+    return len(bidirectional_pairs)

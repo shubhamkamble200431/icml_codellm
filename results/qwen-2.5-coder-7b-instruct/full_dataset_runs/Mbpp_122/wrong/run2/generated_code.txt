@@ -1,0 +1,11 @@
+def smartNumber(n):
+    """
+    Write a function to find n’th smart number.
+    """
+    smart_numbers = []
+    i = 1
+    while len(smart_numbers) < n:
+        if (i % 3 == 0 and i % 5 != 0) or (i % 3 != 0 and i % 5 == 0):
+            smart_numbers.append(i)
+        i += 1
+    return smart_numbers[-1]

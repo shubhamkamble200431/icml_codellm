@@ -1,0 +1,26 @@
+def solution(*args):
+    """
+    Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).
+    """
+    if len(args) != 1:
+        return "Error: Please provide exactly one argument."
+
+    n = args[0]
+
+    # Base cases
+    if n == 0 or n == 1:
+        return n
+
+    # Initialize the memoization dictionary with base cases
+    memo = {1: 1}
+
+    def compute(n):
+        if n in memo:
+            return memo[n]
+
+        # Recursive case: maximize sum by dividing n into its factors and taking the max of the sums
+        result = max(compute(n // i) + compute(n // j) + compute(n // k) + compute(n // l)
+        memo[n] = result
+        return result
+
+    return compute(n)

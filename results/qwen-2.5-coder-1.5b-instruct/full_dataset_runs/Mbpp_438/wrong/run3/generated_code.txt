@@ -1,0 +1,11 @@
+def count_bidirectional(test_list):
+    """
+    Write a function to count bidirectional tuple pairs.
+    """
+    # Generate all possible tuples from the test list
+    tuples = list(itertools.combinations(test_list, 2))
+
+    # Filter out tuples where both elements are the same
+    unique_tuples = [tup for tup in tuples if tup[0] != tup[1]]
+
+    return len(unique_tuples)

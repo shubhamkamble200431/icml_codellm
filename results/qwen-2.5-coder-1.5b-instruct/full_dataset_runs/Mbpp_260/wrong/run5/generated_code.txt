@@ -1,0 +1,16 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    if n == 1:
+        return 2
+
+    k = 0
+    i = 0
+
+    while k < n:
+        if isprime(i):
+            k += 1
+        i += 1
+
+    return i - 1

@@ -1,0 +1,17 @@
+def comb_sort(nums):
+    """
+    Write a function to sort a list of elements using comb sort.
+    """
+    interval = len(nums)
+    swapped = True
+
+    while interval > 1 or swapped:
+        interval //= 1.3  # Reduce interval size by approximately 13%
+        if interval < 1:
+            interval = 1  # Minimum interval is 1
+
+        swapped = False
+        for i in range(len(nums) - interval):
+            if nums[i] > nums[i + interval]:
+                nums[i], nums[i + interval] = nums[i + interval], nums[i]
+                swapped = True

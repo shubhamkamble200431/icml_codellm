@@ -1,0 +1,8 @@
+def get_pell(n):
+    """
+    Write a function to calculate the nth pell number.
+    """
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, 2 * b + a
+    return a

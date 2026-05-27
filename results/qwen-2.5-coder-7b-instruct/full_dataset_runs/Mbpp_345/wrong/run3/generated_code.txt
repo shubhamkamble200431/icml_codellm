@@ -1,0 +1,5 @@
+def diff_consecutivenums(nums):
+    """
+    Write a function to find the difference between two consecutive numbers in a given list.
+    """
+return [b - a for a, b in zip(nums, nums[1:])]

@@ -1,0 +1,11 @@
+def prod_Square(n):
+    """
+    Write a python function to check whether the given number can be represented by product of two squares or not.
+    """
+    if n <= 0:
+        return False
+    for i in range(1, int(math.sqrt(n)) + 1):
+        j = math.isqrt(n // i)
+        if i * j == n and math.isqrt(i) ** 2 == i and math.isqrt(j) ** 2 == j:
+            return True
+    return False

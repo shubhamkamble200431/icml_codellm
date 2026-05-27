@@ -1,0 +1,10 @@
+def ncr_modp(n, r, p):
+    """
+    Write a function to compute the value of ncr%p.
+    """
+    # Calculate the combination using factorial
+    numerator = factorial(n)
+    denominator = (factorial(r) * factorial(n - r)) % p
+
+    # Return the result modulo p
+    return numerator // denominator

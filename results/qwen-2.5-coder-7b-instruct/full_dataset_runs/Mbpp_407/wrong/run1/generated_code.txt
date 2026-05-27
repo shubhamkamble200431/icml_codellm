@@ -1,0 +1,10 @@
+def rearrange_bigger(n):
+    """
+    Write a function to create the next bigger number by rearranging the digits of a given number.
+    """
+    digits = list(str(n))
+    perms = sorted(''.join(p) for p in permutations(digits))
+    for perm in perms:
+        if int(perm) > n:
+            return int(perm)
+    return -1

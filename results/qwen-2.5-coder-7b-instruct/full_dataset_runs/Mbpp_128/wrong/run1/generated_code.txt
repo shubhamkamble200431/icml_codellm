@@ -1,0 +1,5 @@
+def long_words(n, str):
+    """
+    Write a function to shortlist words that are longer than n from a given list of words.
+    """
+return [word for word in str.split() if len(word) > n]

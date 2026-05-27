@@ -1,0 +1,5 @@
+def overlapping(list1,list2):
+    """
+    Write a python function to check whether the value exists in a sequence or not.
+    """
+    return any(item in list2 for item in list1)

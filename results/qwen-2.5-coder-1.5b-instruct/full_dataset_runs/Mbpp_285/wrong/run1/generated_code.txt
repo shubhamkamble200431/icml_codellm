@@ -1,0 +1,7 @@
+def text_match_two_three(text):
+    """
+    Write a function that matches a string that has an a followed by two to three 'b'.
+    """
+    pattern = r'a{1}b{2,3}'
+    match = re.search(pattern, text)
+    return match is not None

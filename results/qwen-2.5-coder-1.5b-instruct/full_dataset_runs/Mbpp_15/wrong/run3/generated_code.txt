@@ -1,0 +1,6 @@
+def split_lowerstring(text):
+    """
+    Write a function to split a string at lowercase letters.
+    """
+    # Split the text using regular expression that matches lowercase letters
+    return re.split('[a-z]', text)

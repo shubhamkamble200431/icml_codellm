@@ -1,0 +1,6 @@
+def remove_elements(list1, list2):
+    """
+    Write a function to remove all elements from a given list present in another list.
+    """
+    # Using list comprehension to create a new list excluding elements found in list2
+    return [element for element in list1 if element not in list2]

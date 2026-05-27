@@ -1,0 +1,11 @@
+def extract_min_max(test_tup, K):
+    """
+    Write a function to extract maximum and minimum k elements in the given tuple.
+    """
+    res = []
+    for ele in sorted(test_tup):
+        if len(res) < 2 * K:
+            res.append(ele)
+        else:
+            break
+    return tuple(sorted(res[:K] + res[-K:]))

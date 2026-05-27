@@ -1,0 +1,13 @@
+def divSum(n):
+    """
+    Write a python function to check whether the sum of divisors are same or not.
+    """
+    if n < 2:
+        return False
+    sum_divs = 1  # Include 1 as a divisor
+    for i in range(2, int(sqrt(n)) + 1):
+        if n % i == 0:
+            sum_divs += i
+            if i != n // i:  # Add the other divisor (n // i) if it's different from i
+                sum_divs += n // i
+    return sum_divs == n

@@ -1,0 +1,10 @@
+def is_woodall(x):
+    """
+    Write a function to check if the given number is woodball or not.
+    """
+    # Calculate the exponent and root using logarithms
+    exponent = int(math.log2(x))
+    root = int(math.pow(2, exponent))
+
+    # Check if the product of the root raised to the power of the exponent equals x
+    return root ** exponent == x

@@ -1,0 +1,5 @@
+def check_triplet(A, n, sum, count):
+    """
+    Write a function to find the triplet with sum of the given array
+    """
+from typing import List

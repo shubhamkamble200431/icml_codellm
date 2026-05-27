@@ -1,0 +1,30 @@
+def extract_missing(test_list, strt_val, stop_val):
+    """
+    Write a function to extract the ranges that are missing from the given list with the given start range and end range values.
+    """
+    # Sort the test list in ascending order
+    test_list.sort()
+
+    # Initialize variables for the first and last elements of the current range
+    first = None
+    last = None
+
+    # Iterate over the sorted test list
+    for element in test_list:
+        if first is None:
+            first = element
+        elif last is None:
+            last = element
+        else:
+            if element > last + 1:
+                # If the current element is greater than the next expected value,
+                # yield the missing range and reset the new range
+                yield (first, last)
+                first = element
+                last = element
+            else:
+                last = element
+
+    # Yield the final range after completing the iteration
+    if first is not None and last is not None:
+        yield (first, last)

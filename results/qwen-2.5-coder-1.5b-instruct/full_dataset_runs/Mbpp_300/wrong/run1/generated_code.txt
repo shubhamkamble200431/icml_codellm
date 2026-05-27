@@ -1,0 +1,12 @@
+def count_binary_seq(n):
+    """
+    Write a function to find the count of all binary sequences of length 2n such that sum of first n bits is same as sum of last n bits.
+    """
+    # Calculate the number of ways to have exactly k zeros in the first half and k ones in the second half
+    def binomial_coefficient(n, k):
+        if k > n // 2:
+            k = n - k
+        return math.comb(n, k)
+
+    count = binomial_coefficient(2*n, n) * (2 ** n)
+    return count

@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """
+    return len([i for i in range(*args) if all(c in '0123456789ABCDEFabcdef' for c in hex(i)[2:])])

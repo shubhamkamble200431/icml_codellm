@@ -1,0 +1,7 @@
+def find_adverb_position(text):
+    """
+    Write a function to find all adverbs and their positions in a given sentence.
+    """
+    adverbs = re.findall(r'\b\w+\b', text)
+    positions = [(adverb, text.index(adverb)) for adverb in adverbs]
+    return positions

@@ -1,0 +1,8 @@
+def recursive_list_sum(data_list):
+    """
+    Write a function of recursion list sum.
+    """
+if len(data_list) == 1:
+    return data_list[0]
+else:
+    return data_list[0] + recursive_list_sum(data_list[1:])

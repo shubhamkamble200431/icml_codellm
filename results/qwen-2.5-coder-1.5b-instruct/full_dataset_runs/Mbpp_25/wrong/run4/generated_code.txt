@@ -1,0 +1,4 @@
+def find_Product(arr,n):
+    """
+    Write a python function to find the product of non-repeated elements in a given array.
+    """

@@ -1,0 +1,17 @@
+def count_Rectangles(radius):
+    """
+    Write a python function to count the number of rectangles in a circle of radius r.
+    """
+    num_sides = 0
+    # Calculate the diameter of the circle
+    diameter = 2 * radius
+
+    # Each rectangle can be formed by choosing two opposite points on the circumference
+    # and drawing a line between them. The number of such pairs is given by the number
+    # of ways to choose 2 points out of the total number of points on the circumference,
+    # which is n*(n-1)/2, where n is the total number of points on the circumference.
+    # Since the circumference has n points (the vertices of the circle), the number of rectangles
+    # is given by n*(n-1)*((n-3)*(n-4))/4.
+    num_sides = int(diameter * diameter / 4)
+
+    return num_sides

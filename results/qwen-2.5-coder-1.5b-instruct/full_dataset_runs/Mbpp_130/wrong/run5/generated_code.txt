@@ -1,0 +1,12 @@
+def max_occurrences(nums):
+    """
+    Write a function to find the item with maximum frequency in a given list.
+    """
+    # Count the occurrences of each number in the list
+    counts = Counter(nums)
+
+    # Find the number with the highest count
+    max_count = max(counts.values(), default=0)
+    result = [num for num, count in counts.items() if count == max_count]
+
+    return result[0]  # Return the first occurrence as per requirement

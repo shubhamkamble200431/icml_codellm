@@ -1,0 +1,16 @@
+def first_non_repeating_character(str1):
+    """
+    Write a python function to find the first non-repeated character in a given string.
+    """
+    from collections import Counter
+
+    # Count occurrences of each character
+    count = Counter(str1)
+
+    # Find the first character with a count of 1
+    for char in str1:
+        if count[char] == 1:
+            return char
+
+    # If no non-repeating character is found, return None
+    return None

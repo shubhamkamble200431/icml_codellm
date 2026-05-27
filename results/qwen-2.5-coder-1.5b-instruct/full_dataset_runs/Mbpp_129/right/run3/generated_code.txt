@@ -1,0 +1,22 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    n = len(my_matrix)
+    
+    # Calculate the sum of numbers from 1 to n^2
+    target_sum = n * (n**2 + 1) // 2
+    
+    # Check rows
+    if not all(sum(row) == target_sum for row in my_matrix):
+        return False
+    
+    # Check columns
+    if not all(sum(row[i] for row in my_matrix) == target_sum for i in range(n)):
+        return False
+    
+    # Check diagonals
+    if sum(my_matrix[i][i] for i in range(n)) != target_sum or sum(my_matrix[i][n-i-1] for i in range(n)) != target_sum:
+        return False
+    
+    return True

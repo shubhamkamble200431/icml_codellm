@@ -1,0 +1,5 @@
+def count_Rectangles(radius):
+    """
+    Write a python function to count the number of rectangles in a circle of radius r.
+    """
+    return int(4 * radius**2)

@@ -1,0 +1,11 @@
+def extract_symmetric(test_list):
+    """
+    Write a function to extract all the pairs which are symmetric in the given tuple list.
+    """
+    # Generate all possible pairs using combinations
+    pairs = list(combinations(test_list, 2))
+
+    # Filter pairs that are symmetric
+    symmetric_pairs = [pair for pair in pairs if pair[0] == pair[1][::-1]]
+
+    return symmetric_pairs

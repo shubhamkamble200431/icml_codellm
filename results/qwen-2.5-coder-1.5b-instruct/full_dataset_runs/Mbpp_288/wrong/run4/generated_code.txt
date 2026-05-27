@@ -1,0 +1,10 @@
+def modular_inverse(arr, N, P):
+    """
+    Write a function to count array elements having modular inverse under given prime number p equal to itself.
+    """
+    # Create a dictionary to store the modular inverses of all numbers from 0 to N-1
+    mod_inv = {i: pow(i, -1, P) for i in range(N)}
+
+    # Count and return the number of elements with modular inverse equal to themselves
+    result = sum(1 for num in arr if num in mod_inv and mod_inv[num] == num)
+    return result

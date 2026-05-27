@@ -1,0 +1,5 @@
+def remove_splchar(text):
+    """
+    Write a function to remove everything except alphanumeric characters from a string.
+    """
+    return ''.join(re.findall(r'\w', text))

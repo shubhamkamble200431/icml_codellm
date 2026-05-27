@@ -1,0 +1,14 @@
+def solution(*args):
+    """
+    Write a python function to minimize the length of the string by removing occurrence of only one character.
+    """
+    # Count frequency of each character in the input string
+    char_count = collections.Counter(args[0])
+
+    # Find the maximum count of any character (the character with the most occurrences)
+    max_count = max(char_count.values())
+
+    # Calculate the minimum length required after removing characters to reach max_count
+    min_length = len(args[0]) - max_count
+
+    return min_length

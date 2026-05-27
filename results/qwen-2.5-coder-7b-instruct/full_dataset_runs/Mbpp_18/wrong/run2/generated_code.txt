@@ -1,0 +1,5 @@
+def str_to_list(string):
+    """
+    Write a function to remove characters from the first string which are present in the second string.
+    """
+    return [char for char in string if char not in string[1:]]

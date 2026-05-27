@@ -1,0 +1,4 @@
+def first_Missing_Positive(arr,n):
+    """
+    Write a python function to find the first missing positive number.
+    """

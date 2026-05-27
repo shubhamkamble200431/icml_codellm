@@ -1,0 +1,7 @@
+def cal_electbill(units):
+    """
+    Write a function to calculate electricity bill.
+    """
+    rate_per_unit = 0.5  # Assuming rate per unit is $0.5
+    total_bill = units * rate_per_unit
+    return total_bill

@@ -1,0 +1,8 @@
+def multiply_num(numbers):
+    """
+    Write a function to multiply all the numbers in a list and divide with the length of the list.
+    """
+    product = 1
+    for number in numbers:
+        product *= number
+    return product / len(numbers)

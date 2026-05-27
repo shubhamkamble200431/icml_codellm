@@ -1,0 +1,18 @@
+def solution(*args):
+    """
+    Write a function to find out the maximum sum such that no two chosen numbers are adjacent for the given rectangular grid of dimension 2 x n.
+    """
+    if len(args) == 0:
+        return 0
+    elif len(args) == 1:
+        return args[0]
+
+    incl = max(args[0], args[1])
+    excl = 0
+
+    for i in range(2, len(args)):
+        new_excl = max(excl, incl)
+        incl = excl + args[i]
+        excl = new_excl
+
+    return max(excl, incl)

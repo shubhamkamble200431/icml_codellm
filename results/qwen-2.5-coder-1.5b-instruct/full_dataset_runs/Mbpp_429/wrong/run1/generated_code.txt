@@ -1,0 +1,6 @@
+def and_tuples(test_tup1, test_tup2):
+    """
+    Write a function to extract the elementwise and tuples from the given two tuples.
+    """
+    result = tuple(elem for elem in zip(test_tup1, test_tup2))
+    return result

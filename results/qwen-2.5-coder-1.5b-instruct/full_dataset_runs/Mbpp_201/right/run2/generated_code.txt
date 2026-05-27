@@ -1,0 +1,8 @@
+def chkList(lst):
+    """
+    Write a python function to check whether the elements in a list are same or not.
+    """
+    if len(set(lst)) == 1:
+        return True
+    else:
+        return False

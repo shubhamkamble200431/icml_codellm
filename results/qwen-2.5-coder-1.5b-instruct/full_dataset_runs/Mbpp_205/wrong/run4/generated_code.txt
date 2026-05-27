@@ -1,0 +1,10 @@
+def inversion_elements(test_tup):
+    """
+    Write a function to find the inversions of tuple elements in the given tuple list.
+    """
+    result = []
+    for i in range(len(test_tup)):
+        for j in range(i + 1, len(test_tup)):
+            if test_tup[i] > test_tup[j]:
+                result.append((i, j))
+    return result

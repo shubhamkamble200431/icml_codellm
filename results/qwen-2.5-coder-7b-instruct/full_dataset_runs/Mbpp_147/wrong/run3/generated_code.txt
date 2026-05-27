@@ -1,0 +1,9 @@
+def max_path_sum(tri, m, n):
+    """
+    Write a function to find the maximum total path sum in the given triangle.
+    """
+    if m == 0 and n == 0:
+        return tri[0][0]
+    if m == 0:
+        return max_path_sum(tri, 0, n-1)
+    return max(max_path_sum(tri, m-1, n-1), max_path_sum(tri, m-1, n)) + tri[m][n]

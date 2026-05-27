@@ -1,0 +1,5 @@
+def count_unset_bits(n):
+    """
+    Write a python function to count unset bits of a given number.
+    """
+    return bin(n).count('0') - 1

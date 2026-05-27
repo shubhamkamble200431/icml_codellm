@@ -1,0 +1,30 @@
+def month_season(month,days):
+    """
+    Write a function to print the season for the given month and day.
+    """
+    seasons = {
+        'winter': ['January', 'February', 'December'],
+        'spring': ['March', 'April', 'May'],
+        'summer': ['June', 'July', 'August'],
+        'autumn': ['September', 'October', 'November']
+    }
+    
+    if month in seasons['winter']:
+        return "Winter"
+    elif month in seasons['spring']:
+        if month == 'March' and days < 20:
+            return "Winter"
+        else:
+            return "Spring"
+    elif month in seasons['summer']:
+        if month == 'June' and days < 21:
+            return "Spring"
+        elif month == 'September' and days < 23:
+            return "Summer"
+        else:
+            return "Autumn"
+    elif month in seasons['autumn']:
+        if month == 'December' and days < 21:
+            return "Autumn"
+        else:
+            return "Winter"

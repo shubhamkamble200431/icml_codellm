@@ -1,0 +1,8 @@
+def find_long_word(text):
+    """
+    Write a function to find all five characters long word in the given string by using regex.
+    """
+    # Define the regex pattern to match words of length 5 or more
+    pattern = r'\b\w{5,}\b'
+    # Use re.findall to find all occurrences that match the pattern
+    return re.findall(pattern, text)

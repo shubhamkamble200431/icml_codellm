@@ -1,0 +1,19 @@
+def count_Substrings(s,n):
+    """
+    Write a python function to count number of substrings with the sum of digits equal to their length.
+    """
+    from collections import defaultdict
+
+    def count_substrings(s, n):
+        count = 0
+        prefix_sum = 0
+        prefix_count = defaultdict(int)
+        prefix_count[0] = 1
+
+        for i in range(n):
+            prefix_sum += int(s[i])
+            if prefix_sum - (i + 1) in prefix_count:
+                count += prefix_count[prefix_sum - (i + 1)]
+            prefix_count[prefix_sum - (i + 1)] += 1
+
+        return count

@@ -1,0 +1,11 @@
+def count_Occurrence(tup, lst):
+    """
+    Write a python function to count the occurence of all elements of list in a tuple.
+    """
+    result = {}
+    for item in lst:
+        if item in result:
+            result[item] += 1
+        else:
+            result[item] = 1
+    return tuple(result.items())

@@ -1,0 +1,29 @@
+def __init__(self, value, list_num, index):
+    """
+    Write a function to find the smallest range that includes at-least one element from each of the given arrays.
+    """
+        self.min_range = float('inf')
+        self.current_max = float('-inf')
+        self.pointers = [0] * len(list_num)
+        self.values = list_num
+
+        while True:
+            current_min = float('inf')
+            for i in range(len(list_num)):
+                if self.pointers[i] < len(list_num[i]):
+                    current_min = min(current_min, list_num[i][self.pointers[i]])
+            
+            if current_min > self.current_max:
+                self.current_max = current_min
+                self.min_range = min(self.min_range, self.current_max - current_min)
+
+            found_all = True
+            for i in range(len(list_num)):
+                if self.pointers[i] < len(list_num[i]) and list_num[i][self.pointers[i]] == current_min:
+                    self.pointers[i] += 1
+                    if self.pointers[i] >= len(list_num[i]):
+                        return self.min_range
+                    found_all = False
+
+            if found_all:
+                break

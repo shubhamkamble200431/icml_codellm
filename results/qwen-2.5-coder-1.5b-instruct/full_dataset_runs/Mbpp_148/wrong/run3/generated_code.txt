@@ -1,0 +1,15 @@
+def solution(*args):
+    """
+    Write a function to divide a number into two parts such that the sum of digits is maximum.
+    """
+    total_sum = sum(args)
+    max_value = float('-inf')
+    best_split = (0, 0)
+
+    for i in range(1, len(args)):
+        current_sum = total_sum - args[i]
+        if current_sum > max_value:
+            max_value = current_sum
+            best_split = (args[i], total_sum - args[i])
+
+    return best_split

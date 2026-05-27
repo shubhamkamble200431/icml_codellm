@@ -1,0 +1,9 @@
+def find_lists(Input):
+    """
+    Write a function to find number of lists present in the given tuple.
+    """
+    count = 0
+    for item in Input:
+        if isinstance(item, list):
+            count += 1
+    return count

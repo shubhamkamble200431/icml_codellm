@@ -1,0 +1,11 @@
+def sort_counter(dict1):
+    """
+    Write a function to sort counter by value.
+    """
+    # Create a Counter object from the input dictionary
+    count = Counter(dict1)
+
+    # Sort the Counter object by its values in descending order
+    sorted_count = count.most_common()
+
+    return sorted_count

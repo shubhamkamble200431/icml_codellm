@@ -1,0 +1,22 @@
+def find_Divisor(x,y):
+    """
+    Write a python function to find the maximum occuring divisor in an interval.
+    """
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+
+    max_count = 0
+    max_divisor = 1
+
+    for i in range(2, min(x, y) + 1):
+        count = 0
+        for j in range(i, x + 1, i):
+            if y % (x // j * i) == 0:
+                count += 1
+        if count > max_count:
+            max_count = count
+            max_divisor = i
+
+    return max_divisor

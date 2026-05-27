@@ -1,0 +1,16 @@
+def parabola_focus(a, b, c):
+    """
+    Write a function to find the focus of a parabola.
+    """
+    # Calculate the vertex of the parabola
+    h = -b / (2 * a)
+    k = (4ac - b**2) / (4a)
+
+    # Calculate the distance from the vertex to the focus
+    p = abs(b**2 - 4*a*c) / (4*a)
+
+    # Coordinates of the focus
+    x_focus = h
+    y_focus = k + p
+
+    return (x_focus, y_focus)

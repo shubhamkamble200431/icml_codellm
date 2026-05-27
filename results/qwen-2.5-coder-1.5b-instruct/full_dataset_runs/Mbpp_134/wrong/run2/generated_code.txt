@@ -1,0 +1,19 @@
+def solution(*args):
+    """
+    Write a python function to check whether the last element of given array is even or odd after performing an operation p times.
+    """
+    n = len(args)
+    if n == 0:
+        return "Array empty"
+
+    x = args[-1]
+    count = 0
+
+    while x % 2 != 0 and count < 20:  # Limiting the loop for safety
+        x += sum(args[:-1])  # Performing the operation on each element except the last one
+        count += 1
+
+    if count == 20:
+        return "Operation exceeded limit"
+
+    return "Last element is " + ("even" if x % 2 == 0 else "odd")

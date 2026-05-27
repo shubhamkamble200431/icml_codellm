@@ -1,0 +1,4 @@
+def divSum(n):
+    """
+    Write a python function to check whether the sum of divisors are same or not.
+    """

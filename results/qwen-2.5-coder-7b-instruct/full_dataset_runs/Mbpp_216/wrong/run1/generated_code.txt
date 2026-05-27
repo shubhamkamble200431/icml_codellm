@@ -1,0 +1,15 @@
+def check_subset_list(list1, list2):
+    """
+    Write a function to check if a nested list is a subset of another nested list.
+    """
+    def flatten(lst):
+        for el in lst:
+            if isinstance(el, list):
+                yield from flatten(el)
+            else:
+                yield el
+
+    flat_list1 = set(flatten(list1))
+    flat_list2 = set(flatten(list2))
+
+    return flat_list1.issubset(flat_list2)

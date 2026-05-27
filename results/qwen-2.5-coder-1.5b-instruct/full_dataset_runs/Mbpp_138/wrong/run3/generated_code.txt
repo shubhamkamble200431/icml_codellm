@@ -1,0 +1,9 @@
+def is_Sum_Of_Powers_Of_Two(n):
+    """
+    Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.
+    """
+    if n <= 0:
+        return False
+    while n > 1 and (n & 1) == 1:  # Check if n is odd and greater than 1
+        n >>= 1  # Right shift n by 1 to remove the rightmost bit
+    return n == 1

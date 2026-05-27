@@ -1,0 +1,5 @@
+def loss_amount(actual_cost,sale_amount):
+    """
+    Write a function that gives loss amount if the given amount has loss else return none.
+    """
+return actual_cost - sale_amount if actual_cost > sale_amount else None

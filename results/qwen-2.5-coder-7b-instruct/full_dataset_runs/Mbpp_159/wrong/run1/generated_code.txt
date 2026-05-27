@@ -1,0 +1,4 @@
+def month_season(month,days):
+    """
+    Write a function to print the season for the given month and day.
+    """

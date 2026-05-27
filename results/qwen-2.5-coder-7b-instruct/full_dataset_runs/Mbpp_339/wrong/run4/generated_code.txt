@@ -1,0 +1,12 @@
+def find_Divisor(x,y):
+    """
+    Write a python function to find the maximum occuring divisor in an interval.
+    """
+    divisors = []
+    for i in range(x, y+1):
+        for j in range(2, int(i**0.5) + 1):
+            if i % j == 0:
+                divisors.extend([j, i//j])
+        else:
+            divisors.append(i)
+    return Counter(divisors).most_common(1)[0][0]

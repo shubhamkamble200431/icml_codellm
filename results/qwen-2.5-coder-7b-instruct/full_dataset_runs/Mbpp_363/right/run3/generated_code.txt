@@ -1,0 +1,5 @@
+def add_K_element(test_list, K):
+    """
+    Write a function to add the k elements to each element in the tuple.
+    """
+    return [tuple(x + K for x in t) for t in test_list]

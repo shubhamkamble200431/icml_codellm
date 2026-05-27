@@ -1,0 +1,11 @@
+def decimal_to_Octal(deciNum):
+    """
+    Write a python function to convert decimal number to octal number.
+    """
+    if deciNum == 0:
+        return "0"
+    octal = ""
+    while deciNum > 0:
+        octal = str(deciNum % 8) + octal
+        deciNum //= 8
+    return octal

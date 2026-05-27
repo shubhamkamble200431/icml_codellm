@@ -1,0 +1,5 @@
+def greater_specificnum(list,num):
+    """
+    Write a function to find all the values in a list that are greater than a specified number.
+    """
+    return [x for x in list if x > num]

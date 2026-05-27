@@ -1,0 +1,5 @@
+def permute_string(str):
+    """
+    Write a function to print all permutations of a given string including duplicates.
+    """
+from itertools import permutations

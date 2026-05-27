@@ -1,0 +1,5 @@
+def centered_hexagonal_number(n):
+    """
+    Write a function to find nth centered hexagonal number.
+    """
+return n * (2 * n - 1)

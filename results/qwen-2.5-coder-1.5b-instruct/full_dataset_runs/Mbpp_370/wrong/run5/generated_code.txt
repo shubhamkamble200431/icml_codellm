@@ -1,0 +1,5 @@
+def float_sort(price):
+    """
+    Write a function to sort a tuple by its float element.
+    """
+    return sorted(price, key=float)

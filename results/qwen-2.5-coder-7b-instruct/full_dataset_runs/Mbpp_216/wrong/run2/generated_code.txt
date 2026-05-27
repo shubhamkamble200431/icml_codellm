@@ -1,0 +1,5 @@
+def check_subset_list(list1, list2):
+    """
+    Write a function to check if a nested list is a subset of another nested list.
+    """
+    return all(item in list2 for item in list1)

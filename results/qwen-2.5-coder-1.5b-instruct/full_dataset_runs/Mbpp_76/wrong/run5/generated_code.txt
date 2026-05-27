@@ -1,0 +1,8 @@
+def count_Squares(m,n):
+    """
+    Write a python function to count the number of squares in a rectangle.
+    """
+    # Calculate the maximum side length of the square that can fit within the rectangle
+    max_side = min(m, n)
+    # Count all possible squares with each possible side length
+    return sum(max_side - i + 1 for i in range(1, max_side + 1))

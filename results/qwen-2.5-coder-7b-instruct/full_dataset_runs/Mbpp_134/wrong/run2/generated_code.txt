@@ -1,0 +1,18 @@
+def solution(*args):
+    """
+    Write a python function to check whether the last element of given array is even or odd after performing an operation p times.
+    """
+    if len(args) < 2:
+        return "Invalid input"
+    
+    arr = list(args[:-1])
+    p = args[-1]
+    
+    while p > 0:
+        arr[-1] += sum(arr)
+        p -= 1
+    
+    if arr[-1] % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"

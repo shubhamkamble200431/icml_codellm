@@ -1,0 +1,5 @@
+def is_woodall(x):
+    """
+    Write a function to check if the given number is woodball or not.
+    """
+    return x % 2 == 1 and (x + 1) & x == 0

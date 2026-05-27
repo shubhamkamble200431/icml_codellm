@@ -1,0 +1,6 @@
+def remove_words(list1, removewords):
+    """
+    Write a function to remove specific words from a given list.
+    """
+    # Use list comprehension to filter out words in list1 that are present in removewords
+    return [word for word in list1 if word not in removewords]

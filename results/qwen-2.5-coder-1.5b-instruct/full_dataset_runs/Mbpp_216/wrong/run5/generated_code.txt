@@ -1,0 +1,10 @@
+def check_subset_list(list1, list2):
+    """
+    Write a function to check if a nested list is a subset of another nested list.
+    """
+    # Convert both lists to sets of tuples for easier comparison
+    set1 = {tuple(element) for element in list1}
+    set2 = {tuple(element) for element in list2}
+    
+    # Check if set1 is a subset of set2
+    return set1.issubset(set2)

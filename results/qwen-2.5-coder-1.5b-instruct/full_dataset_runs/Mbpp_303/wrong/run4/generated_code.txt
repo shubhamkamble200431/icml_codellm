@@ -1,0 +1,5 @@
+def solve(a,n):
+    """
+    Write a python function to check whether the count of inversion of two types are same or not.
+    """
+from itertools import combinations

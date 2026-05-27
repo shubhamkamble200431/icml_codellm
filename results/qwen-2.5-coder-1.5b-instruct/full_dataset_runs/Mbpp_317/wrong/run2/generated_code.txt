@@ -1,0 +1,12 @@
+def modified_encode(alist):
+    """
+    Write a function to reflect the modified run-length encoding from a list.
+    """
+    count_dict = Counter(alist)
+    modified_list = []
+    for char, count in count_dict.items():
+        if count > 1:
+            modified_list.append(char * count)
+        else:
+            modified_list.append(str(char))
+    return modified_list

@@ -1,0 +1,7 @@
+def solution(*args):
+    """
+    Write a python function to toggle all even bits of a given number.
+    """
+    num = args[0]
+    mask = 0xAAAAAAAA  # Binary representation: 1010101010101010...
+    return num ^ mask

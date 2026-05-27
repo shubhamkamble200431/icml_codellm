@@ -1,0 +1,44 @@
+def calculate_polygons(startx, starty, endx, endy, radius):
+    """
+    Write a function to calculate a grid of hexagon coordinates where function returns a list of lists containing 6 tuples of x, y point coordinates.
+    """
+    # Calculate the side length of the hexagons based on the given radius
+    side_length = radius * (2 ** (1/3))
+
+    # Initialize the list to store the hexagonal points
+    polygons = []
+
+    # Determine if the rectangle is horizontal or vertical
+    if abs(endx - startX) > abs(endy - startY):
+        # Calculate the number of hexagons along the longer dimension
+        num_hexes_x = int((endx - startX) / side_length)
+        # Calculate the starting position in the shorter dimension
+        start_y = min(starty, endy)
+
+        # Generate the hexagonal points along the long dimension
+        for i in range(num_hexes_x + 1):
+            # Calculate the y-coordinate for each column
+            current_y = start_y + i * side_length * (math.sqrt(3) / 4)
+            # Generate the hexagonal points within each row
+            for j in range(6):
+                # Calculate the x-coordinate for each hexagon
+                current_x = startX + j * side_length * (3 + math.sqrt(3)) / 2
+                polygons.append([(current_x, current_y)])
+
+    else:
+        # Calculate the number of hexagons along the shorter dimension
+        num_hexes_y = int((endy - startY) / side_length)
+        # Calculate the starting position in the longer dimension
+        start_x = min(startx, endx)
+
+        # Generate the hexagonal points along the short dimension
+        for i in range(num_hexes_y + 1):
+            # Calculate the x-coordinate for each column
+            current_x = start_x + i * side_length * (3 + math.sqrt(3)) / 2
+            # Generate the hexagonal points within each row
+            for j in range(6):
+                # Calculate the y-coordinate for each hexagon
+                current_y = startY + j * side_length * (math.sqrt(3) / 4)
+                polygons.append([(current_x, current_y)])
+
+    return polygons

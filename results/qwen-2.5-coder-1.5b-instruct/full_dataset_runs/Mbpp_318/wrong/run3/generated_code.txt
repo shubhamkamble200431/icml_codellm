@@ -1,0 +1,11 @@
+def solution(*args):
+    """
+    Write a python function to find the maximum volume of a cuboid with given sum of sides.
+    """
+    # Calculate the product of all arguments and divide by 6 to get the minimum possible side length
+    min_side = args[0] // 6
+
+    # Find the maximum volume using the minimum possible side length
+    max_volume = min_side ** 3
+
+    return max_volume

@@ -1,0 +1,9 @@
+def group_tuples(Input):
+    """
+    Write a function to find common first element in given list of tuple.
+    """
+    grouped = defaultdict(list)
+    for tup in Input:
+        if len(tup) > 0:
+            grouped[tup[0]].append(tup)
+    return dict(grouped)

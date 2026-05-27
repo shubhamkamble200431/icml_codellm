@@ -1,0 +1,32 @@
+def calculate_polygons(startx, starty, endx, endy, radius):
+    """
+    Write a function to calculate a grid of hexagon coordinates where function returns a list of lists containing 6 tuples of x, y point coordinates.
+    """
+    hex_height = math.sqrt(3) * radius
+    hex_width = 2 * radius
+    side_length = radius
+    horizontal_spacing = (3/4) * hex_width
+    vertical_spacing = (3/4) * hex_height
+    startx -= horizontal_spacing
+    starty -= vertical_spacing
+    rows = int((endy - starty) / vertical_spacing) + 1
+    cols = int((endx - startx) / horizontal_spacing) + 1
+    polygons = []
+
+    for row in range(rows):
+        offset_y = row * vertical_spacing
+        if row % 2 == 0:
+            offset_x = startx
+        else:
+            offset_x = startx + (horizontal_spacing / 2)
+
+        for col in range(cols):
+            x_center = offset_x + col * horizontal_spacing
+            y_center = starty + offset_y
+            points = [
+                (x_center + radius * math.cos(math.radians(i*60)), y_center + radius * math.sin(math.radians(i*60)))
+                for i in range(6)
+            ]
+            polygons.append(points)
+
+    return polygons

@@ -1,0 +1,15 @@
+def count_bidirectional(test_list):
+    """
+    Write a function to count bidirectional tuple pairs.
+    """
+    bidirectional_count = 0
+    seen_pairs = set()
+
+    for pair in test_list:
+        reverse_pair = (pair[1], pair[0])
+        if reverse_pair in seen_pairs:
+            bidirectional_count += 1
+        else:
+            seen_pairs.add(pair)
+
+    return bidirectional_count

@@ -1,0 +1,30 @@
+def solution(*args):
+    """
+    Write a function to find x and y that satisfies ax + by = n.
+    """
+    def gcd(a, b):
+        while b != 0:
+            a, b = b, a % b
+        return a
+
+    def extended_gcd(a, b):
+        s, old_s = 0, 1
+        t, old_t = 1, 0
+        r, old_r = b, a
+
+        while r != 0:
+            quotient = old_r // r
+            old_r, r = r, old_r - quotient * r
+            old_s, s = s, old_s - quotient * s
+            old_t, t = t, old_t - quotient * t
+
+        return old_r, old_s, old_t
+
+    a, b, n = args[0], args[1], args[2]
+    g = gcd(a, b)
+    if n % g != 0:
+        return "No solution"
+
+    s, t = extended_gcd(a // g, b // g)
+
+    return (s * n) // g, (t * n) // g

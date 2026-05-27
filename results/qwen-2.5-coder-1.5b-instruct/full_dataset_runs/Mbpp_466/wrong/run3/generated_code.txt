@@ -1,0 +1,15 @@
+def find_peak_util(arr, low, high, n):
+    """
+    Write a function to find the peak element in the given array.
+    """
+    # Check if mid is 0 or end of the array
+    if (high == 0) or (arr[mid] > arr[mid-1]):
+        return mid
+
+    # If mid is not 0 and the element before mid is greater than mid itself
+    elif (mid > 0) and (arr[mid] < arr[mid-1]):
+        return find_peak_util(arr, low, mid-1, n)
+
+    # Otherwise, the peak must be in the right half
+    else:
+        return find_peak_util(arr, mid+1, high, n)

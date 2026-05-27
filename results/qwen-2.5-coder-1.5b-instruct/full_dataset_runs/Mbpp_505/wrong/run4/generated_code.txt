@@ -1,0 +1,21 @@
+def re_order(A):
+    """
+    Write a function to move all zeroes to the end of the given array.
+    """
+    n = len(A)
+    left, right = 0, n - 1
+
+    while left < right:
+        # Move left pointer right as long as the element is zero
+        while left < right and A[left] == 0:
+            left += 1
+
+        # Move right pointer left as long as the element is non-zero
+        while left < right and A[right] != 0:
+            right -= 1
+
+        # Swap elements if left is less than right
+        if left < right:
+            A[left], A[right] = A[right], A[left]
+            left += 1
+            right -= 1

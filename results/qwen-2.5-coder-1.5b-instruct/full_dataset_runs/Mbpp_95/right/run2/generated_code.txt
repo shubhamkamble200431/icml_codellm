@@ -1,0 +1,11 @@
+def Find_Min_Length(lst):
+    """
+    Write a python function to find the minimum length of sublist.
+    """
+    min_length = float('inf')  # Initialize with infinity as the maximum possible value
+
+    for sublist in lst:
+        if len(sublist) < min_length:  # Compare each sublist's length with the current minimum
+            min_length = len(sublist)
+
+    return min_length

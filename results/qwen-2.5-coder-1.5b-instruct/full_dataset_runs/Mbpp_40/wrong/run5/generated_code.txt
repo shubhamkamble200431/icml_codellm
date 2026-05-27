@@ -1,0 +1,11 @@
+def freq_element(nums):
+    """
+    Write a function to find frequency of the elements in a given list of lists using collections module.
+    """
+    # Flatten the list of lists into a single list
+    flat_list = [item for sublist in nums for item in sublist]
+
+    # Use Counter from collections module to count the frequency of each element
+    freq = Counter(flat_list)
+
+    return freq

@@ -1,0 +1,5 @@
+def odd_Days(N):
+    """
+    Write a python function to calculate the number of odd days in a given year.
+    """
+    return (N // 4 - N // 100 + N // 400) % 7

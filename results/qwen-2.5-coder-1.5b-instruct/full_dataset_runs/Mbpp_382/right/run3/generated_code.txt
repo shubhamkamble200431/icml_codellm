@@ -1,0 +1,19 @@
+def find_rotation_count(A):
+    """
+    Write a function to find the number of rotations in a circularly sorted array.
+    """
+    left = 0
+    right = len(A) - 1
+
+    while left < right:
+        mid = (left + right) // 2
+
+        # Check if mid is already the minimum element
+        if A[mid] < A[right]:
+            right = mid
+
+        elif A[mid] > A[right]:
+            # If mid's value is greater than the end, then we must be in the rotation part
+            left = mid + 1
+
+    return left

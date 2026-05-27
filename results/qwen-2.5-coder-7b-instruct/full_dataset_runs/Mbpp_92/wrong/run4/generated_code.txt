@@ -1,0 +1,9 @@
+def is_undulating(n):
+    """
+    Write a function to check whether the given number is undulating or not.
+    """
+    digits = [int(d) for d in str(n)]
+    if len(digits) % 2 != 0:
+        return False
+    half_length = len(digits) // 2
+    return all(digits[i] == digits[i + half_length] for i in range(half_length))

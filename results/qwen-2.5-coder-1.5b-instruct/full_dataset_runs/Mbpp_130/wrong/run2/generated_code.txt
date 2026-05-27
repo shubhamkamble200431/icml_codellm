@@ -1,0 +1,7 @@
+def max_occurrences(nums):
+    """
+    Write a function to find the item with maximum frequency in a given list.
+    """
+    count = Counter(nums)
+    max_freq_item, _ = count.most_common(1)[0]
+    return max_freq_item

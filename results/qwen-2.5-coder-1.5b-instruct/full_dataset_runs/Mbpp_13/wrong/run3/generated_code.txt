@@ -1,0 +1,14 @@
+def count_common(words):
+    """
+    Write a function to count the most common words in a dictionary.
+    """
+    # Count the occurrences of each word
+    word_counts = Counter(words)
+
+    # Find the number of words with the highest frequency
+    max_frequency = max(word_counts.values())
+
+    # Filter words that have the highest frequency
+    common_words = [word for word, freq in word_counts.items() if freq == max_frequency]
+
+    return common_words

@@ -1,0 +1,5 @@
+def find_exponentio(test_tup1, test_tup2):
+    """
+    Write a function to perform the exponentiation of the given two tuples.
+    """
+    return tuple(x**y for x, y in zip(test_tup1, test_tup2))

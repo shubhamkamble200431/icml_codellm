@@ -1,0 +1,5 @@
+def reverse_string_list(stringlist):
+    """
+    Write a function to reverse strings in a given list of string values.
+    """
+return [s[::-1] for s in stringlist]

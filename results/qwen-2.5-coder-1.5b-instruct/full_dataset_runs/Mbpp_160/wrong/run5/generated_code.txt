@@ -1,0 +1,21 @@
+def solution(*args):
+    """
+    Write a function to find x and y that satisfies ax + by = n.
+    """
+    from itertools import product
+
+    def check(a, b, n):
+        return a * args[0] + b * args[1] == n
+
+    if len(args) != 2:
+        raise ValueError("The function requires exactly two arguments")
+
+    a, b = args
+    n = args[-1]
+
+    # Check all possible values of x and y within the range of n/abs(b)
+    for x in range(n // abs(b) + 1):
+        if check(a, b, n - x * b):
+            return (x, n - x * b)
+
+    return None

@@ -1,0 +1,5 @@
+def check_type(test_tuple):
+    """
+    Write a function to check if all the elements in tuple have same data type or not.
+    """
+    return len(set(map(type, test_tuple))) == 1

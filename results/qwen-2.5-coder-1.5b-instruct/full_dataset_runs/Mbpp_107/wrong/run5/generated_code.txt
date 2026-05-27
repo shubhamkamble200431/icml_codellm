@@ -1,0 +1,5 @@
+def solution(*args):
+    """
+    Write a python function to count hexadecimal numbers for a given range.
+    """
+    return sum(1 for i in range(args[0], args[1]) if 'x' in hex(i))

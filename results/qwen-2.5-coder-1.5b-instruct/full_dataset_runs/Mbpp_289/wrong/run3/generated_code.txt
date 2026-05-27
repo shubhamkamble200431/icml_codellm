@@ -1,0 +1,22 @@
+def odd_Days(N):
+    """
+    Write a python function to calculate the number of odd days in a given year.
+    """
+    if N < 1:
+        raise ValueError("Year must be greater than zero")
+
+    # Calculate leap years
+    leap_years = N // 4 - (N // 100 + N // 400)
+
+    # Total days in a common year and a leap year
+    total_days_common_year = 365
+    total_days_leap_year = total_days_common_year + 1
+
+    # Number of odd days in a common year
+    odd_days_common_year = total_days_common_year % 7
+
+    # Number of odd days in a leap year
+    odd_days_leap_year = total_days_leap_year % 7
+
+    # Total number of odd days in the year
+    return odd_days_common_year + leap_years * odd_days_leap_year

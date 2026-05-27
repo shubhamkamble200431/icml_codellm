@@ -1,0 +1,10 @@
+def re_order(A):
+    """
+    Write a function to move all zeroes to the end of the given array.
+    """
+    non_zero_index = 0
+    for i in range(len(A)):
+        if A[i] != 0:
+            A[non_zero_index], A[i] = A[i], A[non_zero_index]
+            non_zero_index += 1
+    return A

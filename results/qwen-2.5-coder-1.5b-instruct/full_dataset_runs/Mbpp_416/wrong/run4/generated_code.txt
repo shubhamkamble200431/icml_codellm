@@ -1,0 +1,10 @@
+def breakSum(n):
+    """
+    Write a function to find the maximum sum we can make by dividing number in three parts recursively and summing them up together for the given number.
+    """
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return max(breakSum(n-1), breakSum(n//2) + breakSum(n//3) + breakSum(n//4))

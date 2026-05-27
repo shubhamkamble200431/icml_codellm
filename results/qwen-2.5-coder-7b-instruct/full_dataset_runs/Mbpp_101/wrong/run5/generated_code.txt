@@ -1,0 +1,8 @@
+def kth_element(arr, n, k):
+    """
+    Write a function to find the kth element in the given array.
+    """
+    if 0 <= k < n:
+        return arr[k]
+    else:
+        raise IndexError("k is out of bounds")

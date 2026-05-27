@@ -1,0 +1,9 @@
+def solution(*args):
+    """
+    Write a function to divide a number into two parts such that the sum of digits is maximum.
+    """
+    if len(args) != 1:
+        raise ValueError("The function requires exactly one argument.")
+
+    n = args[0]
+    return find_max_digit_sum(n)

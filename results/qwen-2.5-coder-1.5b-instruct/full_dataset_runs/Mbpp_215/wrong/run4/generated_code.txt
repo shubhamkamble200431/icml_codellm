@@ -1,0 +1,12 @@
+def decode_list(alist):
+    """
+    Write a function to decode a run-length encoded given list.
+    """
+    decoded_list = []
+    i = 0
+    while i < len(alist):
+        count = alist[i]
+        value = alist[i+1]
+        decoded_list.extend([value] * count)
+        i += 2  # Move two steps after processing each element pair
+    return decoded_list

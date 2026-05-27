@@ -1,0 +1,11 @@
+def modified_encode(alist):
+    """
+    Write a function to reflect the modified run-length encoding from a list.
+    """
+    from itertools import groupby
+
+    # Encode the list using run-length encoding
+    encoded_list = [(key, len(list(group))) for key, group in groupby(alist)]
+
+    # Convert each tuple to a string and then join them with '-' as separator
+    return '-'.join([f'{key}-{len(group)}' for key, group in encoded_list])

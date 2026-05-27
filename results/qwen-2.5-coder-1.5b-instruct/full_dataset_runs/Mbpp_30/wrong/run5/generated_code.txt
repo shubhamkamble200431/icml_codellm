@@ -1,0 +1,16 @@
+def check_Equality(s):
+    """
+    Write a python function to count all the substrings starting and ending with same characters.
+    """
+    # Initialize a counter to keep track of the number of equal substrings
+    count = 0
+
+    # Iterate through each character in the string
+    for i in range(len(s)):
+        # Check if the current character is equal to the next one
+        if s[i] == s[i + 1]:
+            # If they are equal, increment the counter
+            count += 1
+
+    # Return the total count of equal substrings
+    return count

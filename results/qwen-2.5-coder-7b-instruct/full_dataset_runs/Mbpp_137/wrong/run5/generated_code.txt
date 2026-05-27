@@ -1,0 +1,5 @@
+def zero_count(nums):
+    """
+    Write a function to find the ration of zeroes in an array of integers.
+    """
+    return nums.count(0) / len(nums)

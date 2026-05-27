@@ -1,0 +1,20 @@
+def newman_prime(n):
+    """
+    Write a function to find the nth newman–shanks–williams prime number.
+    """
+    def nsw_number(k):
+        if k == 0:
+            return 2
+        elif k == 1:
+            return 3
+        else:
+            return (nsw_number(k - 1) + 1) * nsw_number(k - 2) + 1
+
+    count = 0
+    num = 0
+    while True:
+        num += 1
+        if isprime(num):
+            count += 1
+            if count == n:
+                return num

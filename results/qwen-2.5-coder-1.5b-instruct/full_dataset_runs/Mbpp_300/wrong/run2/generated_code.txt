@@ -1,0 +1,15 @@
+def count_binary_seq(n):
+    """
+    Write a function to find the count of all binary sequences of length 2n such that sum of first n bits is same as sum of last n bits.
+    """
+    if n == 0:
+        return 1
+
+    # Sum of each half should be n/2
+    # If n is even, each half will have n//2 ones and n//2 zeros
+    # If n is odd, one half will have (n-1)//2 ones and (n+1)//2 zeros
+    # The middle bit can be either 0 or 1, so there are 2 choices
+    if n % 2 == 0:
+        return 2 * count_binary_seq(n // 2)
+    else:
+        return 2 * count_binary_seq((n - 1) // 2) + count_binary_seq((n + 1) // 2)

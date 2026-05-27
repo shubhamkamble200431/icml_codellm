@@ -1,0 +1,5 @@
+def lateralsuface_cylinder(r,h):
+    """
+    Write a function to find the lateral surface area of a cylinder.
+    """
+return 2 * 3.14159 * r * h

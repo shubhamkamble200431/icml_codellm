@@ -1,0 +1,8 @@
+def is_octagonal(n):
+    """
+    Write a function to find the nth octagonal number.
+    """
+    if n < 1:
+        return False
+    k = (2 * n + math.sqrt(8 * n + 1)) / 4
+    return k == int(k)

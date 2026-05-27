@@ -1,0 +1,5 @@
+def count_element_in_list(list1, x):
+    """
+    Write a function to count the number of sublists containing a particular element.
+    """
+    return len([sublist for sublist in list1 if x in sublist])

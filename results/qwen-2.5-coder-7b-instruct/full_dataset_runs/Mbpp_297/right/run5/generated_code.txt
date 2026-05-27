@@ -1,0 +1,5 @@
+def flatten_list(list1):
+    """
+    Write a function to flatten a given nested list structure.
+    """
+    return [item for sublist in list1 for item in (flatten_list(sublist) if isinstance(sublist, list) else [sublist])]

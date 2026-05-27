@@ -1,0 +1,4 @@
+def get_max_occuring_char(str1):
+    """
+    Write a python function to find the maximum occurring character in a given string.
+    """

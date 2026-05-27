@@ -1,0 +1,5 @@
+def kth_element(arr, n, k):
+    """
+    Write a function to find the kth element in the given array.
+    """
+return arr[k]

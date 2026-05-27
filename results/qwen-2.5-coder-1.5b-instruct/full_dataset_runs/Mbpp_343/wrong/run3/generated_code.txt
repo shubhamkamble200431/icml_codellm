@@ -1,0 +1,12 @@
+def dig_let(s):
+    """
+    Write a function to calculate the number of digits and letters in a string.
+    """
+    digit_count = 0
+    letter_count = 0
+    for char in s:
+        if char.isdigit():
+            digit_count += 1
+        elif char.isalpha():
+            letter_count += 1
+    return digit_count, letter_count

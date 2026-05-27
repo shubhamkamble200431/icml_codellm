@@ -1,0 +1,9 @@
+def is_majority(arr, n, x):
+    """
+    Write a function to check for majority element in the given sorted array.
+    """
+    # Check if the element at the middle index is x and it occurs more than n/2 times
+    if (arr[n//2] == x and arr.count(x) > n//2):
+        return True
+    else:
+        return False

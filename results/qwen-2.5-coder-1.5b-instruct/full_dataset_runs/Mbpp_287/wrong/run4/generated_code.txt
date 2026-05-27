@@ -1,0 +1,4 @@
+def square_Sum(n):
+    """
+    Write a python function to find the sum of squares of first n even natural numbers.
+    """

@@ -1,0 +1,19 @@
+def solution(*args):
+    """
+    Write a function to divide a number into two parts such that the sum of digits is maximum.
+    """
+    def digit_sum(n):
+        return sum(int(digit) for digit in str(n))
+
+    max_sum = 0
+    best_division = (0, 0)
+    
+    for i in range(1, len(args)):
+        total = args[0] + args[i]
+        max_digit_sum = max(sum(map(int, str(total))) - args[0], sum(map(int, str(total))) - args[i]
+        
+        if max_digit_sum > max_sum:
+            max_sum = max_digit_sum
+            best_division = (args[0], total - args[0])
+
+    return best_division

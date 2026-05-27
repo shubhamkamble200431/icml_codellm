@@ -1,0 +1,15 @@
+def amicable_numbers_sum(limit):
+    """
+    Write a function to sum all amicable numbers from 1 to a specified number.
+    """
+    def get_divisors(n):
+        return [i for i in range(1, n) if n % i == 0]
+
+    def is_amicable(a, b):
+        return sum(get_divisors(a)) == b and sum(get_divisors(b)) == a
+
+    total = 0
+    for num in range(2, limit + 1):
+        if is_amicable(num, get_divisors(num)[1]):
+            total += num
+    return total

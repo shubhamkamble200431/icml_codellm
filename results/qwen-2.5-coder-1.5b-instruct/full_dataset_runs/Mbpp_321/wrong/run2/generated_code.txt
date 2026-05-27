@@ -1,0 +1,16 @@
+def find_demlo(s):
+    """
+    Write a function to find the demlo number for the given number.
+    """
+    def recurse(index, current):
+        if index == len(s):
+            return current
+        for digit in '01':
+            result = recurse(index + 1, f"{current}{digit}")
+            if len(result) > len(maxDemlo) or (len(result) == len(maxDemlo) and int(result) < maxDemlo):
+                maxDemlo = result
+        return maxDemlo
+
+    maxDemlo = ""
+    recurse(0, "")
+    return maxDemlo

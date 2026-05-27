@@ -1,0 +1,16 @@
+def find_gcd(x, y):
+    """
+    Write a function to find the gcd of the given array elements.
+    """
+    # Initialize the greatest common divisor (gcd) with the smaller number
+    gcd = min(x, y)
+    
+    # Loop until the gcd is 1
+    while gcd != 1:
+        # Divide both x and y by the current gcd
+        x //= gcd
+        y //= gcd
+        # Update the gcd to be the new value of the result
+        gcd = min(x, y)
+    
+    return gcd

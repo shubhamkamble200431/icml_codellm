@@ -1,0 +1,16 @@
+def solution(*args):
+    """
+    Write a function to find the maximum sum possible by using the given equation f(n) = max( (f(n/2) + f(n/3) + f(n/4) + f(n/5)), n).
+    """
+    if len(args) > 1:
+        raise ValueError("The function only accepts one argument.")
+    n = args[0]
+    if n <= 0:
+        return 0
+
+    dp = [0] * (n + 1)
+    dp[1] = n
+    for i in range(2, n + 1):
+        dp[i] = max(dp[i // 2], dp[i // 3], dp[i // 4], dp[i // 5]) + i
+
+    return dp[n]

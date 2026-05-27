@@ -1,0 +1,15 @@
+def bitwise_xor(test_tup1, test_tup2):
+    """
+    Write a function to perform the mathematical bitwise xor operation across the given tuples.
+    """
+    # Convert each tuple into a list of integers
+    list_tup1 = list(test_tup1)
+    list_tup2 = list(test_tup2)
+
+    # Perform bitwise XOR on each corresponding pair and store the results in a new list
+    result_list = [a ^ b for a, b in zip(list_tup1, list_tup2)]
+
+    # Convert the resulting list back into a tuple
+    result_tuple = tuple(result_list)
+
+    return result_tuple

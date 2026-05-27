@@ -1,0 +1,6 @@
+def closest_num(N):
+    """
+    Write a function to find the closest smaller number than n.
+    """
+    # Use the floor division operator // to get the largest integer less than N
+    return N - 1 if N > 0 else None
