@@ -1,0 +1,41 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    def is_magic(matrix):
+        n = len(matrix)
+        
+        # Check if the matrix is of size 3x3
+        if n != 3:
+            return False
+        
+        # Get all numbers in the matrix and check their sum
+        numbers = set()
+        for row in matrix:
+            for number in row:
+                numbers.add(number)
+        if len(numbers) != 9 or sum(numbers) != 45:
+            return False
+        
+        # Check rows and columns
+        for i in range(n):
+            if sum(matrix[i]) != 15:
+                return False
+            if sum(matrix[j][i] for j in range(n)) != 15:
+                return False
+        
+        # Check diagonals
+        if sum(matrix[i][i] for i in range(n)) != 15:
+            return False
+        if sum(matrix[i][n-i-1] for i in range(n)) != 15:
+            return False
+        
+        return True
+    
+    # Convert input list to a numpy array
+    matrix = np.array(my_matrix)
+    
+    # Test the function
+    result = is_magic(matrix)
+    
+    return result

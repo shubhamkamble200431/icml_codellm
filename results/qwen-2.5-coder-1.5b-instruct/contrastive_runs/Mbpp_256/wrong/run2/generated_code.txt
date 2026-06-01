@@ -1,0 +1,5 @@
+def count_Primes_nums(n):
+    """
+    Write a python function to count the number of prime numbers less than a given non-negative number.
+    """
+from math import sqrt

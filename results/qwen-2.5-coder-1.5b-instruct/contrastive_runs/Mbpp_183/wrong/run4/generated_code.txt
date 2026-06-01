@@ -1,0 +1,20 @@
+def count_pairs(arr, n, k):
+    """
+    Write a function to count all the distinct pairs having a difference of k in any array.
+    """
+    # Dictionary to store frequency of elements in the array
+    freq = defaultdict(int)
+
+    # Counting frequencies
+    for num in arr:
+        freq[num] += 1
+
+    pair_count = 0
+
+    # Checking each element
+    for i in range(n):
+        # Checking if (i + k) exists in the array
+        if i + k < n and freq[i + k]:
+            pair_count += freq[i]
+
+    return pair_count

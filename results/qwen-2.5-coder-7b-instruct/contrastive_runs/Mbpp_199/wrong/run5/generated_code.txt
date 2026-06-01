@@ -1,0 +1,5 @@
+def highest_Power_of_2(n):
+    """
+    Write a python function to find highest power of 2 less than or equal to given number.
+    """
+    return int(math.pow(2, math.floor(math.log2(n))))

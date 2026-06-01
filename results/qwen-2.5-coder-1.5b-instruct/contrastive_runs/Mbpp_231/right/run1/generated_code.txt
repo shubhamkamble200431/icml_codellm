@@ -1,0 +1,10 @@
+def max_sum(tri, n):
+    """
+    Write a function to find the maximum sum in the given right triangle of numbers.
+    """
+    # Start from the second last row and move upwards
+    for i in range(n - 2, -1, -1):
+        # Update each element with the maximum value it can get by adding to the maximum of its two children
+        for j in range(i + 1):
+            tri[i][j] += max(tri[i + 1][j], tri[i + 1][j + 1])
+    return tri[0][0]

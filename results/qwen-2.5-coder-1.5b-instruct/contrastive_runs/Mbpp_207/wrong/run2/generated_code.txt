@@ -1,0 +1,22 @@
+def find_longest_repeating_subseq(str):
+    """
+    Write a function to count the longest repeating subsequences such that the two subsequences don’t have same string characters at same positions.
+    """
+    def lcs(X, Y, m, n): 
+        if m == 0 or n == 0:
+            return 0
+        elif X[m-1] == Y[n-1]: 
+            return 1 + lcs(X, Y, m-1, n-1)
+        else: 
+            return max(lcs(X, Y, m-1, n), lcs(X, Y, m, n-1)) 
+
+    lenX = len(str) 
+    lenY = len(str) 
+
+    # Find length of LCS of str and reversed(str) 
+    l = lcs(str, str[::-1], lenX, lenY) 
+
+    # The result is twice the length of the longest repeating subsequence  
+    # because each character in the longest repeating subsequence is counted twice (once  
+    # in the original string and once in the reversed string). 
+    return 2 * l

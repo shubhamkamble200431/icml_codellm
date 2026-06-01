@@ -1,0 +1,6 @@
+def sort_sublists(input_list):
+    """
+    Write a function to sort each sublist of strings in a given list of lists using lambda function.
+    """
+    # Use map with a lambda function to sort each sublist
+    return [sorted(sublist) for sublist in input_list]

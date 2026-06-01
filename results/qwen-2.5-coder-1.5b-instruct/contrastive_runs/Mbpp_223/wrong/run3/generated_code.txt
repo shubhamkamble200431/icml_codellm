@@ -1,0 +1,19 @@
+def is_majority(arr, n, x):
+    """
+    Write a function to check for majority element in the given sorted array.
+    """
+    mid = n // 2
+
+    # Check if x is present at the middle index
+    if arr[mid] == x:
+        # Count occurrences of x in the first half
+        count_left = sum(1 for i in range(mid) if arr[i] == x)
+
+        # Check if x occurs more than n/2 times in the first half
+        return count_left > mid
+
+    # Check if x is present in the second half
+    count_right = sum(1 for i in range(mid + 1, n) if arr[i] == x)
+
+    # Check if x occurs more than n/2 times in the second half
+    return count_right > mid

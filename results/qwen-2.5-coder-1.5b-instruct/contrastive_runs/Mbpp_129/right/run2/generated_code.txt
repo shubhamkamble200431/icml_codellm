@@ -1,0 +1,23 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    rows = len(my_matrix)
+    cols = len(my_matrix[0])
+
+    # Calculate the sum of each row, column and diagonal
+    row_sums = [sum(row) for row in my_matrix]
+    col_sums = [sum(col) for col in zip(*my_matrix)]
+    diag1_sum = sum(my_matrix[i][i] for i in range(rows))
+    diag2_sum = sum(my_matrix[i][cols - 1 - i] for i in range(rows))
+
+    # Check if all sums are equal
+    if row_sums != col_sums:
+        return False
+
+    # Check if diagonal sums are equal
+    if diag1_sum != diag2_sum:
+        return False
+
+    # If all checks pass, it's a magic square
+    return True

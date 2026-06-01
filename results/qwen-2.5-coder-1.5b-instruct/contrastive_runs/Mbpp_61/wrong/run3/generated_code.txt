@@ -1,0 +1,4 @@
+def count_Substrings(s,n):
+    """
+    Write a python function to count number of substrings with the sum of digits equal to their length.
+    """

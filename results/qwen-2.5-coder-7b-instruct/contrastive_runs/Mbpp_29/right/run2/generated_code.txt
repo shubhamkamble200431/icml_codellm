@@ -1,0 +1,8 @@
+def get_Odd_Occurrence(arr,arr_size):
+    """
+    Write a python function to find the element occurring odd number of times.
+    """
+    result = 0
+    for i in range(arr_size):
+        result ^= arr[i]
+    return result

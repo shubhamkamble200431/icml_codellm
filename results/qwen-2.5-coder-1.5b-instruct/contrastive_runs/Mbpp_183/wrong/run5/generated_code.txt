@@ -1,0 +1,20 @@
+def count_pairs(arr, n, k):
+    """
+    Write a function to count all the distinct pairs having a difference of k in any array.
+    """
+    count = 0
+    arr.sort()
+
+    left, right = 0, n - 1
+
+    while left < right:
+        if arr[right] - arr[left] == k:
+            count += 1
+            left += 1
+            right -= 1
+        elif arr[right] - arr[left] < k:
+            left += 1
+        else:
+            right -= 1
+
+    return count

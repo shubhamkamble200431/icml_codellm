@@ -1,0 +1,5 @@
+def max_product_tuple(list1):
+    """
+    Write a function to find the maximum product from the pairs of tuples within a given list.
+    """
+    return max(tuple(x * y for x, y in zip(tup[0], tup[1])) for tup in list1)

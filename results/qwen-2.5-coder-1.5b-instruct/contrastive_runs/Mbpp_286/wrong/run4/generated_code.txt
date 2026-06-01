@@ -1,0 +1,17 @@
+def max_sub_array_sum_repeated(a, n, k):
+    """
+    Write a function to find the largest sum of contiguous array in the modified array which is formed by repeating the given array k times.
+    """
+    # Concatenate the original array with itself k-1 times
+    combined = a * (k - 1) + a
+
+    # Use Kadane's algorithm to find the maximum subarray sum in the concatenated array
+    max_sum = float('-inf')
+    current_sum = 0
+
+    for num in combined:
+        current_sum += num
+        if current_sum > max_sum:
+            max_sum = current_sum
+
+    return max_sum

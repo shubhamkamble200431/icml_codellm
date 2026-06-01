@@ -1,0 +1,8 @@
+def same_order(l1, l2):
+    """
+    Write a function to check if the common elements between two given lists are in the same order or not.
+    """
+    set_l1 = set(l1)
+    set_l2 = set(l2)
+    common_elements = list(set_l1.intersection(set_l2))
+    return all(l1.index(element) == l2.index(element) for element in common_elements if element in l1 and element in l2)

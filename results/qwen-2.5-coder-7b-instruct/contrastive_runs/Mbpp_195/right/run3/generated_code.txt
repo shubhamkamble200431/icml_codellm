@@ -1,0 +1,17 @@
+def first(arr,x,n):
+    """
+    Write a python function to find the first position of an element in a sorted array.
+    """
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == x:
+            if mid == 0 or arr[mid - 1] != x:
+                return mid
+            else:
+                right = mid - 1
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1

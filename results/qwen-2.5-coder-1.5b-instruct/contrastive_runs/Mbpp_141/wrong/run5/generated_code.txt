@@ -1,0 +1,20 @@
+def pancake_sort(nums):
+    """
+    Write a function to sort a list of elements using pancake sort.
+    """
+    def flip(arr, k):
+        arr[:k] = arr[:k][::-1]
+
+    n = len(nums)
+    for i in range(n, 0, -1):
+        # Find index of the maximum element in nums[0..i-1]
+        max_index = 0
+        for j in range(1, i):
+            if nums[j] > nums[max_index]:
+                max_index = j
+
+        # Flip the array from start to max_index
+        flip(nums, max_index)
+
+        # Flip the entire array up to i-1
+        flip(nums, i-1)

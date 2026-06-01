@@ -1,0 +1,12 @@
+def large_product(nums1, nums2, N):
+    """
+    Write a function to find the specified number of largest products from two given lists.
+    """
+    # Generate all possible combinations of elements in nums1 and nums2
+    combinations_of_nums = list(combinations(nums1 + nums2, 2))
+
+    # Sort the combinations by their product in descending order
+    combinations_of_nums.sort(key=lambda x: x[0] * x[1], reverse=True)
+
+    # Return the top N largest products
+    return [x[0] * x[1] for x in combinations_of_nums[:N]]

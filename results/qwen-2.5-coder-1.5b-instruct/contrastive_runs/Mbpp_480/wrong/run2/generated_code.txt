@@ -1,0 +1,7 @@
+def get_max_occuring_char(str1):
+    """
+    Write a python function to find the maximum occurring character in a given string.
+    """
+    count = Counter(str1)
+    max_count = max(count.values())
+    return [char for char, freq in count.items() if freq == max_count]

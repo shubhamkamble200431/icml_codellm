@@ -1,0 +1,26 @@
+def re_order(A):
+    """
+    Write a function to move all zeroes to the end of the given array.
+    """
+    # Initialize pointers for non-zero elements and the end of the list
+    i = 0
+    j = len(A) - 1
+    
+    # Use two pointers technique to rearrange elements
+    while i < j:
+        # Move left pointer until a non-zero element is found
+        while i < j and A[i] == 0:
+            i += 1
+        
+        # Move right pointer until a zero element is found
+        while i < j and A[j] != 0:
+            j -= 1
+        
+        # If both pointers have crossed each other, break the loop
+        if i >= j:
+            break
+        
+        # Swap the elements pointed by both pointers
+        A[i], A[j] = A[j], A[i]
+    
+    return A

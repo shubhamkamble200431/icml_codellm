@@ -1,0 +1,14 @@
+def division_elements(test_tup1, test_tup2):
+    """
+    Write a function to perform mathematical division operation across the given tuples.
+    """
+    # Initialize an empty list to store the results of the division operations
+    result = []
+
+    # Iterate over the elements in both tuples simultaneously using zip()
+    for x, y in zip(test_tup1, test_tup2):
+        # Perform integer division and append the result to the list
+        result.append(x // y)
+
+    # Return the list containing the results of the division operations
+    return result

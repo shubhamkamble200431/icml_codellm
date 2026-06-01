@@ -1,0 +1,11 @@
+def add_lists(test_list, test_tup):
+    """
+    Write a function to add the given list to the given tuples.
+    """
+    # Convert the tuple into a list
+    test_tup = list(test_tup)
+
+    # Extend the list with elements from the test_list
+    test_tup.extend(test_list)
+
+    return tuple(test_tup)  # Return the list as a tuple

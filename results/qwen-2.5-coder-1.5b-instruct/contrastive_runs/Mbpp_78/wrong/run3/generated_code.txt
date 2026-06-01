@@ -1,0 +1,16 @@
+def count_With_Odd_SetBits(n):
+    """
+    Write a python function to find number of integers with odd number of set bits.
+    """
+    # Function to calculate power of 2
+    def pow_of_two(x):
+        return int(math.pow(2, x))
+
+    # Count the number of set bits in n using Brian Kernighan's algorithm
+    set_bits = bin(n).count('1')
+
+    # The total number of integers with odd number of set bits is 2^(set_bits-1)
+    if set_bits % 2 == 0:
+        return pow_of_two(set_bits - 1)
+    else:
+        return pow_of_two(set_bits)

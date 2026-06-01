@@ -1,0 +1,5 @@
+def filter_evennumbers(nums):
+    """
+    Write a function to filter even numbers using lambda function.
+    """
+filter_even_numbers = list(filter(lambda x: x % 2 == 0, nums))

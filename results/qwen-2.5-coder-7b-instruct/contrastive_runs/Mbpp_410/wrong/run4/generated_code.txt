@@ -1,0 +1,5 @@
+def min_val(listval):
+    """
+    Write a function to find the minimum value in a given heterogeneous list.
+    """
+return min(item for item in listval if isinstance(item, (int, float)))

@@ -1,0 +1,15 @@
+def counting_sort(my_list):
+    """
+    Write a function to sort the given array by using counting sort.
+    """
+    max_val = max(my_list)
+    count_array = [0] * (max_val + 1)
+
+    for num in my_list:
+        count_array[num] += 1
+
+    sorted_list = []
+    for i in range(max_val + 1):
+        sorted_list.extend([i] * count_array[i])
+
+    return sorted_list

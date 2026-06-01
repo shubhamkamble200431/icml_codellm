@@ -1,0 +1,20 @@
+def div_even_odd(list1):
+    """
+    Write a function to find the division of first even and odd number of a given list.
+    """
+    even_count = 0
+    odd_count = 0
+
+    for num in list1:
+        if num % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+
+    if even_count > 0 and odd_count > 0:
+        result = even_count / odd_count
+        return result
+    elif even_count > 0:
+        return "Cannot divide by zero"
+    else:
+        return "No odd numbers found"

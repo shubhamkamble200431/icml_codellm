@@ -1,0 +1,14 @@
+def count_pairs(arr, n, k):
+    """
+    Write a function to count all the distinct pairs having a difference of k in any array.
+    """
+    pair_count = 0
+    seen_numbers = set()
+
+    for number in arr:
+        if number + k in seen_numbers:
+            pair_count += 1
+
+        seen_numbers.add(number)
+
+    return pair_count

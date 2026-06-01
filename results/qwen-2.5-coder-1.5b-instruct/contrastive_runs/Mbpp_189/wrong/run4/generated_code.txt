@@ -1,0 +1,15 @@
+def first_Missing_Positive(arr,n):
+    """
+    Write a python function to find the first missing positive number.
+    """
+    for i in range(n):        
+        while arr[i] > 0 and arr[i] <= n:            
+            temp = arr[arr[i]-1]            
+            if arr[i] == temp:                
+                break                
+            else:                    
+                arr[temp-1],arr[i] = arr[i],temp
+    for i in range(n):        
+        if arr[i]!=i+1:            
+            return i+1    
+    return n+1

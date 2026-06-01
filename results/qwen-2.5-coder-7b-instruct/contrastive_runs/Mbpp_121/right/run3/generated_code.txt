@@ -1,0 +1,13 @@
+def check_triplet(A, n, sum, count):
+    """
+    Write a function to find the triplet with sum of the given array
+    """
+    if count == 3 and sum == 0:
+        return True
+    elif count == 3 or sum == 0:
+        return False
+    else:
+        for i in range(n):
+            if check_triplet(A[i+1:], n-i-1, sum-A[i], count+1):
+                return True
+        return False

@@ -1,0 +1,22 @@
+def max_sub_array_sum_repeated(a, n, k):
+    """
+    Write a function to find the largest sum of contiguous array in the modified array which is formed by repeating the given array k times.
+    """
+    def kadane(arr):
+        current_max = max_global = arr[0]
+        for num in arr[1:]:
+            current_max = max(num, current_max + num)
+            if current_max > max_global:
+                max_global = current_max
+        return max_global
+
+    # Calculate the total length of the array after repetition
+    total_length = n * k
+
+    # Create a new array to store the elements repeated k times
+    repeated_array = [a[i % n] for i in range(total_length)]
+
+    # Find the maximum subarray sum in the repeated array
+    result = kadane(repeated_array)
+
+    return result

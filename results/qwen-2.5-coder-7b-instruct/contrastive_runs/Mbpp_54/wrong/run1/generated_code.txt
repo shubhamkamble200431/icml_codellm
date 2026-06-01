@@ -1,0 +1,9 @@
+def counting_sort(my_list):
+    """
+    Write a function to sort the given array by using counting sort.
+    """
+    count = collections.Counter(my_list)
+    sorted_list = []
+    for key in range(min(count), max(count) + 1):
+        sorted_list.extend([key] * count[key])
+    return sorted_list

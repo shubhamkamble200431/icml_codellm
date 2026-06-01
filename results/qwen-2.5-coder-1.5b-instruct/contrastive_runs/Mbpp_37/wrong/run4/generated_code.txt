@@ -1,0 +1,5 @@
+def sort_mixed_list(mixed_list):
+    """
+    Write a function to sort a given mixed list of integers and strings.
+    """
+from typing import List

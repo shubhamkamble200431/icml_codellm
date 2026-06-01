@@ -1,0 +1,12 @@
+def sort_matrix(M):
+    """
+    Write a function to sort a given matrix in ascending order according to the sum of its rows.
+    """
+    # Calculate the sum of each row
+    sums = [sum(row) for row in M]
+
+    # Sort the indices based on the sum of rows
+    sorted_indices = sorted(range(len(M)), key=lambda i: sums[i])
+
+    # Return the sorted matrix
+    return [M[i] for i in sorted_indices]

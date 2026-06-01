@@ -1,0 +1,11 @@
+def frequency_lists(list1):
+    """
+    Write a function to find frequency count of list of lists.
+    """
+    frequency_dict = defaultdict(int)
+    
+    for sublist in list1:
+        for item in sublist:
+            frequency_dict[item] += 1
+            
+    return frequency_dict

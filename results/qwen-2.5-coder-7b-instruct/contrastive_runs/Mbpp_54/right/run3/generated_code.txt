@@ -1,0 +1,23 @@
+def counting_sort(my_list):
+    """
+    Write a function to sort the given array by using counting sort.
+    """
+    if not my_list:
+        return []
+
+    # Find the maximum value in the list
+    max_val = max(my_list)
+
+    # Initialize the count array with zeros
+    count_array = [0] * (max_val + 1)
+
+    # Count each element's frequency
+    for num in my_list:
+        count_array[num] += 1
+
+    # Reconstruct the sorted list
+    sorted_list = []
+    for i, count in enumerate(count_array):
+        sorted_list.extend([i] * count)
+
+    return sorted_list

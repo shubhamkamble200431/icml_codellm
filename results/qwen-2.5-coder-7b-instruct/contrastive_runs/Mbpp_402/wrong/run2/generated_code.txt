@@ -1,0 +1,5 @@
+def ncr_modp(n, r, p):
+    """
+    Write a function to compute the value of ncr%p.
+    """
+    return comb(n, r) % p

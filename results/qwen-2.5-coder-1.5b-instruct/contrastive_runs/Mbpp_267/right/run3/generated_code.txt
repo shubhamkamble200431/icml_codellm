@@ -1,0 +1,5 @@
+def square_Sum(n):
+    """
+    Write a python function to find the sum of squares of first n odd natural numbers.
+    """
+    return sum(i**2 for i in range(1, 2*n, 2))

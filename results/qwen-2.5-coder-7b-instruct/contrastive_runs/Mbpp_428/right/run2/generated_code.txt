@@ -1,0 +1,18 @@
+def shell_sort(my_list):
+    """
+    Write a function to sort the given array by using shell sort.
+    """
+    gap = len(my_list) // 2
+    while gap > 0:
+        for index in range(gap, len(my_list)):
+            current_value = my_list[index]
+            position = index
+
+            while position >= gap and my_list[position - gap] > current_value:
+                my_list[position] = my_list[position - gap]
+                position -= gap
+
+            my_list[position] = current_value
+
+        gap //= 2
+    return my_list

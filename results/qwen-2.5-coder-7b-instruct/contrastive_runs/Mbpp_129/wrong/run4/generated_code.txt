@@ -1,0 +1,5 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    return is_magic_square(my_matrix)

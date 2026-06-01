@@ -1,0 +1,5 @@
+def find_star_num(n):
+    """
+    Write a function to find the n'th star number.
+    """
+return (n * (5 * n - 3)) // 2

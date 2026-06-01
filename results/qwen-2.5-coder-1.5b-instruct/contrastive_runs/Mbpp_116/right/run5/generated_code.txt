@@ -1,0 +1,8 @@
+def tuple_to_int(nums):
+    """
+    Write a function to convert a given tuple of positive integers into an integer.
+    """
+    result = 0
+    for i in range(len(nums)):
+        result += nums[i] * (10 ** (len(nums) - i - 1))
+    return result

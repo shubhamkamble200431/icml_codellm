@@ -1,0 +1,15 @@
+def min_product_tuple(list1):
+    """
+    Write a function to find the minimum product from the pairs of tuples within a given list.
+    """
+    # Use itertools.combinations to generate all possible pairs of tuples
+    pairs = itertools.combinations(list1, 2)
+
+    # Calculate the product for each pair and keep track of the minimum product found
+    min_product = float('inf')
+    for pair in pairs:
+        current_product = pair[0] * pair[1]
+        if current_product < min_product:
+            min_product = current_product
+
+    return min_product

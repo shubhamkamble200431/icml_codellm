@@ -1,0 +1,23 @@
+def reverse_vowels(str1):
+    """
+    Write a python function to reverse only the vowels of a given string.
+    """
+    vowels = 'aeiouAEIOU'
+    # Extract all vowels from the input string and store them in a list
+    vowels_list = [char for char in str1 if char in vowels]
+
+    # Reverse the list of vowels
+    vowels_list.reverse()
+
+    # Initialize an empty string to store the result
+    result = ''
+
+    # Iterate through each character in the original string
+    for i, char in enumerate(str1):
+        # If the character is a vowel, replace it with the corresponding vowel from the reversed list
+        if char in vowels:
+            result += vowels_list.pop(0)
+        else:
+            result += char
+
+    return result

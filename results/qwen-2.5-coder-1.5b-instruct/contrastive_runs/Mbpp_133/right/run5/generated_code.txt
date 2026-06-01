@@ -1,0 +1,5 @@
+def sum_negativenum(nums):
+    """
+    Write a function to calculate the sum of the negative numbers of a given list of numbers using lambda function.
+    """
+sum_negativenum = lambda nums: sum(num for num in nums if num < 0)

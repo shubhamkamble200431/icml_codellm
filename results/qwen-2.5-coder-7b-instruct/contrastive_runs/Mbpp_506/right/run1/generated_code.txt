@@ -1,0 +1,10 @@
+def permutation_coefficient(n, k):
+    """
+    Write a function to calculate the permutation coefficient of given p(n, k).
+    """
+    if k > n:
+        return 0
+    elif k == 0 or k == n:
+        return 1
+    else:
+        return permutation_coefficient(n-1, k-1) * n

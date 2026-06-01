@@ -1,0 +1,13 @@
+def babylonian_squareroot(number):
+    """
+    Write a function for computing square roots using the babylonian method.
+    """
+    if number == 0:
+        return 0
+    estimate = number / 2.0
+    while True:
+        next_estimate = (estimate + number / estimate) / 2
+        if abs(next_estimate - estimate) < 1e-10:  # Precision threshold
+            break
+        estimate = next_estimate
+    return estimate

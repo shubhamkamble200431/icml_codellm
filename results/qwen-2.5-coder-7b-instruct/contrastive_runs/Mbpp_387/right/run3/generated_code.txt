@@ -1,0 +1,5 @@
+def even_or_odd(N):
+    """
+    Write a python function to check whether the hexadecimal number is even or odd.
+    """
+    return "Even" if int(N, 16) % 2 == 0 else "Odd"

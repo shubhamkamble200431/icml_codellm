@@ -1,0 +1,4 @@
+def lps(str):
+    """
+    Write a function to find the longest palindromic subsequence in the given string.
+    """

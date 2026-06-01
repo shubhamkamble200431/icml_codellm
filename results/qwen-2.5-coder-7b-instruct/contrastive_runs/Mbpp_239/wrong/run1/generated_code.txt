@@ -1,0 +1,15 @@
+def get_total_number_of_sequences(m,n):
+    """
+    Write a function to find the number of possible sequences of length n such that each of the next element is greater than or equal to twice of the previous element but less than or equal to m.
+    """
+    if n == 0:
+        return 1
+    if m < n:
+        return 0
+    total_sequences = 0
+    for i in range(1, m+1):
+        if i >= n:
+            total_sequences += 1
+        else:
+            total_sequences += get_total_number_of_sequences(m//2, n-i-1)
+    return total_sequences

@@ -1,0 +1,19 @@
+def get_max_occuring_char(str1):
+    """
+    Write a python function to find the maximum occurring character in a given string.
+    """
+    char_count = {}
+    max_char = None
+    max_count = 0
+
+    for char in str1:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+        if char_count[char] > max_count:
+            max_count = char_count[char]
+            max_char = char
+
+    return max_char

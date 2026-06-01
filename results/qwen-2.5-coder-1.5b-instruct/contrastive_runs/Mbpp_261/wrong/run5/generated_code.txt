@@ -1,0 +1,11 @@
+def division_elements(test_tup1, test_tup2):
+    """
+    Write a function to perform mathematical division operation across the given tuples.
+    """
+    # Ensure that both tuples have the same length
+    if len(test_tup1) != len(test_tup2):
+        raise ValueError("Both tuples must have the same length.")
+
+    # Use map and operator.truediv to apply division across elements of the tuples
+    result = tuple(map(operator.truediv, test_tup1, test_tup2))
+    return result

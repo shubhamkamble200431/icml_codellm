@@ -1,0 +1,5 @@
+def substract_elements(test_tup1, test_tup2):
+    """
+    Write a function to substract the contents of one tuple with corresponding index of other tuple.
+    """
+    return tuple(x - y for x, y in zip(test_tup1, test_tup2))

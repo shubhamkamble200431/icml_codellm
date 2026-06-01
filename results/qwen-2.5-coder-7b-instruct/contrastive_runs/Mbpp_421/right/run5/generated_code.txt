@@ -1,0 +1,7 @@
+def concatenate_tuple(test_tup):
+    """
+    Write a function to concatenate each element of tuple by the delimiter.
+    """
+    delimiter = '-'
+    result = delimiter.join(str(item) for item in test_tup)
+    return result

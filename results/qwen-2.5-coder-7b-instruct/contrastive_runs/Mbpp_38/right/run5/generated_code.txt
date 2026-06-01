@@ -1,0 +1,11 @@
+def div_even_odd(list1):
+    """
+    Write a function to find the division of first even and odd number of a given list.
+    """
+    even = next((x for x in list1 if x % 2 == 0), None)
+    odd = next((x for x in list1 if x % 2 != 0), None)
+
+    if even is not None and odd is not None:
+        return even / odd
+    else:
+        return None

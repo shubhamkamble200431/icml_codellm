@@ -1,0 +1,5 @@
+def remove_elements(list1, list2):
+    """
+    Write a function to remove all elements from a given list present in another list.
+    """
+return [item for item in list1 if item not in list2]

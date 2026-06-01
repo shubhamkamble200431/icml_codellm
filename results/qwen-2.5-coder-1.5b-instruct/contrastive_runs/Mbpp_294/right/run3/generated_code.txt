@@ -1,0 +1,12 @@
+def max_val(listval):
+    """
+    Write a function to find the maximum value in a given heterogeneous list.
+    """
+    max_value = float('-inf')  # Initialize with negative infinity to handle any potential floats
+
+    for value in listval:
+        if isinstance(value, (int, float)):  # Check if the value is numeric
+            if value > max_value:  # Update max_value if the current value is greater
+                max_value = value
+
+    return max_value

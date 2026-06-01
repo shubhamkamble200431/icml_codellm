@@ -1,0 +1,14 @@
+def find_missing(ar,N):
+    """
+    Write a python function to find the missing number in a sorted array.
+    """
+    left, right = 0, N - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if ar[mid] != mid + 1 and (mid == 0 or ar[mid - 1] == mid):
+            return mid + 1
+        elif ar[mid] != mid + 1:
+            right = mid - 1
+        else:
+            left = mid + 1
+    return N + 1

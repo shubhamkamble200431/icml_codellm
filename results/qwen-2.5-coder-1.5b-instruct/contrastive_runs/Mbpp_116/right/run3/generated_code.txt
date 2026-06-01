@@ -1,0 +1,13 @@
+def tuple_to_int(nums):
+    """
+    Write a function to convert a given tuple of positive integers into an integer.
+    """
+    # Initialize the result variable to zero
+    result = 0
+
+    # Iterate over each number in the tuple
+    for num in nums:
+        # Multiply the current result by 10 and add the current number
+        result = result * 10 + num
+
+    return result

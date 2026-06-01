@@ -1,0 +1,6 @@
+def even_or_odd(N):
+    """
+    Write a python function to check whether the hexadecimal number is even or odd.
+    """
+    hex_val = bin(int(N))[2:].zfill(4)  # Convert the integer N to binary and remove '0b' prefix
+    return 'Even' if int(hex_val[2], 16) % 2 == 0 else 'Odd'

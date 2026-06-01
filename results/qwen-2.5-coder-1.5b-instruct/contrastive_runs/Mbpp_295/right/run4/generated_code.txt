@@ -1,0 +1,12 @@
+def sum_div(number):
+    """
+    Write a function to return the sum of all divisors of a number.
+    """
+    total = 1
+    # Check for divisibility up to half of the number (inclusive)
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            total += i
+            if i != number // i:  # Add the divisor pair if it's not a perfect square
+                total += number // i
+    return total

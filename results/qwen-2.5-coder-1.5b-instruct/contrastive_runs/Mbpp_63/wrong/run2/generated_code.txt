@@ -1,0 +1,12 @@
+def max_difference(test_list):
+    """
+    Write a function to find the maximum difference between available pairs in the given tuple list.
+    """
+    # Extract all unique numbers from the tuple list
+    unique_numbers = set(sum(test_list, ()))
+
+    # Find all possible pairings of numbers and calculate their differences
+    differences = [abs(a - b) for a, b in combinations(unique_numbers, 2)]
+
+    # Return the maximum difference found
+    return max(differences)

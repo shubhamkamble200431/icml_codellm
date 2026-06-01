@@ -1,0 +1,5 @@
+def max_product_tuple(list1):
+    """
+    Write a function to find the maximum product from the pairs of tuples within a given list.
+    """
+max_product_tuple = lambda lst: max(a * b for a, b in lst)

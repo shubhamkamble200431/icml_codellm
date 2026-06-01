@@ -1,0 +1,10 @@
+def group_keyvalue(l):
+    """
+    Write a function to group a sequence of key-value pairs into a dictionary of lists.
+    """
+    result = {}
+    for k, v in l:
+        if k not in result:
+            result[k] = []
+        result[k].append(v)
+    return result

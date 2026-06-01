@@ -1,0 +1,26 @@
+def shell_sort(my_list):
+    """
+    Write a function to sort the given array by using shell sort.
+    """
+    n = len(my_list)
+
+    # start with a big gap and reduce it over time
+    gap = n//2
+
+    while gap > 0:
+        # do a gapped insertion sort for this gap size.
+        for i in range(gap, n):
+            temp = my_list[i]
+            j = i
+
+            # shift earlier gap-sorted elements until the correct location
+            # for temp is found.
+            while j >= gap and my_list[j - gap] > temp:
+                my_list[j] = my_list[j - gap]
+                j -= gap
+
+            # put temp (the original my_list[i]) in its sorted position
+            my_list[j] = temp
+
+        # Reduce the gap
+        gap //= 2

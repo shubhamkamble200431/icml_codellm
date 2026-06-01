@@ -1,0 +1,17 @@
+def large_product(nums1, nums2, N):
+    """
+    Write a function to find the specified number of largest products from two given lists.
+    """
+    import heapq
+    
+    min_heap = []
+    for num1 in nums1:
+        for num2 in nums2:
+            product = num1 * num2
+            if len(min_heap) < N:
+                heapq.heappush(min_heap, product)
+            elif product > min_heap[0]:
+                heapq.heappop(min_heap)
+                heapq.heappush(min_heap, product)
+    
+    return sorted(min_heap, reverse=True)

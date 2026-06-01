@@ -1,0 +1,16 @@
+def common_in_nested_lists(nestedlist):
+    """
+    Write a function to find common elements in given nested lists. * list item * list item * list item * list item
+    """
+    common = set()
+
+    def flatten(lst):
+        for element in lst:
+            if isinstance(element, list):
+                yield from flatten(element)
+            else:
+                yield element
+
+    unique_elements = set(flatten(nestedlist))
+
+    return [item for item in unique_elements if item in flatten(nestedlist)]

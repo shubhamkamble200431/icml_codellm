@@ -1,0 +1,31 @@
+def magic_square_test(my_matrix):
+    """
+    Write a function to calculate magic square.
+    """
+    def is_magic_square(matrix):
+        n = len(matrix)
+        if any(len(row) != n for row in matrix):
+            return False
+        
+        # Calculate the sum of the first row to use as a reference
+        target_sum = sum(matrix[0])
+        
+        # Check sums of all rows
+        if any(sum(row) != target_sum for row in matrix):
+            return False
+        
+        # Check sums of all columns
+        if any(sum(matrix[i][j] for i in range(n)) != target_sum for j in range(n)):
+            return False
+        
+        # Check sum of main diagonal
+        if sum(matrix[i][i] for i in range(n)) != target_sum:
+            return False
+        
+        # Check sum of secondary diagonal
+        if sum(matrix[i][n - 1 - i] for i in range(n)) != target_sum:
+            return False
+        
+        return True
+
+    return is_magic_square(my_matrix)

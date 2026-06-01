@@ -1,0 +1,20 @@
+def get_Min_Squares(n):
+    """
+    Write a python function to find the minimum number of squares whose sum is equal to a given number.
+    """
+    # Base case: if n is less than 4, return n
+    if n < 4:
+        return n
+
+    # Initialize the minimum number of squares to a high value
+    min_squares = float('inf')
+
+    # Iterate through all possible perfect squares up to sqrt(n)
+    for i in range(1, int(math.sqrt(n)) + 1):
+        remaining = n - i * i
+        # Recursively calculate the minimum number of squares for the remaining value
+        sub_min_squares = get_Min_Squares(remaining)
+        # Update the minimum number of squares found
+        min_squares = min(min_squares, sub_min_squares + 1)
+
+    return min_squares

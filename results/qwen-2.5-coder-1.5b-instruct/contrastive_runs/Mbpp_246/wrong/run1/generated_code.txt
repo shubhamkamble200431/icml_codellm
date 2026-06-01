@@ -1,0 +1,14 @@
+def babylonian_squareroot(number):
+    """
+    Write a function for computing square roots using the babylonian method.
+    """
+    if number <= 0:
+        return None
+
+    guess = number / 2
+    while True:
+        better_guess = (guess + number / guess) / 2
+        if abs(guess - better_guess) < 1e-6:  # Close enough to the answer
+            break
+        guess = better_guess
+    return guess

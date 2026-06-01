@@ -1,0 +1,17 @@
+def count_Primes_nums(n):
+    """
+    Write a python function to count the number of prime numbers less than a given non-negative number.
+    """
+    if n < 2:
+        return 0
+
+    primes = [True] * (n + 1)
+    p = 2
+    while (p * p <= n):
+        if primes[p]:
+            for i in range(p * p, n + 1, p):
+                primes[i] = False
+        p += 1
+
+    count = sum(primes[2:])
+    return count

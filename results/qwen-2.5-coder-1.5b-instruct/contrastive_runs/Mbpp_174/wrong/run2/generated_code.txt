@@ -1,0 +1,8 @@
+def group_keyvalue(l):
+    """
+    Write a function to group a sequence of key-value pairs into a dictionary of lists.
+    """
+    grouped_dict = defaultdict(list)
+    for key, value in l:
+        grouped_dict[key].append(value)
+    return dict(grouped_dict)

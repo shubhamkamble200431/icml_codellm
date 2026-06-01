@@ -1,0 +1,8 @@
+def is_num_keith(x):
+    """
+    Write a function to find if the given number is a keith number or not.
+    """
+    digits = [int(digit) for digit in str(x)]
+    while len(digits) < x:
+        digits.append(sum(digits))
+    return digits[-1] == x

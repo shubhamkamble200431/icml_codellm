@@ -1,0 +1,5 @@
+def remove_column(list1, n):
+    """
+    Write a function to remove a specified column from a given nested list.
+    """
+    return [[row[col] for col in range(len(row)) if col != n] for row in list1]

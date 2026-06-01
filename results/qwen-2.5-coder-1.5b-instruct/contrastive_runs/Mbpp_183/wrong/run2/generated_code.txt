@@ -1,0 +1,14 @@
+def count_pairs(arr, n, k):
+    """
+    Write a function to count all the distinct pairs having a difference of k in any array.
+    """
+    num_counter = Counter(arr)
+    count = 0
+
+    # Count each element and its occurrences in the array
+    for i in range(n):
+        if i + k in num_counter:
+            # Add the product of the counts of the current element and its complement
+            count += num_counter[i] * num_counter[i+k]
+
+    return count // 2  # Divide by 2 because each pair is counted twice

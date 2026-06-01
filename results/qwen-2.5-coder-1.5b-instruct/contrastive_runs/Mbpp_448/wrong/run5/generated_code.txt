@@ -1,0 +1,15 @@
+def cal_sum(n):
+    """
+    Write a function to calculate the sum of perrin numbers.
+    """
+
+    def perrin_numbers(max_n):
+        # Generate perrin numbers up to max_n
+        p = [3, 0, 2]
+        for i in range(3, max_n):
+            p.append(p[i-1] + p[i-2])
+        return p
+
+    # Calculate the sum of perrin numbers up to n
+    p = perrin_numbers(n)
+    return sum(p)

@@ -1,0 +1,26 @@
+def reverse_vowels(str1):
+    """
+    Write a python function to reverse only the vowels of a given string.
+    """
+    # Convert the string to lowercase to make it case-insensitive
+    str1 = str1.lower()
+
+    # Find all vowels in the string
+    vowels = set('aeiou')
+    vowels_list = [char for char in str1 if char in vowels]
+
+    # Initialize pointers for the start and end of the vowels list
+    left = 0
+    right = len(vowels_list) - 1
+
+    # Swap vowels from both ends towards the center
+    while left < right:
+        vowels_list[left], vowels_list[right] = vowels_list[right], vowels_list[left]
+        left += 1
+        right -= 1
+
+    # Join the modified list back into a string
+    reversed_str = ''.join(vowels_list)
+
+    # Return the original string with the vowels swapped
+    return str1.replace(reversed_str, '', len(reversed_str))

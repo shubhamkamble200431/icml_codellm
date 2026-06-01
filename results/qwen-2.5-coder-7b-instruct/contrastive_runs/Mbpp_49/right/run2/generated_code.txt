@@ -1,0 +1,5 @@
+def specified_element(nums, N):
+    """
+    Write a function to extract every first or specified element from a given two-dimensional list.
+    """
+    return [row[N] for row in nums]

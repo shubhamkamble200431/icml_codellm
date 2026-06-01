@@ -1,0 +1,5 @@
+def find_rotation_count(A):
+    """
+    Write a function to find the number of rotations in a circularly sorted array.
+    """
+from typing import List

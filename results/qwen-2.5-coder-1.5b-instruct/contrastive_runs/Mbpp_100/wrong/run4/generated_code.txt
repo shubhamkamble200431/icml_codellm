@@ -1,0 +1,20 @@
+def next_smallest_palindrome(num):
+    """
+    Write a function to find the next smallest palindrome of a specified number.
+    """
+    if num == 0:
+        return 1
+
+    # Convert the number to a string and reverse it
+    num_str = str(num)[::-1]
+
+    # Check if the reversed number is a palindrome
+    if num_str == num_str[::-1]:
+        # If it is, increment the original number by 1 and check again
+        while True:
+            num += 1
+            num_str = str(num)[::-1]
+            if num_str == num_str[::-1]:
+                break
+
+    return num

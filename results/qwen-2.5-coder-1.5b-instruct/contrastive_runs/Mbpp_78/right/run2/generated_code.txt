@@ -1,0 +1,5 @@
+def count_With_Odd_SetBits(n):
+    """
+    Write a python function to find number of integers with odd number of set bits.
+    """
+    return sum(1 for i in range(n + 1) if bin(i).count('1') % 2 != 0)

@@ -1,0 +1,15 @@
+def find_Min(arr,low,high):
+    """
+    Write a python function to find the minimum element in a sorted and rotated array.
+    """
+    if low == high:
+        return arr[low]
+    
+    mid = (low + high) // 2
+    
+    if arr[mid] > arr[high]:
+        return find_Min(arr, mid + 1, high)
+    else:
+        return find_Min(arr, low, mid)
+
+    return -1

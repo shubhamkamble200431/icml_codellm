@@ -1,0 +1,5 @@
+def sum_even_and_even_index(arr,n):
+    """
+    Write a python function to find the sum of even numbers at even positions.
+    """
+sum_even_and_even_index = lambda arr, n: sum(val for i, val in enumerate(arr) if i % 2 == 0 and val % 2 == 0)

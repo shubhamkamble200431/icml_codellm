@@ -1,0 +1,18 @@
+def get_total_number_of_sequences(m,n):
+    """
+    Write a function to find the number of possible sequences of length n such that each of the next element is greater than or equal to twice of the previous element but less than or equal to m.
+    """
+    def count_sequences(current, m, n):
+        if n == 0:
+            return 1
+        total = 0
+        for i in range(2 * current, m + 1):
+            total += count_sequences(i, m, n - 1)
+        return total
+
+    if n == 0:
+        return 1
+    total_sequences = 0
+    for start in range(1, m + 1):
+        total_sequences += count_sequences(start, m, n - 1)
+    return total_sequences

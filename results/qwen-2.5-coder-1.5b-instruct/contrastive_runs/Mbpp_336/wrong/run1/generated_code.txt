@@ -1,0 +1,8 @@
+def check_monthnum(monthname1):
+    """
+    Write a function to check whether the given month name contains 28 days or not.
+    """
+    if calendar.monthrange(2023, monthname1)[1] == 28:
+        return True
+    else:
+        return False

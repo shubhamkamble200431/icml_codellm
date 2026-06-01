@@ -1,0 +1,16 @@
+def first_Element(arr,n,k):
+    """
+    Write a python function to find the first element occurring k times in a given array.
+    """
+    count = [0] * (n+1)
+
+    # Count occurrences of each element in the array
+    for i in range(n):
+        count[arr[i]] += 1
+
+    # Find the first element that occurs k times
+    for i in range(1, n + 1):
+        if count[i] == k:
+            return i
+
+    return None  # If no element occurs k times, return None

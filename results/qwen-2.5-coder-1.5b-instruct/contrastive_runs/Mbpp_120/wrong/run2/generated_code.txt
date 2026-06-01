@@ -1,0 +1,22 @@
+def max_product_tuple(list1):
+    """
+    Write a function to find the maximum product from the pairs of tuples within a given list.
+    """
+    # Initialize variables to store the maximum product and the pair of elements that achieve this product
+    max_prod = float('-inf')
+    max_pair = ()
+
+    # Iterate through each tuple in the list
+    for tup in list1:
+        # Check if the current tuple has two elements
+        if len(tup) == 2:
+            # Calculate the product of the two elements
+            prod = tup[0] * tup[1]
+
+            # Update the maximum product and the pair if the current product is greater
+            if prod > max_prod:
+                max_prod = prod
+                max_pair = tup
+
+    # Return the pair with the maximum product
+    return max_pair

@@ -1,0 +1,14 @@
+def is_undulating(n):
+    """
+    Write a function to check whether the given number is undulating or not.
+    """
+    digits = [int(d) for d in str(n)]
+    if len(digits) % 2 != 0:
+        return False
+    first_digit, second_digit = digits[0], digits[1]
+    for i in range(2, len(digits)):
+        if i % 2 == 0 and digits[i] != first_digit:
+            return False
+        elif i % 2 != 0 and digits[i] != second_digit:
+            return False
+    return True

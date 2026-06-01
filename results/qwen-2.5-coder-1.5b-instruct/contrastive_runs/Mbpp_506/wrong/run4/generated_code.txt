@@ -1,0 +1,7 @@
+def permutation_coefficient(n, k):
+    """
+    Write a function to calculate the permutation coefficient of given p(n, k).
+    """
+    if n < k:
+        return 0
+    return factorial(n) // (factorial(k) * factorial(n - k))

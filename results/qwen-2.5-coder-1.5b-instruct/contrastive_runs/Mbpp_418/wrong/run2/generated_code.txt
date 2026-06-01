@@ -1,0 +1,18 @@
+def Find_Max(lst):
+    """
+    Write a python function to find the sublist having maximum length.
+    """
+    max_len = 0
+    max_sublist = []
+
+    for i in range(len(lst)):
+        sublist = [lst[i]]
+        j = i + 1
+        while j < len(lst) and lst[j] == lst[i]:
+            sublist.append(lst[j])
+            j += 1
+        if len(sublist) > max_len:
+            max_len = len(sublist)
+            max_sublist = sublist
+
+    return max_sublist

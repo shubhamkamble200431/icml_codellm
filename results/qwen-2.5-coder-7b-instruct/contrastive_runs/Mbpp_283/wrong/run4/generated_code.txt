@@ -1,0 +1,6 @@
+def validate(n):
+    """
+    Write a python function to check whether the frequency of each digit is less than or equal to the digit itself.
+    """
+    digit_count = Counter(str(n))
+    return all(int(digit) >= count for digit, count in digit_count.items())

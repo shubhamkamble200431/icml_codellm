@@ -1,0 +1,10 @@
+def first_even(nums):
+    """
+    Write a python function to find the first even number in a given list of numbers.
+    """
+    # Iterate through the list and return the first even number
+    for num in nums:
+        if num % 2 == 0:
+            return num
+    # If no even number is found, return None
+    return None

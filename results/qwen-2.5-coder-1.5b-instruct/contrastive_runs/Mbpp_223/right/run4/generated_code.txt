@@ -1,0 +1,14 @@
+def is_majority(arr, n, x):
+    """
+    Write a function to check for majority element in the given sorted array.
+    """
+    # Initialize count of occurrences of x
+    count = 0
+
+    # Iterate through the array to count occurrences of x
+    for i in range(n):
+        if arr[i] == x:
+            count += 1
+
+    # Check if count is greater than half the size of the array
+    return count > (n // 2)

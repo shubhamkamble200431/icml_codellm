@@ -1,0 +1,5 @@
+def is_octagonal(n):
+    """
+    Write a function to find the nth octagonal number.
+    """
+    return n * (3 * n - 2)

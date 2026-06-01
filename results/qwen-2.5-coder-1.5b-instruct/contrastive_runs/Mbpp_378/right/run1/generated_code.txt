@@ -1,0 +1,8 @@
+def move_first(test_list):
+    """
+    Write a python function to shift last element to first position in the given list.
+    """
+    if test_list:  # Check if the list is not empty
+        test_list.insert(0, test_list.pop())  # Move the last element to the first position
+
+    return test_list

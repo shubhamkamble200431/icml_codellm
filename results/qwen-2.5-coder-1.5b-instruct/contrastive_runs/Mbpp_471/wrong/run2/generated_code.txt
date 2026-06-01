@@ -1,0 +1,5 @@
+def find_remainder(arr, lens, n):
+    """
+    Write a python function to find remainder of array multiplication divided by n.
+    """
+    return sum([a % n for a in arr[:lens]]) % n
